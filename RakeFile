@@ -1,0 +1,43 @@
+require 'rake'
+
+desc "Creates necessary symlinks"
+task :install do
+  Dir['*'].each do |file|
+    next if %w[RakeFile README].include? file
+    
+    new_file_path = File.join(ENV['HOME'], ".#{file}")
+
+    if File.exist?(new_file_path)
+      if File.identical? file, new_file_path
+        puts "identical ~/.#{file}"
+      else
+        print "overwrite ~/.#{file}? [yes no quit] "
+        case $stdin.gets.chomp
+        when 'y'
+          replace_file(file)
+        when 'q'
+          exit
+        else
+          puts "skipping ~/.#{file}"
+        end
+      end
+    else
+      link_file(file)
+    end
+  end
+end
+
+desc "Removes created symlinks"
+task :uninstall do 
+  # TODO
+end
+
+def replace_file(file)
+  # system %Q{rm -rf "File.join(ENV['HOME'], ".#{file}")"}
+  link_file(file)
+end
+
+def link_file(file)
+  puts "linking ~/.#{file}"
+  # system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+end
