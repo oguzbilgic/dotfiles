@@ -15,6 +15,10 @@ alias lsa='ls -a'
 alias cl='clear'
 alias db='cd ~/Dropbox'
 
+# Git command shortcuts
+alias gs='git status'
+alias gaa='git add .'
+
 # Command Overwrites
 alias mv='mv -i'
 
