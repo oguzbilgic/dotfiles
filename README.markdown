@@ -9,6 +9,8 @@ Apps
 + DropBox
 + MacVim
 + Xcode
++ Fireworks
++ Spotify
 
 Mac
 ---
@@ -22,9 +24,9 @@ Mac
 Packages
 --------
 + Homebrew
-+ Git
+  - git
++ Rvm
+  - ruby 1.9.2
 + RubyGems
-+ Heroku
-+ Rails
-+ Mysql
-+ Apache
+  - heroku
+  - rails
