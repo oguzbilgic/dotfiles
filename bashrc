@@ -12,8 +12,10 @@ alias db='cd ~/Dropbox'
 
 # Git command shortcuts
 alias gs='git status'
+alias gc='git commit'
+alias gp='git push'
 alias gaa='git add .'
-alias gtka='gitk --all'
+alias gitk='gitk --all'
 
 # Command Overwrites
 alias mv='mv -i'
