@@ -3,7 +3,7 @@ require 'rake'
 desc "Creates necessary symlinks"
 task :install do
   Dir['*'].each do |file|
-    next if %w[RakeFile README].include? file
+    next if %w[RakeFile README.markdown].include? file
     
     new_file_path = File.join(ENV['HOME'], ".#{file}")
 

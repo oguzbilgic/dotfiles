@@ -1,24 +1,39 @@
 Folder Structure
 ----------------
-+ Code
-+ Projects
++ ~/
+  - Dropbox/  
+    * Code/
+    * Projects/
+  
 
-Apps
-----
+Mac Apps
+--------
 + Google Chrome
 + DropBox
 + MacVim
 + Xcode
 + Fireworks
++ Gitx
 + Spotify
 
-Mac
----
+Linux Packages
+--------------
++ homebrew
++ git
++ mysql
++ tomcat
++ rvm
++ rubygems
+  - rails
+  - heroku
+
+Mac Configurations
+------------------
++ Move Dock to the right
 + Set Dock
   - Finder
   - Google Chrome
   - MacVim
-+ Move Dock to the right
 + Set Hot Corners
   - top-right : 
   - top-left : 
@@ -32,15 +47,11 @@ Mac
   - Designing
     * Fireworks
     * Photoshop
-+ Set Color Schema
++ Set Terminal Color Schema
 
-Packages
---------
-+ Homebrew
-  - git
-  - mysql
-+ Rvm
-  - ruby 1.9.2
-+ RubyGems
-  - heroku
-  - rails
+Linux Configurations
+--------------------
++ git
++ apache
++ mysql 
+
