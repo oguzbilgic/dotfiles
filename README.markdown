@@ -2,9 +2,9 @@ Folder Structure
 ----------------
 + ~/
   - Dropbox/  
-    * Code/
-    * Projects/
-  
+  - Code/ -> Dropbox/Code
+  - Projects/ -> Dropbox/Projects
+  - Documents/ -> Dropbox/Documents
 
 Mac Apps
 --------
@@ -14,18 +14,7 @@ Mac Apps
 + Xcode
 + Fireworks
 + Gitx
-+ Spotify
-
-Linux Packages
---------------
-+ homebrew
-+ git
-+ mysql
-+ tomcat
-+ rvm
-+ rubygems
-  - rails
-  - heroku
++ Rdio
 
 Mac Configurations
 ------------------
@@ -41,13 +30,26 @@ Mac Configurations
 + Set 3 Desktops
   - Browsing 
     * Google Chrome
+    * Rdio
   - Coding
     * Terminal
     * MacVim
+    * Gitx
   - Designing
     * Fireworks
     * Photoshop
 + Set Terminal Color Schema
+
+Linux Packages
+--------------
++ homebrew
++ git
++ mysql
++ tomcat
++ rvm
++ rubygems
+  - rails
+  - heroku
 
 Linux Configurations
 --------------------
