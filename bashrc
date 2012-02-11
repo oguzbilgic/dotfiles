@@ -24,10 +24,6 @@ alias mv='mv -i'
 function c { cd ~/Code/$1; ls; }
 function p { cd ~/Projects/$1; ls; }
 
-# Class shortcuts - Temp
-function lab { cd ~/Code/cs-200/lab/lab$1; }
-function hw { cd ~/Code/cs-200/hw/hw$1*; }
-
 # Cli at start-up
 clear; cd;
 bind 'set completion-ignore-case on'
