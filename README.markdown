@@ -43,17 +43,20 @@ Mac Configurations
 Linux Packages
 --------------
 + homebrew
-+ git
-+ mysql
-+ tomcat
+  - git
+  - mysql
+  - tomcat
 + rvm
 + rubygems
   - rails
   - heroku
++ pip
+  - virtualenv
 
 Linux Configurations
 --------------------
 + git
 + apache
 + mysql 
++ tomcat
 
