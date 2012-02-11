@@ -1,3 +1,7 @@
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+
 # Fill with minuses
 # (this is recalculated every time the prompt is shown in function prompt_command):
 fill="--- "
@@ -9,10 +13,11 @@ YELLOW=$RESET_COLOR'\[\033[0;33m\]' # gray color; use 0;37m for lighter color
 
 # Prompt variable:
 PS1="$GRAY"'$fill'
-PS1+="[$YELLOW\u$GRAY]"
-PS1+=" $YELLOW\W"
+PS1+="$YELLOW\W"
+PS1+=" $GRAY[$YELLOW"
+PS1+="\$(parse_git_branch)"
+PS1+="$GRAY]"
 PS1+=" $WHITE> "
-
 
 function prompt_command {
   # create a $fill of all screen width minus the time string and a space:
