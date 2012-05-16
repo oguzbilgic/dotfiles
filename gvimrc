@@ -54,3 +54,9 @@ map <right> <nop>
 vnoremap < <gv
 vnoremap > >gv
 
+" Experimental Settings
+autocmd BufNewFile,BufRead *.py setlocal tabstop=4
+set smarttab
+set textwidth=70
+set nowrap
+set guifont=Monaco:h12
