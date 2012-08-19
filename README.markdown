@@ -1,14 +1,15 @@
 Folder Structure
 ----------------
-+ ~/
-  - Dropbox/  
-  - Code/ -> Dropbox/Code
-  - Projects/ -> Dropbox/Projects
-  - Documents/ -> Dropbox/Documents
+
+    ~/Code      -> ~/Dropbox/Code
+    ~/Design    -> ~/Dropbox/Design
+    ~/Documents -> ~/Dropbox/Documents
 
 Mac Apps
 --------
+
 + Google Chrome
++ Google Drive
 + DropBox
 + MacVim
 + Xcode
@@ -18,30 +19,30 @@ Mac Apps
 
 Mac Configurations
 ------------------
+
 + Move Dock to the right
 + Set Dock
   - Finder
   - Google Chrome
   - MacVim
-+ Set Hot Corners
-  - top-right : 
-  - top-left : 
-+ Set Mouse Gestures
 + Set 3 Desktops
   - Browsing 
     * Google Chrome
     * Rdio
-  - Coding
+  - Working
     * Terminal
     * MacVim
     * Gitx
-  - Designing
     * Fireworks
     * Photoshop
 + Set Terminal Color Schema
++ Mac Finder Preferences
+  - Sidebar shortcuts
+  - New finder window location
 
 Linux Packages
 --------------
+
 + homebrew
   - git
   - mysql
@@ -55,6 +56,7 @@ Linux Packages
 
 Linux Configurations
 --------------------
+
 + git
 + apache
 + mysql 
