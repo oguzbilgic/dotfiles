@@ -25,7 +25,7 @@ Mac Configurations
   - Finder
   - Google Chrome
   - MacVim
-+ Set 3 Desktops
++ Set 2 Desktops
   - Browsing 
     * Google Chrome
     * Rdio
@@ -49,7 +49,7 @@ Linux Packages
   - tomcat
 + rvm
 + rubygems
-  - rails
+  - bundler
   - heroku
 + pip
   - virtualenv
