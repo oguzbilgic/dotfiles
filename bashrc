@@ -10,7 +10,6 @@ alias mv='mv -i'
 
 # Folder shortcuts
 function c { cd ~/Code/$1; ls; }
-function p { cd ~/Projects/$1; ls; }
 
 # Cli at start-up
 clear; cd;
