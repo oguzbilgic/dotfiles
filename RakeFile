@@ -11,6 +11,11 @@ task :install do
     exit
   end
 
+  # Check if this is a test run
+  print "test run? [y/n] "
+  is_test_run = $stdin.gets.chomp != 'n' ? true : false ;
+
+  # Proccess files
   Dir.chdir('dot/')
   Dir['*'].each do |file|
     new_file_path = File.join(ENV['HOME'], ".#{file}")
@@ -22,7 +27,7 @@ task :install do
         print "overwrite ~/.#{file}? [yes no quit] "
         case $stdin.gets.chomp
         when 'y'
-          replace_file(file)
+          replace_file(file, is_test_run)
         when 'q'
           exit
         else
@@ -30,7 +35,7 @@ task :install do
         end
       end
     else
-      link_file(file)
+      link_file(file, is_test_run)
     end
   end
 end
@@ -40,12 +45,19 @@ task :uninstall do
   # TODO
 end
 
-def replace_file(file)
-  # system %Q{rm -rf "File.join(ENV['HOME'], ".#{file}")"}
+# Replace file if this is not a test run
+def replace_file(file, is_test_run)
+  puts "replacing ~/.#{file}"
+  if !is_test_run
+    system %Q{rm -rf "File.join(ENV['HOME'], ".#{file}")"}
+  end
   link_file(file)
 end
 
-def link_file(file)
+# Link file if this is not a test run
+def link_file(file, is_test_run)
   puts "linking ~/.#{file}"
-  # system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+  if !is_test_run
+    system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+  end
 end
