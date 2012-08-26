@@ -2,6 +2,15 @@ require 'rake'
 
 desc "Creates necessary symlinks"
 task :install do
+
+  # Check if the home dir is correct
+  puts "Home directory: " + `echo $HOME`
+  print "correct? [y/n] "
+  if $stdin.gets.chomp != 'y'
+    puts "aborting ..."
+    exit
+  end
+
   Dir.chdir('dot/')
   Dir['*'].each do |file|
     new_file_path = File.join(ENV['HOME'], ".#{file}")
