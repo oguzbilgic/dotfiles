@@ -1,3 +1,19 @@
+Installation
+------------
+
+    $ rake install
+    Home directory: /Users/username
+    correct? [y/n] y
+    test run? [y/n] y
+    linking ~/.bash
+    linking ~/.bash_profile
+    linking ~/.bashrc
+    linking ~/.bin
+    linking ~/.gitconfig
+    linking ~/.gvimrc
+    linking ~/.ssh
+    linking ~/.vim
+
 Folder Structure
 ----------------
 
