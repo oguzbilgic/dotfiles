@@ -2,9 +2,8 @@ require 'rake'
 
 desc "Creates necessary symlinks"
 task :install do
+  Dir.chdir('dot/')
   Dir['*'].each do |file|
-    next if %w[RakeFile README.md].include? file
-    
     new_file_path = File.join(ENV['HOME'], ".#{file}")
 
     if File.exist?(new_file_path)
