@@ -1,5 +1,18 @@
-Installation
-------------
+# dotfiles
+
+my mac os x configuration
+
+## 1. Install Mac Apps
+
++ Google Chrome
++ Google Drive
++ DropBox
++ MacVim
++ Xcode Cli Tools
++ Fireworks
++ Gitx
+
+## 2. Symlink dot files
 
     $ rake install
     Home directory: /Users/username
@@ -14,37 +27,23 @@ Installation
     linking ~/.ssh
     linking ~/.vim
 
-Folder Structure
-----------------
+## 3. Symlink dropbox folders
 
     ~/Code      -> ~/Dropbox/Code
     ~/Design    -> ~/Dropbox/Design
     ~/Documents -> ~/Dropbox/Documents
 
-Mac Apps
---------
+## 4. Set Mac Preferences
 
-+ Google Chrome
-+ Google Drive
-+ DropBox
-+ MacVim
-+ Xcode
-+ Fireworks
-+ Gitx
-+ Rdio
-
-Mac Configurations
-------------------
-
-+ Move Dock to the right
-+ Set Dock
++ Set computer name
++ Move dock to the right
++ Set dock
   - Finder
   - Google Chrome
   - MacVim
-+ Set 2 Desktops
++ Set 2 spaces
   - Browsing 
     * Google Chrome
-    * Rdio
   - Working
     * Terminal
     * MacVim
@@ -56,25 +55,22 @@ Mac Configurations
   - Sidebar shortcuts
   - New finder window location
 
-Linux Packages
---------------
+## 5. Install Packages 
 
 + homebrew
   - git
   - mysql
   - tomcat
-+ rvm
 + rubygems
   - bundler
   - heroku
 + pip
   - virtualenv
 
-Linux Configurations
---------------------
+## 6. Configure Packages
 
++ xcode cli tools
 + git
 + apache
 + mysql 
 + tomcat
-
