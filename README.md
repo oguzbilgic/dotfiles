@@ -9,7 +9,7 @@ my mac os x configuration
 + DropBox
 + MacVim
 + Xcode Cli Tools
-+ Fireworks
++ Adobe CS
 + Gitx
 
 ## 2. Symlink dot files
@@ -31,7 +31,6 @@ my mac os x configuration
 
     ~/Code      -> ~/Dropbox/Code
     ~/Design    -> ~/Dropbox/Design
-    ~/Documents -> ~/Dropbox/Documents
 
 ## 4. Set Mac Preferences
 
@@ -48,8 +47,7 @@ my mac os x configuration
     * Terminal
     * MacVim
     * Gitx
-    * Fireworks
-    * Photoshop
+    * Adobe CS
 + Set Terminal Color Schema
 + Mac Finder Preferences
   - Sidebar shortcuts
@@ -63,7 +61,6 @@ my mac os x configuration
   - tomcat
 + rubygems
   - bundler
-  - heroku
 + pip
   - virtualenv
 
