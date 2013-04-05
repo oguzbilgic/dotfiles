@@ -52,6 +52,7 @@ my mac os x configuration
 + Mac Finder Preferences
   - Sidebar shortcuts
   - New finder window location
++ Use _Source Code Pro_ font for text editing
 
 ## 5. Install Packages 
 
@@ -63,6 +64,9 @@ my mac os x configuration
   - bundler
 + pip
   - virtualenv
++ go
++ tmux
++ irssi
 
 ## 6. Configure Packages
 
