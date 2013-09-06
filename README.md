@@ -14,18 +14,14 @@ my mac os x configuration
 
 ## 2. Symlink dot files
 
-    $ rake install
-    Home directory: /Users/username
-    correct? [y/n] y
-    test run? [y/n] y
-    linking ~/.bash
-    linking ~/.bash_profile
-    linking ~/.bashrc
-    linking ~/.bin
-    linking ~/.gitconfig
-    linking ~/.gvimrc
-    linking ~/.ssh
-    linking ~/.vim
+    link ~/.bash
+    link ~/.bash_profile
+    link ~/.bashrc
+    link ~/.bin
+    link ~/.gitconfig
+    link ~/.gvimrc
+    link ~/.ssh
+    link ~/.vim
 
 ## 3. Symlink dropbox folders
 
@@ -40,14 +36,6 @@ my mac os x configuration
   - Finder
   - Google Chrome
   - MacVim
-+ Set 2 spaces
-  - Browsing 
-    * Google Chrome
-  - Working
-    * Terminal
-    * MacVim
-    * Gitx
-    * Adobe CS
 + Set Terminal Color Schema
 + Mac Finder Preferences
   - Sidebar shortcuts
@@ -58,8 +46,6 @@ my mac os x configuration
 
 + homebrew
   - git
-  - mysql
-  - tomcat
 + rubygems
   - bundler
 + pip
@@ -72,6 +58,4 @@ my mac os x configuration
 
 + xcode cli tools
 + git
-+ apache
-+ mysql 
-+ tomcat
+
