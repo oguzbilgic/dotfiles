@@ -7,7 +7,7 @@ set nowritebackup                       " Don't create backup files
 set noswapfile
 
 " Gui Settings
-colorscheme solarized                   " Use solarized colorscheme 
+colorscheme mustang 
 set background=dark                     " Use dark version of the colorscheme
 set fuoptions=maxvert,maxhorz           " Fullscreen mode settings
 set guioptions=emgt                     " Hide toolbar and scrollbars
@@ -60,3 +60,5 @@ set smarttab
 set textwidth=70
 set nowrap
 set guifont=Monaco:h12
+set completeopt-=preview "Don't show docs while autocompleting
+set wildmenu
