@@ -1,3 +1,6 @@
+" Pathogen
+execute pathogen#infect()
+
 " General Settings
 set nocompatible                        " Don't care vi
 filetype on                             " Enable filetype detection

@@ -11,7 +11,7 @@ set noswapfile
 set viminfo=""
  
 " Gui Settings
-colorscheme m2													" Use solarized colorscheme 
+colorscheme mustang													" Use solarized colorscheme 
 syntax on                               " Turn syntax higlighting on
  
 " Status Line Settings
