@@ -1,0 +1,14 @@
+[user]
+  user = Oguz Bilgic
+  email = fisyonet@gmail.com
+[color]
+  ui = true
+[core]
+  editor = vim
+  quotepath = false
+  excludesfile =  ~/.gitignore
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  st = status
+  co = checkout
+  br = branch
