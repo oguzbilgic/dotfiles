@@ -21,3 +21,5 @@ PS1="[\[\e[0;33m\]\u\[\e[m\]] \[\e[0;33m\]\W\[\e[m\] > "
 export NODE_PATH="/usr/local/lib/node_modules"
 
 export GOPATH="/Users/oguzbilgic/Code/_gocode"
+export PATH="$GOPATH/bin:$PATH"
+
