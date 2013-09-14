@@ -1,0 +1,6 @@
+[submodule "dot/vim/bundle/vim-golang"]
+	path = dot/vim/bundle/vim-golang
+	url = https://github.com/jnwhiteh/vim-golang.git
+[submodule "dot/vim/bundle/color-pack"]
+	path = dot/vim/bundle/color-pack
+	url = https://github.com/vim-scripts/Colour-Sampler-Pack.git
