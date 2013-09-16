@@ -13,6 +13,16 @@ set viminfo=""							" No welcome screen
 " UI Settings
 colorscheme Mustang						" Use solarized colorscheme 
 syntax on                               " Turn syntax higlighting on
+
+" Gui Settings
+if has("gui_running")
+	set fuoptions=maxvert,maxhorz       " Fullscreen mode settings
+	set guioptions=emgt                 " Hide toolbar and scrollbars
+	set shortmess+=I                    " Disable welcome screen
+	set guifont=Monaco:h12
+	set mouse=""                        " Disable Mouse
+	set lines=999 columns=95            " Set window size
+endif
  
 " Status Line Settings
 set laststatus=2
@@ -45,4 +55,9 @@ map <right> <nop>
 " Experimental Settings
 set smarttab
 set nowrap
+set wildmenu
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 expandtab
+
+set textwidth=70
+set completeopt-=preview "Don't show docs while autocompleting
+
