@@ -12,7 +12,6 @@ function c { cd ~/Code/$1; ls; }
 bind 'set completion-ignore-case on'
 
 # Custom Prompt
-PS1="[\[\e[0;33m\]\u\[\e[m\]] \[\e[0;33m\]\W\[\e[m\] > "
 . "$HOME/.bash/prompt.sh"
 
 # Bash autocomplete
