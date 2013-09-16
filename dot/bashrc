@@ -2,9 +2,6 @@
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxbxegedabagacad
 
-# Extend include path
-export PATH="/usr/local/bin:/usr/local/sbin:~/.bin:$PATH"
-
 # Command Overwrites
 alias mv='mv -i'
 
