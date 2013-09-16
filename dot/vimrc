@@ -6,12 +6,12 @@ set nocompatible                        " Don't care vi
 filetype on                             " Enable filetype detection
 set hidden                              " Enable changed hidden buffers
 set nobackup                            " Disable backup files
-set nowritebackup                       " Don't create backup files
-set noswapfile
-set viminfo=""
+set nowritebackup                       " No backup files
+set noswapfile							" No swap files
+set viminfo=""							" No welcome screen
  
-" Gui Settings
-colorscheme mustang													" Use solarized colorscheme 
+" UI Settings
+colorscheme Mustang						" Use solarized colorscheme 
 syntax on                               " Turn syntax higlighting on
  
 " Status Line Settings
@@ -29,11 +29,12 @@ set incsearch                           " Enable instant search
 set hlsearch                            " Highlight search term
 
 " Indentation Settings
-set tabstop=2                           " Tab lenght is 2 space
-set softtabstop=2                       " Tab lenght is 2 space
-set shiftwidth=2                        " Tab lenght is 2 space
-" set expandtab                           " Use spaces instead of tabs
-filetype plugin indent on               " Enable Automatic Indentation based on file type 
+set tabstop=4                           " Width of a tab character
+set softtabstop=4                       " Tab lenght is 2 space
+set shiftwidth=4                        " Tab lenght is 2 space
+set smartindent
+set autoindent
+filetype plugin indent on               " Enable Automatic Indentation 
 
 " Disable Arrow Keys
 map <up> <nop>
@@ -41,7 +42,7 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
  
-" " Experimental Settings
+" Experimental Settings
 set smarttab
 set nowrap
-imap <tab> <c-x><c-o>
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 expandtab
