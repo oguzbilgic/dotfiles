@@ -4,3 +4,6 @@
 [submodule "dot/vim/bundle/color-pack"]
 	path = dot/vim/bundle/color-pack
 	url = https://github.com/vim-scripts/Colour-Sampler-Pack.git
+[submodule "dot/vim/bundle/vim-airline"]
+	path = dot/vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
