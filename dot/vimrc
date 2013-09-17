@@ -59,6 +59,9 @@ set wildmenu
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 expandtab
 set completeopt-=preview "Don't show docs while autocompleting
 
+" Enable 256 color on ubuntu server
+set t_Co=256
+
 " Airline settings
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
