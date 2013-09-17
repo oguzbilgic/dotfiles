@@ -9,7 +9,6 @@ my mac os x configuration
 + DropBox
 + MacVim
 + Xcode Cli Tools
-+ Adobe CS
 + Gitx
 
 ## 2. Symlink dot files
@@ -17,10 +16,7 @@ my mac os x configuration
     link ~/.bash
     link ~/.bash_profile
     link ~/.bashrc
-    link ~/.bin
     link ~/.gitconfig
-    link ~/.gvimrc
-    link ~/.ssh
     link ~/.vim
 
 ## 3. Symlink dropbox folders
@@ -40,7 +36,7 @@ my mac os x configuration
 + Mac Finder Preferences
   - Sidebar shortcuts
   - New finder window location
-+ Use _Source Code Pro_ font for text editing
++ Use _Source Code Pro_ (Powerline edition) font
 
 ## 5. Install Packages 
 
@@ -58,4 +54,5 @@ my mac os x configuration
 
 + xcode cli tools
 + git
++ ssh
 
