@@ -4,6 +4,7 @@ Bundle 'bling/vim-airline'
 Bundle 'daviddavis/vim-colorpack'
 Bundle 'junegunn/seoul256.vim'
 Bundle 'noahfrederick/vim-hemisu'
+Bundle 'jnwhiteh/vim-golang'
 
 " General Settings
 set nocompatible                        " Don't care vi
