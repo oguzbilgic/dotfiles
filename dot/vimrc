@@ -1,5 +1,9 @@
-" Pathogen
-execute pathogen#infect()
+" Initialize vundle
+call vundle#rc()
+Bundle 'bling/vim-airline'
+Bundle 'daviddavis/vim-colorpack'
+Bundle 'junegunn/seoul256.vim'
+Bundle 'noahfrederick/vim-hemisu'
 
 " General Settings
 set nocompatible                        " Don't care vi
