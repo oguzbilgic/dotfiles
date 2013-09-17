@@ -23,5 +23,5 @@ fi
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # Set Go tools
-export GOPATH="/Users/oguzbilgic/Code/_gocode"
+export GOPATH="$HOME/Code/_gocode"
 export PATH="$GOPATH/bin:$PATH"
