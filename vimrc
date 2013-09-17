@@ -6,6 +6,7 @@ Bundle 'junegunn/seoul256.vim'
 Bundle 'noahfrederick/vim-hemisu'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'tpope/vim-fugitive'
+Bundle 'Blackrush/vim-gocode'
 
 " General Settings
 set nocompatible                        " Don't care vi
@@ -64,6 +65,7 @@ set nowrap
 set wildmenu
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 expandtab
 set completeopt-=preview "Don't show docs while autocompleting
+imap <tab> <c-x><c-o>
 
 " Enable 256 color on ubuntu server
 set t_Co=256
