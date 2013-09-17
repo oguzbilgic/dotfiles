@@ -5,6 +5,7 @@ Bundle 'daviddavis/vim-colorpack'
 Bundle 'junegunn/seoul256.vim'
 Bundle 'noahfrederick/vim-hemisu'
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'tpope/vim-fugitive'
 
 " General Settings
 set nocompatible                        " Don't care vi
@@ -78,3 +79,5 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+let g:airline#extensions#branch#enabled = 1
+let g:airline_theme='powerlineish'

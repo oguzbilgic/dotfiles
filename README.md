@@ -41,18 +41,20 @@ my mac os x configuration
 ## 5. Install Packages 
 
 + homebrew
-  - git
++ git
++ mercurial
++ tmux
++ irssi
++ go
++ ruby
++ nodejs
 + rubygems
   - bundler
 + pip
   - virtualenv
-+ go
-+ tmux
-+ irssi
 
 ## 6. Configure Packages
 
 + xcode cli tools
 + git
 + ssh
-
