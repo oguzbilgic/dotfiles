@@ -1,4 +1,7 @@
 " Initialize vundle
+set nocompatible                        " Don't care vi
+filetype off                             
+
 call vundle#rc()
 Bundle 'bling/vim-airline'
 Bundle 'daviddavis/vim-colorpack'
@@ -9,8 +12,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Blackrush/vim-gocode'
 
 " General Settings
-set nocompatible                        " Don't care vi
 filetype on                             " Enable filetype detection
+filetype plugin indent on               " Enable Automatic Indentation 
 set hidden                              " Enable changed hidden buffers
 set nobackup                            " Disable backup files
 set nowritebackup                       " No backup files
@@ -51,7 +54,6 @@ set softtabstop=4                       " Tab lenght is 2 space
 set shiftwidth=4                        " Tab lenght is 2 space
 set smartindent
 set autoindent
-filetype plugin indent on               " Enable Automatic Indentation 
 
 " Disable Arrow Keys
 map <up> <nop>
@@ -88,9 +90,7 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " Unicode Alternative
-" let g:airline_left_sep = '»'
 " let g:airline_left_sep = '▶'
-" let g:airline_right_sep = '«'
 " let g:airline_right_sep = '◀'
 " let g:airline_symbols.branch = '⎇'
 " let g:airline_symbols.linenr = '¶'
