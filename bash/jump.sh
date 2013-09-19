@@ -24,20 +24,14 @@ function _completemarks {
 
 function _completeLinuxJump {
 	local cur=${COMP_WORDS[COMP_CWORD]}
-	local marks=$(find $MARKPATH -type l -printf "%f\n")
+
+	if [ `uname` = "Darwin" ]; then
+		local marks=$(find $MARKPATH -type l -exec basename {} \;)
+	elif [ `uname` = "Linux" ]; then
+		local marks=$(find $MARKPATH -type l -printf "%f\n")
+	fi
+
 	COMPREPLY=($(compgen -W '${marks[@]}' -- "$cur"))
 	return 0
 }
-
-function _completeMacJump {
-	local curw=${COMP_WORDS[COMP_CWORD]}
-	local wordlist=$(find $MARKPATH -type l -exec basename {} \;)
-	COMPREPLY=($(compgen -W '${wordlist[@]}' -- "$curw"))
-	return 0
-}
-
-if [ `uname` = "Darwin" ]; then
-	complete -o default -o nospace -F _completeMacJump j
-elif [ `uname` = "Linux" ]; then
-	complete -o default -o nospace -F _completeLinuxJump j
-fi
+complete -o default -o nospace -F _completeMacJump j
