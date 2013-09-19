@@ -1,28 +1,30 @@
 # dotfiles
 
-my mac os x configuration
+my workstation configuration
 
 ## 1. Install Mac Apps
 
 + Google Chrome
 + Google Drive
 + DropBox
-+ MacVim
 + Xcode Cli Tools
-+ Gitx
 
 ## 2. Symlink dot files
 
-    link ~/.bash
-    link ~/.bash_profile
-    link ~/.bashrc
-    link ~/.gitconfig
-    link ~/.vim
+```bash
+ln -s  ~/.bash
+ln -s  ~/.bash_profile
+ln -s  ~/.bashrc
+ln -s  ~/.gitconfig
+ln -s  ~/.vim
+```
 
 ## 3. Symlink dropbox folders
 
-    ~/Code      -> ~/Dropbox/Code
-    ~/Design    -> ~/Dropbox/Design
+```bash
+ ln -s ~/Dropbox/Code   ~/Code      
+ ln -s ~/Dropbox/Design ~/Design    
+```
 
 ## 4. Set Mac Preferences
 
@@ -31,7 +33,6 @@ my mac os x configuration
 + Set dock
   - Finder
   - Google Chrome
-  - MacVim
 + Set Terminal Color Schema
 + Mac Finder Preferences
   - Sidebar shortcuts
@@ -41,10 +42,10 @@ my mac os x configuration
 ## 5. Install Packages 
 
 + homebrew
-+ git
-+ mercurial
 + tmux
 + irssi
++ mercurial
++ git
 + go
 + ruby
 + nodejs
@@ -52,9 +53,3 @@ my mac os x configuration
   - bundler
 + pip
   - virtualenv
-
-## 6. Configure Packages
-
-+ xcode cli tools
-+ git
-+ ssh
