@@ -1,4 +1,3 @@
-
 # j, mark, unmark, marks
 # http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
 export MARKPATH=$HOME/.marks
@@ -23,11 +22,22 @@ function _completemarks {
     reply=($(ls $MARKPATH))
 }
 
-_completemarks() {
+function _completeLinuxJump {
+	local cur=${COMP_WORDS[COMP_CWORD]}
+	local marks=$(find $MARKPATH -type l -printf "%f\n")
+	COMPREPLY=($(compgen -W '${marks[@]}' -- "$cur"))
+	return 0
+}
+
+function _completeMacJump {
 	local curw=${COMP_WORDS[COMP_CWORD]}
-	local wordlist=$(find $MARKPATH -type l -printf "%f\n")
+	local wordlist=$(find $MARKPATH -type l -exec basename {} \;)
 	COMPREPLY=($(compgen -W '${wordlist[@]}' -- "$curw"))
 	return 0
 }
 
-complete -F _completemarks j unmark
+if [ `uname` = "Darwin" ]; then
+	complete -o default -o nospace -F _completeMacJump j
+elif [ `uname` = "Linux" ]; then
+	complete -o default -o nospace -F _completeLinuxJump j
+fi
