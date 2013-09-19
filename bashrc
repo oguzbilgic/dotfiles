@@ -2,12 +2,6 @@
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxbxegedabagacad
 
-# Command Overwrites
-alias mv='mv -i'
-
-# Folder shortcuts
-function c { cd ~/Code/$1; ls; }
-
 # Cli at start-up
 bind 'set completion-ignore-case on'
 
@@ -18,6 +12,9 @@ bind 'set completion-ignore-case on'
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
+
+# Include Jump
+. "$HOME/.bash/jump.sh"
 
 # Set NodeJS
 export NODE_PATH="/usr/local/lib/node_modules"
