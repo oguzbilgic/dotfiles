@@ -17,21 +17,23 @@ filetype plugin indent on               " Enable Automatic Indentation
 set hidden                              " Enable changed hidden buffers
 set nobackup                            " Disable backup files
 set nowritebackup                       " No backup files
-set noswapfile							" No swap files
-set viminfo=""							" No welcome screen
+set noswapfile                          " No swap files
+set viminfo=""                          " No welcome screen
  
 " UI Settings
-colorscheme molokai						" Use solarized colorscheme 
+colorscheme molokai                     " Use solarized colorscheme 
 syntax on                               " Turn syntax higlighting on
+set wildmenu
+set t_Co=256                            " Enable 256 color on ubuntu server
 
 " Gui Settings
 if has("gui_running")
-	set fuoptions=maxvert,maxhorz       " Fullscreen mode settings
-	set guioptions=emgt                 " Hide toolbar and scrollbars
-	set shortmess+=I                    " Disable welcome screen
-	set guifont=Monaco:h12
-	set mouse=""                        " Disable Mouse
-	set lines=999 columns=95            " Set window size
+    set fuoptions=maxvert,maxhorz       " Fullscreen mode settings
+    set guioptions=emgt                 " Hide toolbar and scrollbars
+    set shortmess+=I                    " Disable welcome screen
+    set guifont=Monaco:h12
+    set mouse=""                        " Disable Mouse
+    set lines=999 columns=95            " Set window size
 endif
  
 " Status Line Settings
@@ -60,23 +62,11 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
- 
-" Experimental Settings
-set smarttab
-set nowrap
-set wildmenu
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 expandtab
-set completeopt-=preview "Don't show docs while autocompleting
-imap <tab> <c-x><c-o>
-
-" Enable 256 color on ubuntu server
-set t_Co=256
 
 " Airline settings
 if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
-let g:airline#extensions#branch#enabled = 1
 let g:airline_theme='powerlineish'
 
 let g:airline_left_sep = ''
@@ -84,7 +74,8 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
-let g:airline_symbols.linenr = ''
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
@@ -92,5 +83,9 @@ let g:airline_symbols.whitespace = 'Ξ'
 " Unicode Alternative
 " let g:airline_left_sep = '▶'
 " let g:airline_right_sep = '◀'
-" let g:airline_symbols.branch = '⎇'
-" let g:airline_symbols.linenr = '¶'
+ 
+" Experimental Settings
+set smarttab
+set nowrap
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 expandtab
+imap <tab> <c-x><c-o>
