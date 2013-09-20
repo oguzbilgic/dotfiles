@@ -18,11 +18,7 @@ function marks {
     ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
 
-function _completemarks {
-    reply=($(ls $MARKPATH))
-}
-
-function _completeLinuxJump {
+function _completeMark {
 	local cur=${COMP_WORDS[COMP_CWORD]}
 
 	if [ `uname` = "Darwin" ]; then
@@ -34,4 +30,4 @@ function _completeLinuxJump {
 	COMPREPLY=($(compgen -W '${marks[@]}' -- "$cur"))
 	return 0
 }
-complete -o default -o nospace -F _completeMacJump j
+complete -o default -o nospace -F _completeMark j unmark
