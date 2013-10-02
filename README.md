@@ -42,6 +42,7 @@ ln -s  ~/.vim
 ## 5. Install Packages 
 
 + homebrew
+  - bash-completion
 + tmux
 + irssi
 + mercurial
