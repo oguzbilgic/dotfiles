@@ -12,11 +12,12 @@ my workstation configuration
 ## 2. Symlink dot files
 
 ```bash
-ln -s  ~/.bash
-ln -s  ~/.bash_profile
-ln -s  ~/.bashrc
-ln -s  ~/.gitconfig
-ln -s  ~/.vim
+ln -s ~/.bash bash
+ln -s ~/.bash_profile bash_profile
+ln -s ~/.bashrc bashrc
+ln -s ~/.gitconfig config
+ln -s ~/.vim vim
+ln -s ~/.vimrc vimrc
 ```
 
 ## 3. Symlink dropbox folders
