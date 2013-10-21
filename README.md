@@ -55,3 +55,17 @@ ln -s ~/.vimrc vimrc
   - bundler
 + pip
   - virtualenv
+
+## Contexts
+
+1. Application
+  - Chrome
+  - Terminal
+2. Application Window
+  - Chrome window
+  - Terminal Window
+3. Application Tab inside an application window
+  - Chrome tab
+  - Terminal Tab
+4. Application specific
+  - Vim inside terminal
