@@ -1,4 +1,4 @@
-" Initialize vundle
+"Initialize vundle
 set nocompatible                        " Don't care vi
 filetype off                             
 
@@ -9,7 +9,8 @@ Bundle 'junegunn/seoul256.vim'
 Bundle 'noahfrederick/vim-hemisu'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Blackrush/vim-gocode'
+Bundle 'nsf/gocode', {'rtp': 'vim/'}
+
 
 " General Settings
 filetype on                             " Enable filetype detection
@@ -21,7 +22,7 @@ set noswapfile                          " No swap files
 set viminfo=""                          " No welcome screen
  
 " UI Settings
-colorscheme molokai                     " Use solarized colorscheme 
+colorscheme mustang                     " Use solarized colorscheme 
 syntax on                               " Turn syntax higlighting on
 set wildmenu
 set t_Co=256                            " Enable 256 color on ubuntu server
@@ -38,7 +39,7 @@ endif
  
 " Status Line Settings
 set laststatus=2
-set statusline=%<\%n:%f\ %m%r%y%=%-35.(l:\ %l\ of\ %L,\ c:\ %c%V\ (%P)%)
+" set statusline=%<\%n:%f\ %m%r%y%=%-35.(l:\ %l\ of\ %L,\ c:\ %c%V\ (%P)%)
  
 " Window Settings
 set number                              " Show line numbers
@@ -67,8 +68,8 @@ map <right> <nop>
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-let g:airline_theme='powerlineish'
 
+let g:airline_theme='powerlineish'
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
@@ -79,13 +80,10 @@ let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
-
-" Unicode Alternative
-" let g:airline_left_sep = '▶'
-" let g:airline_right_sep = '◀'
  
 " Experimental Settings
 set smarttab
 set nowrap
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 expandtab
 imap <tab> <c-x><c-o>
+set completeopt-=preview
