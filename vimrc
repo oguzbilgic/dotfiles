@@ -1,26 +1,36 @@
 "Initialize vundle
-set nocompatible                        " Don't care vi
+set nocompatible
 filetype off
 
+" Start Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'daviddavis/vim-colorpack'
-Plugin 'junegunn/seoul256.vim'
-Plugin 'noahfrederick/vim-hemisu'
-Plugin 'jnwhiteh/vim-golang'
+" Plugin 'junegunn/seoul256.vim'
+" Plugin 'noahfrederick/vim-hemisu'
+" Plugin 'jnwhiteh/vim-golang'
 Plugin 'tpope/vim-fugitive'
-Plugin 'luochen1990/rainbow'
-Plugin 'guns/vim-clojure-static'
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'luochen1990/rainbow'
+" Plugin 'guns/vim-clojure-static'
+" Plugin 'nsf/gocode', {'rtp': 'vim/'}
+" Plugin 'airblade/vim-gitgutter'
 Plugin 'rakr/vim-one'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'wincent/command-t'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'xuyuanp/nerdtree-git-plugin'
+Plugin 'w0rp/ale'
 
 call vundle#end()            " required
+
+" Vundle doesn't work on fish shell
+" https://github.com/VundleVim/Vundle.vim/issues/690#issuecomment-251830036
+set shell=/bin/bash
 
 " General Settings
 filetype on                             " Enable filetype detection
@@ -32,11 +42,24 @@ set noswapfile                          " No swap files
 set viminfo=""                          " No welcome screen
 
 " UI Settings
-" colorscheme mustang                     " Use solarized colorscheme
-colorscheme one-dark                     " Use solarized colorscheme
-syntax on                               " Turn syntax higlighting on
+colorscheme one
+set background=dark
+syntax on
 set wildmenu
-set t_Co=256                            " Enable 256 color on ubuntu server
+" Enable 256 color on ubuntu server
+set t_Co=256
+let g:one_allow_italics = 1
+
+" Set truecolor for 16 million colors
+" https://gist.github.com/XVilka/8346728
+" BUG: Shouldn't be set if term doesn't support
+if has('termguicolors')
+  set termguicolors
+endif
+
+" Fix Hyper terminal first line issue
+" https://github.com/zeit/hyper/issues/1037
+set t_RV=
 
 " GUI Settings
 if has("gui_running")
@@ -50,7 +73,6 @@ endif
 
 " Status Line Settings
 set laststatus=2
-" set statusline=%<\%n:%f\ %m%r%y%=%-35.(l:\ %l\ of\ %L,\ c:\ %c%V\ (%P)%)
 
 " Window Settings
 set number                              " Show line numbers
@@ -68,6 +90,8 @@ set softtabstop=2                       " Tab lenght is 2 space
 set shiftwidth=2                        " Tab lenght is 2 space
 set smartindent
 set autoindent
+set expandtab
+set smarttab
 
 " Disable Arrow Keys
 map <up> <nop>
@@ -77,7 +101,7 @@ map <right> <nop>
 
 " Airline settings
 if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+  let g:airline_symbols = {}
 endif
 
 let g:airline_theme='one'
@@ -92,13 +116,20 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
+"Display all the buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Airline + A.L.E Integration
+let g:airline#extensions#ale#enabled = 1
+
+" NERD Commenter Settings
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
 " Experimental Settings
-set smarttab
 set nowrap
 imap <tab> <c-x><c-o>
 set completeopt-=preview
-
-set termguicolors
-set background=light        " for the light version
-let g:one_allow_italics = 1 " I love italic for comments
-colorscheme one
