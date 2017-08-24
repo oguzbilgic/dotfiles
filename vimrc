@@ -1,4 +1,4 @@
-"Initialize vundle
+" Initialize vundle
 set nocompatible
 filetype off
 
@@ -12,19 +12,26 @@ Plugin 'daviddavis/vim-colorpack'
 " Plugin 'junegunn/seoul256.vim'
 " Plugin 'noahfrederick/vim-hemisu'
 " Plugin 'jnwhiteh/vim-golang'
-Plugin 'tpope/vim-fugitive'
 " Plugin 'luochen1990/rainbow'
 " Plugin 'guns/vim-clojure-static'
 " Plugin 'nsf/gocode', {'rtp': 'vim/'}
-" Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'rakr/vim-one'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'wincent/command-t'
+" Plugin 'wincent/command-t'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'w0rp/ale'
+Plugin 'vim-scripts/gitignore'
+Plugin 'vim-scripts/playroom'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'lifepillar/vim-wwdc17-theme'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
+" Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()            " required
 
@@ -100,27 +107,30 @@ map <left> <nop>
 map <right> <nop>
 
 " Airline settings
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
+" if !exists('g:airline_symbols')
+"   let g:airline_symbols = {}
+" endif
 
-let g:airline_theme='one'
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.whitespace = 'Ξ'
+" let g:airline_theme='one'
+" let g:airline_left_sep = ''
+" let g:airline_left_alt_sep = ''
+" let g:airline_right_sep = ''
+" let g:airline_right_alt_sep = ''
+" let g:airline_symbols.branch = ''
+" let g:airline_symbols.branch = '⎇'
+" let g:airline_symbols.linenr = '¶'
+" let g:airline_symbols.readonly = ''
+" let g:airline_symbols.paste = 'ρ'
+" let g:airline_symbols.whitespace = 'Ξ'
 
 "Display all the buffers
 let g:airline#extensions#tabline#enabled = 1
 
 " Airline + A.L.E Integration
 let g:airline#extensions#ale#enabled = 1
+
+" Don't show the file path in Airline's Tabline
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " NERD Commenter Settings
 
@@ -129,7 +139,16 @@ let g:NERDSpaceDelims = 1
 " Align line-wise comment delimiters flush left instead of following code indentation
 let g:NERDDefaultAlign = 'left'
 
+" NERDTree Settings
+map <leader>nt :NERDTree<return>
+
+" FZF Settings
+map <leader>t :GFiles<CR>
+
 " Experimental Settings
 set nowrap
-imap <tab> <c-x><c-o>
 set completeopt-=preview
+
+" Ipad Pro Settings
+map ` <esc>
+map! ` <esc>
