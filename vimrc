@@ -11,16 +11,12 @@ Plugin 'bling/vim-airline'
 Plugin 'daviddavis/vim-colorpack'
 " Plugin 'junegunn/seoul256.vim'
 " Plugin 'noahfrederick/vim-hemisu'
-" Plugin 'jnwhiteh/vim-golang'
 " Plugin 'luochen1990/rainbow'
-" Plugin 'guns/vim-clojure-static'
-" Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'rakr/vim-one'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-" Plugin 'wincent/command-t'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'xuyuanp/nerdtree-git-plugin'
@@ -31,7 +27,13 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'lifepillar/vim-wwdc17-theme'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
+Plugin 'michaeljsmith/vim-indent-object'
 " Plugin 'jiangmiao/auto-pairs'
+
+" brew install cmake
+" cd ~/.vim/bundle/YouCompleteMe
+" ./install.py --clang-completer
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 
@@ -50,7 +52,7 @@ set viminfo=""                          " No welcome screen
 
 " UI Settings
 colorscheme one
-set background=dark
+set background=light
 syntax on
 set wildmenu
 " Enable 256 color on ubuntu server
@@ -145,10 +147,14 @@ map <leader>nt :NERDTree<return>
 " FZF Settings
 map <leader>t :GFiles<CR>
 
-" Experimental Settings
-set nowrap
-set completeopt-=preview
-
 " Ipad Pro Settings
 map ` <esc>
 map! ` <esc>
+
+" Experimental Settings
+
+" Disable automatic wrapping of long lines
+set nowrap
+
+" Exit visual mode immediately 
+vmap <esc> <C-c>
