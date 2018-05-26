@@ -12,6 +12,8 @@ my workstation configuration
 
 + Google Chrome
 + Xcode Cli Tools
++ Atom Editor
++ Hyper terminal
 
 ## dot files
 
@@ -39,8 +41,6 @@ ln -s ~/.hyper.js hyper.js
 ## Install Packages 
 
 + homebrew
-+ tmux
-+ irssi
 + git
 + ruby
 + nodejs
