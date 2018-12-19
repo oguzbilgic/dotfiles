@@ -1,3 +1,7 @@
+"---------------------------------------------------------- 
+" Vundle Plugins
+"---------------------------------------------------------- 
+
 " Initialize vundle
 set nocompatible
 filetype off
@@ -13,10 +17,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'w0rp/ale'
+Plugin 'airblade/vim-gitgutter'         " Shows changed lines on the file
 " Plugin 'jiangmiao/auto-pairs'
 " Plugin 'xuyuanp/nerdtree-git-plugin'
 " Plugin 'tpope/vim-fugitive'
-" Plugin 'airblade/vim-gitgutter'
 
 " Language
 Plugin 'pangloss/vim-javascript'
@@ -33,7 +38,6 @@ Plugin 'ajh17/Spacegray.vim'
 Plugin 'felixhummel/setcolors.vim'
 Plugin 'rakr/vim-one'
 Plugin 'junegunn/seoul256.vim'
-Plugin 'w0rp/ale'
 Plugin 'vim-scripts/playroom'
 Plugin 'lifepillar/vim-wwdc17-theme'
 
@@ -42,11 +46,12 @@ Plugin 'lifepillar/vim-wwdc17-theme'
 " ./install.py --clang-completer
 Plugin 'Valloric/YouCompleteMe'
 
-call vundle#end()            " required
+" End Vundle plugin list
+call vundle#end()
 
-" Vundle doesn't work on fish shell
-" https://github.com/VundleVim/Vundle.vim/issues/690#issuecomment-251830036
-" set shell=/bin/bash
+"---------------------------------------------------------- 
+" Vim Settings
+"---------------------------------------------------------- 
 
 " General Settings
 filetype on                             " Enable filetype detection
@@ -62,36 +67,36 @@ colorscheme hemisu
 set background=light
 syntax on
 set wildmenu
-" Enable 256 color on ubuntu server
-" set t_Co=256
-" Hyper.js doesn't support italics
-" let g:one_allow_italics = 1
-" let g:spacegray_use_italics = 1
+set t_Co=256                            " Enable 256 color on ubuntu server 
 
-" Set truecolor for 16 million colors
-" https://gist.github.com/XVilka/8346728
-" BUG: Shouldn't be set if term doesn't support
-if has('termguicolors')
-  " set termguicolors
-endif
+" Hyper.js doesn't support italics 
+" let g:one_allow_italics = 1 
+" let g:spacegray_use_italics = 1 
 
-" GUI Settings
-if has("gui_running")
-  set fuoptions=maxvert,maxhorz       " Fullscreen mode settings
-  set guioptions=emgt                 " Hide toolbar and scrollbars
-  set shortmess+=I                    " Disable welcome screen
-  set guifont=Menlo:h14
-  set mouse=""                        " Disable Mouse
-  set lines=999 columns=95            " Set window size
-endif
+" Set truecolor for 16 million colors 
+" https://gist.github.com/XVilka/8346728 
+" BUG: Shouldn't be set if term doesn't support 
+" BUG: Currently hyper doesn't support this?  
+" if has('termguicolors') 
+"   set termguicolors 
+" endif
 
-" Status Line Settings
-set laststatus=2
+" GUI Settings 
+if has("gui_running") 
+  set fuoptions=maxvert,maxhorz         " Fullscreen mode settings 
+  set guioptions=emgt                   " Hide toolbar and scrollbars 
+  set shortmess+=I                      " Disable welcome screen 
+  set guifont=Roboto\ Mono:h14 
+  set mouse=""                          " Disable Mouse 
+  set lines=999 columns=95              " Set window size 
+endif 
 
-" Window Settings
-set number                              " Show line numbers
-set splitright                          " Vertical split to right side
-set scroll=5                            " Scroll 5 lines at a time
+" Status Line Settings 
+set laststatus=2 " Window Settings 
+set number                              " Show line numbers 
+set splitright                          " Vertical split to right side 
+set scroll=5                            " Scroll 5 lines at a time 
+set fillchars+=vert:\                   " Don't use window divider character 
 
 " Search Settings
 set ignorecase                          " Disable search case sensitivity
@@ -113,64 +118,62 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+"---------------------------------------------------------- 
 " Airline settings
-" if !exists('g:airline_symbols')
-"   let g:airline_symbols = {}
-" endif
+"---------------------------------------------------------- 
 
 let g:airline_theme='one'
-" let g:airline_left_sep = ''
-" let g:airline_left_alt_sep = ''
-" let g:airline_right_sep = ''
-" let g:airline_right_alt_sep = ''
-" let g:airline_symbols.branch = ''
-" let g:airline_symbols.branch = '⎇'
-" let g:airline_symbols.linenr = '¶'
-" let g:airline_symbols.readonly = ''
-" let g:airline_symbols.paste = 'ρ'
-" let g:airline_symbols.whitespace = 'Ξ'
 
 " Airline + A.L.E Integration
-" let g:airline#extensions#ale#enabled = 1
+" let g:airline#extensions#ale#enabled = 1                 
 
-"Display all the buffers
-let g:airline#extensions#tabline#enabled = 1
+" Display all the buffers
+let g:airline#extensions#tabline#enabled = 1               
+
 " Don't show the file path in Airline's Tabline
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#formatter = 'unique_tail' 
 
+"---------------------------------------------------------- 
 " NERD Commenter Settings
+"---------------------------------------------------------- 
 
 " Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
+let g:NERDSpaceDelims = 1        
+
 " Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'left'
+let g:NERDDefaultAlign = 'left'  
 
 " Use atom's mapping for comment toggles
 " Command key doesn't work, we are using option/alt key
 nmap ÷ <Plug>NERDCommenterToggle
 vmap ÷ <Plug>NERDCommenterToggle<CR>gv
 
+"---------------------------------------------------------- 
 " NERDTree Settings
+"---------------------------------------------------------- 
+
 map <leader>nt :NERDTree<return>
 
+"---------------------------------------------------------- 
 " FZF Settings
+"---------------------------------------------------------- 
+
 " Command key doesn't work, we are using option/alt key <command-t>
 map † :GFiles<CR>
+
+"---------------------------------------------------------- 
+" Experimental Settings
+"---------------------------------------------------------- 
 
 " Ipad Pro Settings
 " map ` <esc>
 " map! ` <esc>
 
-""""""""""""""""""""""""
-" Experimental Settings
-""""""""""""""""""""""""
-
 " Disable automatic wrapping of long lines
 set nowrap
 
 " Exit visual mode immediately 
-vmap <esc> <C-c>
+" vmap <esc> <C-c>
 
-" Enable mouse scrolling
+" Enable mouse
 set mouse=a
-
