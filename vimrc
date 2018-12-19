@@ -46,7 +46,7 @@ call vundle#end()            " required
 
 " Vundle doesn't work on fish shell
 " https://github.com/VundleVim/Vundle.vim/issues/690#issuecomment-251830036
-set shell=/bin/bash
+" set shell=/bin/bash
 
 " General Settings
 filetype on                             " Enable filetype detection
@@ -58,8 +58,8 @@ set noswapfile                          " No swap files
 set viminfo=""                          " No welcome screen
 
 " UI Settings
-colorscheme spacegray
-set background=dark
+colorscheme hemisu
+set background=light
 syntax on
 set wildmenu
 " Enable 256 color on ubuntu server
