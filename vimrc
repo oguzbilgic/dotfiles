@@ -118,7 +118,7 @@ map <right> <nop>
 "   let g:airline_symbols = {}
 " endif
 
-" let g:airline_theme='one'
+let g:airline_theme='one'
 " let g:airline_left_sep = ''
 " let g:airline_left_alt_sep = ''
 " let g:airline_right_sep = ''
