@@ -28,6 +28,7 @@ Plugin 'lifepillar/vim-wwdc17-theme'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'rhysd/vim-crystal'
 " Plugin 'jiangmiao/auto-pairs'
 
 " brew install cmake
@@ -151,10 +152,18 @@ map <leader>t :GFiles<CR>
 map ` <esc>
 map! ` <esc>
 
+""""""""""""""""""""""""
 " Experimental Settings
+""""""""""""""""""""""""
 
 " Disable automatic wrapping of long lines
 set nowrap
 
 " Exit visual mode immediately 
 vmap <esc> <C-c>
+
+" Enable mouse scrolling
+set mouse=a
+
+map <D-/> <Plug>NERDComToggleComment
+
