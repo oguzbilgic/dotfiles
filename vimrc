@@ -8,28 +8,34 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
-Plugin 'daviddavis/vim-colorpack'
-" Plugin 'junegunn/seoul256.vim'
-" Plugin 'noahfrederick/vim-hemisu'
-" Plugin 'luochen1990/rainbow'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'rakr/vim-one'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'xuyuanp/nerdtree-git-plugin'
-Plugin 'w0rp/ale'
-Plugin 'vim-scripts/gitignore'
-Plugin 'vim-scripts/playroom'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'lifepillar/vim-wwdc17-theme'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'rhysd/vim-crystal'
 " Plugin 'jiangmiao/auto-pairs'
+" Plugin 'xuyuanp/nerdtree-git-plugin'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'airblade/vim-gitgutter'
+
+" Language
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'rhysd/vim-crystal'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'vim-scripts/gitignore'
+
+" Themes
+" Plugin 'daviddavis/vim-colorpack'
+Plugin 'noahfrederick/vim-hemisu'
+Plugin 'luochen1990/rainbow'
+Plugin 'ajh17/Spacegray.vim'
+Plugin 'felixhummel/setcolors.vim'
+Plugin 'rakr/vim-one'
+Plugin 'junegunn/seoul256.vim'
+Plugin 'w0rp/ale'
+Plugin 'vim-scripts/playroom'
+Plugin 'lifepillar/vim-wwdc17-theme'
 
 " brew install cmake
 " cd ~/.vim/bundle/YouCompleteMe
@@ -52,31 +58,29 @@ set noswapfile                          " No swap files
 set viminfo=""                          " No welcome screen
 
 " UI Settings
-colorscheme one
-set background=light
+colorscheme spacegray
+set background=dark
 syntax on
 set wildmenu
 " Enable 256 color on ubuntu server
-set t_Co=256
-let g:one_allow_italics = 1
+" set t_Co=256
+" Hyper.js doesn't support italics
+" let g:one_allow_italics = 1
+" let g:spacegray_use_italics = 1
 
 " Set truecolor for 16 million colors
 " https://gist.github.com/XVilka/8346728
 " BUG: Shouldn't be set if term doesn't support
 if has('termguicolors')
-  set termguicolors
+  " set termguicolors
 endif
-
-" Fix Hyper terminal first line issue
-" https://github.com/zeit/hyper/issues/1037
-set t_RV=
 
 " GUI Settings
 if has("gui_running")
   set fuoptions=maxvert,maxhorz       " Fullscreen mode settings
   set guioptions=emgt                 " Hide toolbar and scrollbars
   set shortmess+=I                    " Disable welcome screen
-  set guifont=Monaco:h12
+  set guifont=Menlo:h14
   set mouse=""                        " Disable Mouse
   set lines=999 columns=95            " Set window size
 endif
@@ -126,12 +130,11 @@ map <right> <nop>
 " let g:airline_symbols.paste = 'ρ'
 " let g:airline_symbols.whitespace = 'Ξ'
 
+" Airline + A.L.E Integration
+" let g:airline#extensions#ale#enabled = 1
+
 "Display all the buffers
 let g:airline#extensions#tabline#enabled = 1
-
-" Airline + A.L.E Integration
-let g:airline#extensions#ale#enabled = 1
-
 " Don't show the file path in Airline's Tabline
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
@@ -142,15 +145,21 @@ let g:NERDSpaceDelims = 1
 " Align line-wise comment delimiters flush left instead of following code indentation
 let g:NERDDefaultAlign = 'left'
 
+" Use atom's mapping for comment toggles
+" Command key doesn't work, we are using option/alt key
+nmap ÷ <Plug>NERDCommenterToggle
+vmap ÷ <Plug>NERDCommenterToggle<CR>gv
+
 " NERDTree Settings
 map <leader>nt :NERDTree<return>
 
 " FZF Settings
-map <leader>t :GFiles<CR>
+" Command key doesn't work, we are using option/alt key <command-t>
+map † :GFiles<CR>
 
 " Ipad Pro Settings
-map ` <esc>
-map! ` <esc>
+" map ` <esc>
+" map! ` <esc>
 
 """"""""""""""""""""""""
 " Experimental Settings
@@ -164,6 +173,4 @@ vmap <esc> <C-c>
 
 " Enable mouse scrolling
 set mouse=a
-
-map <D-/> <Plug>NERDComToggleComment
 
