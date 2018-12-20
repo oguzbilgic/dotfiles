@@ -170,11 +170,12 @@ map † :GFiles<CR>
 
 " Highlight changed lines
 let g:gitgutter_highlight_lines = 1
-let g:gitgutter_signs = 0
-let g:gitgutter_async = 0
+" let g:gitgutter_signs = 0
 
-highlight DiffAdd guibg=#d7ffd7
-highlight DiffChange guibg=#ffffd7
+" Colorscheme overrides
+highlight DiffAdd ctermbg=194 guibg=#d7ffd7
+highlight DiffChange ctermbg=230 guibg=#ffffd7
+highlight DiffDelete ctermbg=224 guibg=#fedce0
 
 "---------------------------------------------------------- 
 " Experimental Settings
@@ -193,7 +194,5 @@ set nowrap
 " Enable mouse
 set mouse=a
 
-" Colorscheme overrides
-highlight DiffAdd guibg=#d7ffd7
-highlight DiffChange guibg=#ffffd7
+" Colorscheme change
 highlight Visual guibg=#d7ffff
