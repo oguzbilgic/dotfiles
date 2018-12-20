@@ -19,9 +19,9 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'         " Shows changed lines on the file
+Plugin 'xuyuanp/nerdtree-git-plugin'    " Shows git status in the nerd tree
+Plugin 'tpope/vim-fugitive'             " Shows git branch in airline and more...
 " Plugin 'jiangmiao/auto-pairs'
-" Plugin 'xuyuanp/nerdtree-git-plugin'
-" Plugin 'tpope/vim-fugitive'
 
 " Language
 Plugin 'pangloss/vim-javascript'
@@ -77,9 +77,9 @@ set t_Co=256                            " Enable 256 color on ubuntu server
 " https://gist.github.com/XVilka/8346728 
 " BUG: Shouldn't be set if term doesn't support 
 " BUG: Currently hyper doesn't support this?  
-" if has('termguicolors') 
-"   set termguicolors 
-" endif
+if has('termguicolors') 
+  set termguicolors 
+endif
 
 " GUI Settings 
 if has("gui_running") 
@@ -117,6 +117,9 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
+
+" Faster updatetime so that GitGutter can update instantly
+set updatetime=100
 
 "---------------------------------------------------------- 
 " Airline settings
@@ -162,6 +165,18 @@ map <leader>nt :NERDTree<return>
 map † :GFiles<CR>
 
 "---------------------------------------------------------- 
+" GitGutter
+"---------------------------------------------------------- 
+
+" Highlight changed lines
+let g:gitgutter_highlight_lines = 1
+let g:gitgutter_signs = 0
+let g:gitgutter_async = 0
+
+highlight DiffAdd guibg=#d7ffd7
+highlight DiffChange guibg=#ffffd7
+
+"---------------------------------------------------------- 
 " Experimental Settings
 "---------------------------------------------------------- 
 
@@ -177,3 +192,8 @@ set nowrap
 
 " Enable mouse
 set mouse=a
+
+" Colorscheme overrides
+highlight DiffAdd guibg=#d7ffd7
+highlight DiffChange guibg=#ffffd7
+highlight Visual guibg=#d7ffff
