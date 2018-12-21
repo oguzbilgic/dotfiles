@@ -200,6 +200,7 @@ map <ScrollWheelDown> <C-E>
 
 " Colorscheme change
 highlight Visual guibg=#d7ffff
+highlight Search guibg=#fffc38
 
 " Folding
 set foldmethod=indent                   " Fold based on indentation
