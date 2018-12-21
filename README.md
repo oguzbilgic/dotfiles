@@ -13,7 +13,11 @@ my workstation configuration
 + Google Chrome
 + Xcode Cli Tools
 + Atom Editor
-+ Hyper terminal
++ [Hyper.js](https://hyper.is)
++ [Color Picker](https://itunes.apple.com/us/app/color-picker/id641027709?l=en&mt=12)
++ [Kitematic](https://kitematic.com/)
++ [Sequel Pro](https://www.sequelpro.com/) for MySQL
++ [robo 3T](https://robomongo.org/) for MongoDB
 
 ## dot files
 
@@ -27,34 +31,9 @@ ln -s ~/.vimrc vimrc
 ln -s ~/.hyper.js hyper.js
 ```
 
-## Mac Preferences
-
-+ Set computer name
-+ Set dock
-  - Finder
-  - Google Chrome
-+ Mac Finder Preferences
-  - Sidebar shortcuts
-  - New finder window location
-+ Use _Source Code Pro_ (Powerline edition) font
-
 ## Install Packages 
 
 + homebrew
+- vim
+- irssi
 + git
-+ ruby
-+ nodejs
-
-## Contexts
-
-1. Application
-  - Chrome
-  - Terminal
-2. Application Window
-  - Chrome window
-  - Terminal Window
-3. Application Tab inside an application window
-  - Chrome tab
-  - Terminal Tab
-4. Application specific
-  - Vim inside terminal
