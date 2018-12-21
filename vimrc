@@ -21,6 +21,7 @@ Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'         " Shows changed lines on the file
 Plugin 'xuyuanp/nerdtree-git-plugin'    " Shows git status in the nerd tree
 Plugin 'tpope/vim-fugitive'             " Shows git branch in airline and more...
+Plugin 'Kazark/vim-SimpleSmoothScroll'  " Slow down scroll speed
 " Plugin 'jiangmiao/auto-pairs'
 
 " Language
@@ -193,6 +194,8 @@ set nowrap
 
 " Enable mouse
 set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
 
 " Colorscheme change
 highlight Visual guibg=#d7ffff
