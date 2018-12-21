@@ -27,7 +27,7 @@ module.exports = {
     letterSpacing: 0,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(248,28,229,0.8)',
+    cursorColor: 'rgba(248,28,229,0.5)',
 
     // terminal text color under BLOCK cursor
     cursorAccentColor: '#000',
@@ -36,14 +36,14 @@ module.exports = {
     cursorShape: 'BLOCK',
 
     // set to `true` (without backticks and without quotes) for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
 
     // color of the text
-    // foregroundColor: '#b3b8c4',
+    foregroundColor: '#b3b8c4',
 
     // terminal background color
     // opacity is only supported on macOS
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
 
     // terminal selection color
     selectionColor: 'rgba(248,28,229,0.3)',
@@ -72,7 +72,7 @@ module.exports = {
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
-    xxxxcolors: {
+    colors: {
       black: '#000000',
       red: '#C51E14',
       green: '#1DC121',
@@ -139,7 +139,7 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     "hyper-hide-title",
-    // "hyper-one-light"
+    "hyper-one-light"
   ],
 
   // in development, you can create a directory under
@@ -150,7 +150,7 @@ module.exports = {
 
   keymaps: {
     // Example
-    "tab:new": "command+n",
+    // tab:new": "command+n",
     // 'window:devtools': 'cmd+alt+o',
   },
 };
