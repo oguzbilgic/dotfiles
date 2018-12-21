@@ -199,3 +199,11 @@ map <ScrollWheelDown> <C-E>
 
 " Colorscheme change
 highlight Visual guibg=#d7ffff
+
+" Folding
+set foldmethod=indent                   " Fold based on indentation
+set foldlevel=0                         " Fold starting from the first indentation
+set foldclose=all                       " Close folds if you leave them in any way
+set foldopen=all                        " Open folds if you touch them in any way
+set foldnestmax=5                       " Fold only maximum of 5 levels of indenation
+set fillchars=fold:\ 
