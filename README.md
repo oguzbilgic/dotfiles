@@ -34,6 +34,6 @@ ln -s ~/.hyper.js hyper.js
 ## Install Packages 
 
 + homebrew
-- vim
-- irssi
++ vim
++ irssi
 + git
