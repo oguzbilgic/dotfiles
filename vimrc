@@ -25,11 +25,12 @@ Plugin 'Kazark/vim-SimpleSmoothScroll'  " Slow down scroll speed
 " Plugin 'jiangmiao/auto-pairs'
 
 " Language
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
 Plugin 'rhysd/vim-crystal'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/gitignore'
+" Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+" Plugin 'leafgarland/typescript-vim'
 
 " Themes
 " Plugin 'daviddavis/vim-colorpack'
@@ -44,7 +45,7 @@ Plugin 'lifepillar/vim-wwdc17-theme'
 
 " brew install cmake
 " cd ~/.vim/bundle/YouCompleteMe
-" ./install.py --clang-completer
+" ./install.py --js-completer
 Plugin 'Valloric/YouCompleteMe'
 
 " End Vundle plugin list
