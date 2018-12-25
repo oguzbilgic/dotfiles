@@ -1,4 +1,7 @@
 # 1 - About The Manuals
+- Jumping around
+  * CTRL-]
+  * CTRL-O
 
 # 2 - The First Steps in Vim
 - Inserting text 
@@ -41,16 +44,21 @@
 
 # 4 - Making Small Changes
 - Operators
-  * d, c, x
+  * d, c
 - Repeating
   * .
 - Visual Mode
+  * v, V, CTRL-V
   * o, O
-- Copying  
-  * y, p
+- Copying & Moving
+  * y, yy, dd
+  * p, P
+- Replace
+  * R
 - Text objects
   * a{w,s,p}, i{w,s,p}
-  * i, I, a, A
+- Other ways
+  * I, A, ~
 
 # 5 - Set Your Settings
 - Vimrc
