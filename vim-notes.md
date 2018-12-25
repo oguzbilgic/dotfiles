@@ -1,6 +1,15 @@
 # 1 - About The Manuals
 
 # 2 - The First Steps in Vim
+- Inserting text 
+  * i, a, o
+- Moving
+  * h, j, k, l
+- Deleting
+  * x, d, J
+- Undo
+  * u, CTRL-R
+- Finding help
 
 # 3 - Moving Around
 - Horiz. movement
@@ -32,7 +41,7 @@
 
 # 4 - Making Small Changes
 - Operators
-  * d, c, x, r
+  * d, c, x
 - Repeating
   * .
 - Visual Mode
@@ -41,6 +50,7 @@
   * y, p
 - Text objects
   * a{w,s,p}, i{w,s,p}
+  * i, I, a, A
 
 # 5 - Set Your Settings
 - Vimrc
