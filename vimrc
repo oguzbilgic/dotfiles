@@ -157,7 +157,9 @@ vmap ÷ <Plug>NERDCommenterToggle<CR>gv
 " NERDTree Settings
 "---------------------------------------------------------- 
 
-map <leader>nt :NERDTree<return>
+let NERDTreeMinimalUI=1
+
+map <leader>nt :NERDTree<CR>
 
 "---------------------------------------------------------- 
 " FZF Settings
