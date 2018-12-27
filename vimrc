@@ -168,6 +168,10 @@ map <leader>nt :NERDTree<CR>
 " Command key doesn't work, we are using option/alt key <command-t>
 map † :GFiles<CR>
 
+map ˙ :Helptags<CR>
+
+map ç :Commands<CR>
+
 "---------------------------------------------------------- 
 " GitGutter
 "---------------------------------------------------------- 
