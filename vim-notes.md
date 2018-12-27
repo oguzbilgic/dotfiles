@@ -92,3 +92,7 @@
 - Clipboard
 
 # 10 - Making Big Changes
+
+# 11 - Recovering from a crash
+
+# 12 - Clever Tricks
