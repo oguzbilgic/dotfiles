@@ -42,6 +42,9 @@ Plugin 'rakr/vim-one'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'vim-scripts/playroom'
 Plugin 'lifepillar/vim-wwdc17-theme'
+Plugin 'oguzbilgic/sexy-railscasts-theme'
+Plugin 'cormacrelf/vim-colors-github'
+Plugin 'cocopon/iceberg.vim'
 
 " brew install cmake
 " cd ~/.vim/bundle/YouCompleteMe
