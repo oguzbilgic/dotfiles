@@ -49,7 +49,7 @@ Plugin 'cocopon/iceberg.vim'
 " brew install cmake
 " cd ~/.vim/bundle/YouCompleteMe
 " ./install.py --js-completer
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " End Vundle plugin list
 call vundle#end()
