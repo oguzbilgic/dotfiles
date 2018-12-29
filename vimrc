@@ -23,13 +23,14 @@ Plugin 'xuyuanp/nerdtree-git-plugin'    " Shows git status in the nerd tree
 Plugin 'tpope/vim-fugitive'             " Shows git branch in airline and more...
 Plugin 'Kazark/vim-SimpleSmoothScroll'  " Slow down scroll speed
 " Plugin 'jiangmiao/auto-pairs'
+Plugin 'vim-scripts/gitignore'          " Use gitignore for wildignore option
+Plugin 'bhurlow/vim-parinfer'
 
 " Language
 Plugin 'rhysd/vim-crystal'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'vim-scripts/gitignore'
+" Plugin 'vim-ruby/vim-ruby'
 " Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript'
+" Plugin 'pangloss/vim-javascript'
 " Plugin 'leafgarland/typescript-vim'
 
 " Themes
@@ -62,46 +63,12 @@ call vundle#end()
 filetype on                             " Enable filetype detection
 filetype plugin indent on               " Enable Automatic Indentation
 set hidden                              " Enable changed hidden buffers
+" set viminfo=""                          " No welcome screen
+
+" Backup settings
 set nobackup                            " Disable backup files
 set nowritebackup                       " No backup files
 set noswapfile                          " No swap files
-set viminfo=""                          " No welcome screen
-
-" UI Settings
-colorscheme hemisu
-set background=light
-syntax on
-set wildmenu
-set t_Co=256                            " Enable 256 color on ubuntu server 
-
-" Hyper.js doesn't support italics 
-" let g:one_allow_italics = 1 
-" let g:spacegray_use_italics = 1 
-
-" Set truecolor for 16 million colors 
-" https://gist.github.com/XVilka/8346728 
-" BUG: Shouldn't be set if term doesn't support 
-" BUG: Currently hyper doesn't support this?  
-if has('termguicolors') 
-  set termguicolors 
-endif
-
-" GUI Settings 
-if has("gui_running") 
-  set fuoptions=maxvert,maxhorz         " Fullscreen mode settings 
-  set guioptions=emgt                   " Hide toolbar and scrollbars 
-  set shortmess+=I                      " Disable welcome screen 
-  set guifont=Roboto\ Mono:h14 
-  set mouse=""                          " Disable Mouse 
-  set lines=999 columns=95              " Set window size 
-endif 
-
-" Status Line Settings 
-set laststatus=2 " Window Settings 
-set number                              " Show line numbers 
-set splitright                          " Vertical split to right side 
-set scroll=5                            " Scroll 5 lines at a time 
-set fillchars+=vert:\                   " Don't use window divider character 
 
 " Search Settings
 set ignorecase                          " Disable search case sensitivity
@@ -117,6 +84,57 @@ set autoindent
 set expandtab
 set smarttab
 
+" Folding
+" set foldmethod=indent                   " Fold based on indentation
+" set foldlevel=3                         " Fold all starting from the first
+" set foldclose=all                       " Close folds if you leave them in any way
+" set foldopen=all                        " Open folds if you touch them in any way
+" set foldnestmax=5                       " Fold only maximum of 5 levels of indenation
+set fillchars+=fold:\                   " Don't use fold divider character
+
+"---------------------------------------------------------- 
+" UI Settings
+"---------------------------------------------------------- 
+
+" Color Settings
+colorscheme github
+set background=light
+syntax on
+set t_Co=256                            " Enable 256 color on ubuntu server 
+
+" UI Settings
+set mouse=a                             " Enable mouse
+set showcmd                             " Show current command bottom right
+set wildmenu                            " Show command line suggestions
+set number                              " Show line numbers 
+set nowrap                              " Disable  wrapping of long lines
+
+" Window Settings 
+set laststatus=2                        " Always show window status line
+set splitright                          " Vertical split to right side 
+set fillchars+=vert:\                   " Don't use window divider character 
+
+" Hyper.js doesn't support italics 
+let g:one_allow_italics = 1 
+let g:spacegray_use_italics = 1 
+
+" Set truecolor for 16 million colors 
+" https://gist.github.com/XVilka/8346728 
+" BUG: Shouldn't be set if term doesn't support 
+" BUG: Currently hyper doesn't support this?  
+if has('termguicolors') 
+  set termguicolors 
+endif
+
+" GUI Settings 
+if has("gui_running") 
+  set fuoptions=maxvert,maxhorz         " Fullscreen mode settings 
+  " set guioptions=emgt                   " Hide toolbar and scrollbars 
+  set shortmess+=I                      " Disable welcome screen 
+  set guifont=Roboto\ Mono:h14 
+  set lines=999 columns=95              " Set window size 
+endif 
+
 " Disable Arrow Keys
 map <up> <nop>
 map <down> <nop>
@@ -130,13 +148,14 @@ set updatetime=100
 " Airline settings
 "---------------------------------------------------------- 
 
-let g:airline_theme='one'
+" let w:airline_disabled = 1
+let g:airline_theme='github'
 
 " Airline + A.L.E Integration
 " let g:airline#extensions#ale#enabled = 1                 
 
 " Display all the buffers
-let g:airline#extensions#tabline#enabled = 1               
+" let g:airline#extensions#tabline#enabled = 1               
 
 " Don't show the file path in Airline's Tabline
 let g:airline#extensions#tabline#formatter = 'unique_tail' 
@@ -162,7 +181,7 @@ vmap ÷ <Plug>NERDCommenterToggle<CR>gv
 
 let NERDTreeMinimalUI=1
 
-map <leader>nt :NERDTree<CR>
+map <leader>nt :NERDTreeFind<CR>
 
 "---------------------------------------------------------- 
 " FZF Settings
@@ -179,42 +198,35 @@ map ç :Commands<CR>
 " GitGutter
 "---------------------------------------------------------- 
 
-" Highlight changed lines
-let g:gitgutter_highlight_lines = 1
-" let g:gitgutter_signs = 0
-
 " Colorscheme overrides
-highlight DiffAdd ctermbg=194 guibg=#d7ffd7
-highlight DiffChange ctermbg=230 guibg=#ffffd7
-highlight DiffDelete ctermbg=224 guibg=#fedce0
+if &background ==# "light"
+  let g:gitgutter_signs = 0
+  let g:gitgutter_highlight_lines = 1
+
+  " highlight DiffAdd    ctermbg=194 guibg=#d7ffd7
+  " highlight DiffChange ctermbg=230 guibg=#ffffd7
+  " highlight DiffDelete ctermbg=224 guibg=#fedce0
+endif
+
+set fillchars+=diff:\ 
 
 "---------------------------------------------------------- 
 " Experimental Settings
 "---------------------------------------------------------- 
 
-" Ipad Pro Settings
-" map ` <esc>
-" map! ` <esc>
-
-" Disable automatic wrapping of long lines
-set nowrap
+" Ipad Settings
+" map! ` <ESC>
+" vmap! ` <ESC>
 
 " Exit visual mode immediately 
 " vmap <esc> <C-c>
 
-" Enable mouse
-set mouse=a
+" Smooth scroll with mouse
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
 " Colorscheme change
-highlight Visual guibg=#d7ffff
-highlight Search guibg=#fffc38
-
-" Folding
-set foldmethod=indent                   " Fold based on indentation
-set foldlevel=0                         " Fold starting from the first indentation
-set foldclose=all                       " Close folds if you leave them in any way
-set foldopen=all                        " Open folds if you touch them in any way
-set foldnestmax=5                       " Fold only maximum of 5 levels of indenation
-set fillchars=fold:\ 
+if &background ==# "light"
+  highlight Visual guibg=#d7ffff
+  highlight Search guibg=#fffc38
+endif
