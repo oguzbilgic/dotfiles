@@ -22,9 +22,10 @@ Plugin 'airblade/vim-gitgutter'         " Shows changed lines on the file
 Plugin 'xuyuanp/nerdtree-git-plugin'    " Shows git status in the nerd tree
 Plugin 'tpope/vim-fugitive'             " Shows git branch in airline and more...
 Plugin 'Kazark/vim-SimpleSmoothScroll'  " Slow down scroll speed
-" Plugin 'jiangmiao/auto-pairs'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-scripts/gitignore'          " Use gitignore for wildignore option
 Plugin 'bhurlow/vim-parinfer'
+Plugin 'tpope/vim-endwise'
 
 " Language
 Plugin 'rhysd/vim-crystal'
@@ -34,11 +35,10 @@ Plugin 'rhysd/vim-crystal'
 " Plugin 'leafgarland/typescript-vim'
 
 " Themes
+Plugin 'felixhummel/setcolors.vim'
 " Plugin 'daviddavis/vim-colorpack'
 Plugin 'noahfrederick/vim-hemisu'
-Plugin 'luochen1990/rainbow'
 Plugin 'ajh17/Spacegray.vim'
-Plugin 'felixhummel/setcolors.vim'
 Plugin 'rakr/vim-one'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'vim-scripts/playroom'
@@ -46,6 +46,7 @@ Plugin 'lifepillar/vim-wwdc17-theme'
 Plugin 'oguzbilgic/sexy-railscasts-theme'
 Plugin 'cormacrelf/vim-colors-github'
 Plugin 'cocopon/iceberg.vim'
+Plugin 'tomasr/molokai'
 
 " brew install cmake
 " cd ~/.vim/bundle/YouCompleteMe
