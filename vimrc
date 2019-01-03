@@ -73,6 +73,7 @@ set noswapfile                          " No swap files
 
 " Search Settings
 set ignorecase                          " Disable search case sensitivity
+" set smartcase                         
 set incsearch                           " Enable instant search
 set hlsearch                            " Highlight search term
 
@@ -86,11 +87,11 @@ set expandtab
 set smarttab
 
 " Folding
-" set foldmethod=indent                   " Fold based on indentation
-" set foldlevel=3                         " Fold all starting from the first
-" set foldclose=all                       " Close folds if you leave them in any way
-" set foldopen=all                        " Open folds if you touch them in any way
-" set foldnestmax=5                       " Fold only maximum of 5 levels of indenation
+set foldmethod=indent                   " Fold based on indentation
+set foldlevel=9                         " Fold all starting from the first
+set foldclose=all                       " Close folds if you leave them in any way
+set foldopen=all                        " Open folds if you touch them in any way
+set foldnestmax=5                       " Fold only maximum of 5 levels of indenation
 set fillchars+=fold:\                   " Don't use fold divider character
 
 "---------------------------------------------------------- 
