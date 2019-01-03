@@ -133,7 +133,8 @@ if has("gui_running")
   set fuoptions=maxvert,maxhorz         " Fullscreen mode settings 
   " set guioptions=emgt                   " Hide toolbar and scrollbars 
   set shortmess+=I                      " Disable welcome screen 
-  set guifont=Roboto\ Mono:h14 
+  set guifont=SF\ Mono\ Regular:h12
+  set linespace=7                       " Increase line height
   set lines=999 columns=95              " Set window size 
 endif 
 

@@ -7,6 +7,8 @@ my workstation configuration
 - Robot Mono
 - Fira Code
 - Source Code Pro
+- Office Code Pro (12pt, 125% vertical spacing)
+- SF Mono (12pt, 130% vertial spacing)
 
 ## Mac Apps
 
