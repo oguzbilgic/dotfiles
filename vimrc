@@ -64,8 +64,10 @@ call vundle#end()
 " General Settings
 filetype on                             " Enable filetype detection
 filetype plugin indent on               " Enable Automatic Indentation
-set hidden                              " Enable changed hidden buffers
-" set viminfo=""                          " No welcome screen
+set hidden                              " Enable unsaved buffers to be hidden
+
+" Insert settings
+set backspace=indent,eol,start          " Enable backspace for deleting after insert
 
 " Backup settings
 set nobackup                            " Disable backup files
