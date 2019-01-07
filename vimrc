@@ -111,6 +111,7 @@ set showcmd                             " Show current command bottom right
 set wildmenu                            " Show command line suggestions
 set number                              " Show line numbers 
 set nowrap                              " Disable  wrapping of long lines
+set shortmess+=I                      " Disable welcome screen 
 
 " Window Settings 
 set laststatus=2                        " Always show window status line
@@ -133,7 +134,6 @@ endif
 if has("gui_running") 
   set fuoptions=maxvert,maxhorz         " Fullscreen mode settings 
   " set guioptions=emgt                   " Hide toolbar and scrollbars 
-  set shortmess+=I                      " Disable welcome screen 
   set guifont=SF\ Mono\ Regular:h12
   set linespace=7                       " Increase line height
   set lines=999 columns=95              " Set window size 
