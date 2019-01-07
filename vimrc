@@ -29,6 +29,7 @@ Plugin 'tpope/vim-endwise'
 
 " Language
 Plugin 'rhysd/vim-crystal'
+Plugin 'udalov/kotlin-vim'
 " Plugin 'vim-ruby/vim-ruby'
 " Plugin 'mxw/vim-jsx'
 " Plugin 'pangloss/vim-javascript'
