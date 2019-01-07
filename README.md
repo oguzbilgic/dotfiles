@@ -8,7 +8,8 @@ my workstation configuration
 - Fira Code
 - Source Code Pro
 - Office Code Pro (12pt, 125% vertical spacing)
-- SF Mono (12pt, 130% vertial spacing)
+- SF Mono (12pt, 130% vertical spacing)
+  * Can be found in `/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/`
 
 ## Mac Apps
 
@@ -16,6 +17,7 @@ my workstation configuration
 + Xcode Cli Tools
 + Atom Editor
 + [Hyper.js](https://hyper.is)
++ [iTerm2](https://www.iterm2.com/)
 + [Color Picker](https://itunes.apple.com/us/app/color-picker/id641027709?l=en&mt=12)
 + [Kitematic](https://kitematic.com/)
 + [Sequel Pro](https://www.sequelpro.com/) for MySQL
