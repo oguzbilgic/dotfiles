@@ -16,27 +16,27 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
-Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'w0rp/ale'
-Plugin 'airblade/vim-gitgutter'         " Shows changed lines on the file
-Plugin 'xuyuanp/nerdtree-git-plugin'    " Shows git status in the nerd tree
-Plugin 'tpope/vim-fugitive'             " Shows git branch in airline and more...
-Plugin 'Kazark/vim-SimpleSmoothScroll'  " Slow down scroll speed
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'vim-scripts/gitignore'          " Use gitignore for wildignore option
-Plugin 'bhurlow/vim-parinfer'
-Plugin 'tpope/vim-endwise'
+Plugin 'michaeljsmith/vim-indent-object' " Adds i text-object for indentation
+Plugin 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
+Plugin 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
+Plugin 'tpope/vim-fugitive'              " Shows git branch in airline and more...
+Plugin 'Kazark/vim-SimpleSmoothScroll'   " Slows down scroll speed
+Plugin 'vim-scripts/gitignore'           " Makes vim use gitignore for wildignore option
+Plugin 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
+Plugin 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars
+Plugin 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal etc..
 
 " Language
-Plugin 'rhysd/vim-crystal'
-Plugin 'udalov/kotlin-vim'
+Plugin 'rhysd/vim-crystal'               " Adds .cr file type support
+Plugin 'udalov/kotlin-vim'               " Adds .kt file type support
+Plugin 'pangloss/vim-javascript'         " Improved .js support
 " Plugin 'vim-ruby/vim-ruby'
 " Plugin 'mxw/vim-jsx'
-" Plugin 'pangloss/vim-javascript'
 " Plugin 'leafgarland/typescript-vim'
 
 " Themes
-Plugin 'felixhummel/setcolors.vim'
+Plugin 'felixhummel/setcolors.vim'       " :SetColors all then F8 to switch colorschemes
 " Plugin 'daviddavis/vim-colorpack'
 Plugin 'noahfrederick/vim-hemisu'
 Plugin 'ajh17/Spacegray.vim'
