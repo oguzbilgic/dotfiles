@@ -105,9 +105,14 @@ set fillchars+=diff:\                   " Don't fill deleted diff lines
 " UI Settings
 "----------------------------------------------------------
 
+" Colorscheme
+if &background == 'dark'
+  colorscheme spacegray
+else
+  colorscheme one
+endif
+
 " Color Settings
-colorscheme one
-set background=light
 syntax on
 set t_Co=256                            " Enable 256 color
 
@@ -159,9 +164,7 @@ set updatetime=100
 "----------------------------------------------------------
 
 " let w:airline_disabled = 1
-if g:colors_name == 'one'
-  let g:airline_theme='one'
-end
+let g:airline_theme='one'
 
 " Airline + A.L.E Integration
 " let g:airline#extensions#ale#enabled = 1
@@ -233,6 +236,7 @@ map <ScrollWheelDown> <C-E>
 "----------------------------------------------------------
 " Experimental Highlight Overwrites
 "----------------------------------------------------------
+highlight Comment cterm=italic gui=italic
 
 if &background == "light"
   highlight clear Visual
@@ -240,7 +244,6 @@ if &background == "light"
   highlight clear IncSearch
   highlight Visual guibg=#d7ffff
   highlight Search guibg=#fffc38 cterm=italic gui=italic
-  highlight Comment cterm=italic gui=italic
 
   highlight clear DiffAdd
   highlight clear DiffChange
