@@ -65,6 +65,7 @@ call vundle#end()
 filetype on                             " Enable filetype detection
 filetype plugin indent on               " Enable Automatic Indentation
 set hidden                              " Enable unsaved buffers to be hidden
+set clipboard=unnamed                   " Use system clipboard for copy/paste
 
 " Insert settings
 set backspace=indent,eol,start          " Enable backspace for deleting after insert
@@ -97,15 +98,18 @@ set foldopen=all                        " Open folds if you touch them in any wa
 set foldnestmax=5                       " Fold only maximum of 5 levels of indenation
 set fillchars+=fold:\                   " Don't use fold divider character
 
+" Diff
+set fillchars+=diff:\ 
+
 "---------------------------------------------------------- 
 " UI Settings
 "---------------------------------------------------------- 
 
 " Color Settings
-colorscheme github
+colorscheme one
 set background=light
 syntax on
-set t_Co=256                            " Enable 256 color on ubuntu server 
+set t_Co=256                            " Enable 256 color
 
 " UI Settings
 set mouse=a                             " Enable mouse
@@ -113,7 +117,7 @@ set showcmd                             " Show current command bottom right
 set wildmenu                            " Show command line suggestions
 set number                              " Show line numbers 
 set nowrap                              " Disable  wrapping of long lines
-set shortmess+=I                      " Disable welcome screen 
+set shortmess+=I                        " Hide :intro message
 
 " Window Settings 
 set laststatus=2                        " Always show window status line
