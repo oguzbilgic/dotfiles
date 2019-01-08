@@ -159,7 +159,9 @@ set updatetime=100
 "----------------------------------------------------------
 
 " let w:airline_disabled = 1
-let g:airline_theme='one'
+if g:colors_name == 'one'
+  let g:airline_theme='one'
+end
 
 " Airline + A.L.E Integration
 " let g:airline#extensions#ale#enabled = 1
@@ -223,6 +225,7 @@ endif
 
 " Exit visual mode immediately
 " vmap <esc> <C-c>
+
 " Smooth scroll with mouse
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
@@ -246,6 +249,12 @@ if &background == "light"
   highlight DiffChange ctermbg=230 guibg=#ffffd7
   highlight DiffDelete ctermbg=224 guibg=#feeef0
 endif
+
+if g:colors_name == 'spacegray'
+  highlight! link VertSplit StatusLineNC
+  highlight! link TabLineFill StatusLineNC
+  highlight! link TabLineSel StatusLine
+end
 
 if g:colors_name == 'one'
   highlight! link VertSplit StatusLine
