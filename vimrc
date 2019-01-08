@@ -1,6 +1,6 @@
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 " Vundle Plugins
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 
 " Initialize vundle
 set nocompatible
@@ -57,9 +57,9 @@ Plugin 'tomasr/molokai'
 " End Vundle plugin list
 call vundle#end()
 
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 " Vim Settings
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 
 " General Settings
 filetype on                             " Enable filetype detection
@@ -77,7 +77,7 @@ set noswapfile                          " No swap files
 
 " Search Settings
 set ignorecase                          " Disable search case sensitivity
-" set smartcase                         
+" set smartcase
 set incsearch                           " Enable instant search
 set hlsearch                            " Highlight search term
 
@@ -99,11 +99,11 @@ set foldnestmax=5                       " Fold only maximum of 5 levels of inden
 set fillchars+=fold:\                   " Don't use fold divider character
 
 " Diff
-set fillchars+=diff:\ 
+set fillchars+=diff:\                   " Don't fill deleted diff lines
 
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 " UI Settings
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 
 " Color Settings
 colorscheme one
@@ -115,35 +115,35 @@ set t_Co=256                            " Enable 256 color
 set mouse=a                             " Enable mouse
 set showcmd                             " Show current command bottom right
 set wildmenu                            " Show command line suggestions
-set number                              " Show line numbers 
+set number                              " Show line numbers
 set nowrap                              " Disable  wrapping of long lines
 set shortmess+=I                        " Hide :intro message
 
-" Window Settings 
+" Window Settings
 set laststatus=2                        " Always show window status line
-set splitright                          " Vertical split to right side 
-set fillchars+=vert:\                   " Don't use window divider character 
+set splitright                          " Vertical split to right side
+set fillchars+=vert:\                   " Don't use window divider character
 
-" Hyper.js doesn't support italics 
-let g:one_allow_italics = 1 
-let g:spacegray_use_italics = 1 
+" Hyper.js doesn't support italics
+let g:one_allow_italics = 1
+let g:spacegray_use_italics = 1
 
-" Set truecolor for 16 million colors 
-" https://gist.github.com/XVilka/8346728 
-" BUG: Shouldn't be set if term doesn't support 
-" BUG: Currently hyper doesn't support this?  
-if has('termguicolors') 
-  set termguicolors 
+" Set truecolor for 16 million colors
+" https://gist.github.com/XVilka/8346728
+" BUG: Shouldn't be set if term doesn't support
+" BUG: Currently hyper doesn't support this?
+if has('termguicolors')
+  set termguicolors
 endif
 
-" GUI Settings 
-if has("gui_running") 
-  set fuoptions=maxvert,maxhorz         " Fullscreen mode settings 
-  " set guioptions=emgt                   " Hide toolbar and scrollbars 
+" GUI Settings
+if has("gui_running")
+  set fuoptions=maxvert,maxhorz         " Fullscreen mode settings
+  " set guioptions=emgt                   " Hide toolbar and scrollbars
   set guifont=SF\ Mono\ Regular:h12
   set linespace=7                       " Increase line height
-  set lines=999 columns=95              " Set window size 
-endif 
+  set lines=999 columns=95              " Set window size
+endif
 
 " Disable Arrow Keys
 map <up> <nop>
@@ -154,48 +154,48 @@ map <right> <nop>
 " Faster updatetime so that GitGutter can update instantly
 set updatetime=100
 
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 " Airline settings
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 
 " let w:airline_disabled = 1
 let g:airline_theme='one'
 
 " Airline + A.L.E Integration
-" let g:airline#extensions#ale#enabled = 1                 
+" let g:airline#extensions#ale#enabled = 1
 
 " Display all the buffers
-" let g:airline#extensions#tabline#enabled = 1               
+" let g:airline#extensions#tabline#enabled = 1
 
 " Don't show the file path in Airline's Tabline
-let g:airline#extensions#tabline#formatter = 'unique_tail' 
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 " NERD Commenter Settings
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 
 " Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1        
+let g:NERDSpaceDelims = 1
 
 " Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'left'  
+let g:NERDDefaultAlign = 'left'
 
 " Use atom's mapping for comment toggles
 " Command key doesn't work, we are using option/alt key
 nmap ÷ <Plug>NERDCommenterToggle
 vmap ÷ <Plug>NERDCommenterToggle<CR>gv
 
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 " NERDTree Settings
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 
 let NERDTreeMinimalUI=1
 
 map <leader>nt :NERDTreeFind<CR>
 
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 " FZF Settings
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 
 " Command key doesn't work, we are using option/alt key <command-t>
 map † :GFiles<CR>
@@ -204,31 +204,33 @@ map ˙ :Helptags<CR>
 
 map ç :Commands<CR>
 
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 " GitGutter
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 
 if &background == "light"
   let g:gitgutter_signs = 0
   let g:gitgutter_highlight_lines = 1
 endif
 
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 " Experimental Settings
-"---------------------------------------------------------- 
+"----------------------------------------------------------
 
 " Ipad Settings
 " map! ` <ESC>
 " vmap! ` <ESC>
 
-" Exit visual mode immediately 
+" Exit visual mode immediately
 " vmap <esc> <C-c>
-
 " Smooth scroll with mouse
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
-" Colorscheme change
+"----------------------------------------------------------
+" Experimental Highlight Overwrites
+"----------------------------------------------------------
+
 if &background == "light"
   highlight clear Visual
   highlight clear Search
@@ -240,7 +242,11 @@ if &background == "light"
   highlight clear DiffAdd
   highlight clear DiffChange
   highlight clear DiffDelete
-  highlight DiffAdd    ctermbg=194 guibg=#d7ffd7
+  highlight DiffAdd    ctermbg=194 guibg=#e7feed
   highlight DiffChange ctermbg=230 guibg=#ffffd7
-  highlight DiffDelete ctermbg=224 guibg=#fedce0
+  highlight DiffDelete ctermbg=224 guibg=#feeef0
 endif
+
+if g:colors_name == 'one'
+  highlight! link VertSplit StatusLine
+end
