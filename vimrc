@@ -159,7 +159,7 @@ set updatetime=100
 "---------------------------------------------------------- 
 
 " let w:airline_disabled = 1
-let g:airline_theme='github'
+let g:airline_theme='one'
 
 " Airline + A.L.E Integration
 " let g:airline#extensions#ale#enabled = 1                 
@@ -208,17 +208,10 @@ map ç :Commands<CR>
 " GitGutter
 "---------------------------------------------------------- 
 
-" Colorscheme overrides
-if &background ==# "light"
+if &background == "light"
   let g:gitgutter_signs = 0
   let g:gitgutter_highlight_lines = 1
-
-  " highlight DiffAdd    ctermbg=194 guibg=#d7ffd7
-  " highlight DiffChange ctermbg=230 guibg=#ffffd7
-  " highlight DiffDelete ctermbg=224 guibg=#fedce0
 endif
-
-set fillchars+=diff:\ 
 
 "---------------------------------------------------------- 
 " Experimental Settings
@@ -236,7 +229,18 @@ map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
 " Colorscheme change
-if &background ==# "light"
+if &background == "light"
+  highlight clear Visual
+  highlight clear Search
+  highlight clear IncSearch
   highlight Visual guibg=#d7ffff
-  highlight Search guibg=#fffc38
+  highlight Search guibg=#fffc38 cterm=italic gui=italic
+  highlight Comment cterm=italic gui=italic
+
+  highlight clear DiffAdd
+  highlight clear DiffChange
+  highlight clear DiffDelete
+  highlight DiffAdd    ctermbg=194 guibg=#d7ffd7
+  highlight DiffChange ctermbg=230 guibg=#ffffd7
+  highlight DiffDelete ctermbg=224 guibg=#fedce0
 endif
