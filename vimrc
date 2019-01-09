@@ -222,7 +222,14 @@ if &background == "light"
 endif
 
 "----------------------------------------------------------
-" Experimental Settings
+" SimpleSmoothScroll Settings
+"----------------------------------------------------------
+
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+
+"----------------------------------------------------------
+" Experimental Mappings
 "----------------------------------------------------------
 
 " Ipad Settings
@@ -232,9 +239,6 @@ endif
 " Exit visual mode immediately
 " vmap <esc> <C-c>
 
-" Smooth scroll with mouse
-map <ScrollWheelUp> <C-Y>
-map <ScrollWheelDown> <C-E>
 
 "----------------------------------------------------------
 " Experimental Highlight Overwrites
