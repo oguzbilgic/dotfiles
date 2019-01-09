@@ -27,7 +27,7 @@ Plugin 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
 Plugin 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars
 Plugin 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal etc..
 
-" Language
+" Filetype
 Plugin 'rhysd/vim-crystal'               " Adds .cr file type support
 Plugin 'udalov/kotlin-vim'               " Adds .kt file type support
 Plugin 'pangloss/vim-javascript'         " Improved .js support
@@ -35,7 +35,7 @@ Plugin 'pangloss/vim-javascript'         " Improved .js support
 " Plugin 'mxw/vim-jsx'
 " Plugin 'leafgarland/typescript-vim'
 
-" Themes
+" Colorschemes
 Plugin 'felixhummel/setcolors.vim'       " :SetColors all then F8 to switch colorschemes
 " Plugin 'daviddavis/vim-colorpack'
 Plugin 'noahfrederick/vim-hemisu'
@@ -108,8 +108,10 @@ set fillchars+=diff:\                   " Don't fill deleted diff lines
 
 " Colorscheme
 if &background == 'dark'
+  let g:spacegray_use_italics = 1
   colorscheme spacegray
 else
+  let g:one_allow_italics = 1
   colorscheme one
 endif
 
@@ -129,10 +131,6 @@ set shortmess+=I                        " Hide :intro message
 set laststatus=2                        " Always show window status line
 set splitright                          " Vertical split to right side
 set fillchars+=vert:\                   " Don't use window divider character
-
-" Hyper.js doesn't support italics
-let g:one_allow_italics = 1
-let g:spacegray_use_italics = 1
 
 " Set truecolor for 16 million colors
 " https://gist.github.com/XVilka/8346728
@@ -214,6 +212,7 @@ map ç :Commands<CR>
 " GitGutter
 "----------------------------------------------------------
 
+" Use line highlighting instead of signs if light background
 if &background == "light"
   let g:gitgutter_signs = 0
   let g:gitgutter_highlight_lines = 1
@@ -237,7 +236,6 @@ map <ScrollWheelDown> <C-E>
 "----------------------------------------------------------
 " Experimental Highlight Overwrites
 "----------------------------------------------------------
-highlight Comment cterm=italic gui=italic
 
 if &background == "light"
   highlight clear Visual
