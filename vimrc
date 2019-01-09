@@ -48,6 +48,7 @@ Plugin 'oguzbilgic/sexy-railscasts-theme'
 Plugin 'cormacrelf/vim-colors-github'
 Plugin 'cocopon/iceberg.vim'
 Plugin 'tomasr/molokai'
+Plugin 'morhetz/gruvbox'
 
 " brew install cmake
 " cd ~/.vim/bundle/YouCompleteMe
