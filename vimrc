@@ -266,5 +266,7 @@ if g:colors_name == 'spacegray'
 end
 
 if g:colors_name == 'one'
+  " Remove underline
+  highlight TabLine cterm=NONE gui=NONE
   highlight! link VertSplit StatusLine
 end
