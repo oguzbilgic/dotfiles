@@ -266,6 +266,9 @@ if g:colors_name == 'spacegray'
 end
 
 if g:colors_name == 'one'
+  highlight clear Folded
+  highlight Folded guibg=#e8f1fb guifg=#868c90 cterm=italic
+
   " Remove underline
   highlight TabLine cterm=NONE gui=NONE
   highlight! link VertSplit StatusLine
