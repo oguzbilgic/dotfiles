@@ -16,7 +16,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
-Plugin 'w0rp/ale'
 Plugin 'michaeljsmith/vim-indent-object' " Adds i text-object for indentation
 Plugin 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
 Plugin 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
@@ -26,6 +25,7 @@ Plugin 'vim-scripts/gitignore'           " Makes vim use gitignore for wildignor
 Plugin 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
 Plugin 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars
 Plugin 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal etc..
+" Plugin 'w0rp/ale'
 
 " Filetype
 Plugin 'rhysd/vim-crystal'               " Adds .cr file type support
@@ -169,7 +169,7 @@ map <right> <nop>
 let g:airline_theme='one'
 
 " Airline + A.L.E Integration
-" let g:airline#extensions#ale#enabled = 1
+" let g:airline#extensions#ale#enabled = 0
 
 " Display all the buffers
 " let g:airline#extensions#tabline#enabled = 1
