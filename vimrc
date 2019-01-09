@@ -78,7 +78,6 @@ set noswapfile                          " No swap files
 
 " Search Settings
 set ignorecase                          " Disable search case sensitivity
-" set smartcase
 set incsearch                           " Enable instant search
 set hlsearch                            " Highlight search term
 
@@ -149,14 +148,18 @@ if has("gui_running")
   set lines=999 columns=95              " Set window size
 endif
 
+" Faster updatetime so that GitGutter can update instantly
+set updatetime=100
+
+"----------------------------------------------------------
+" Mappings
+"----------------------------------------------------------
+
 " Disable Arrow Keys
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
-
-" Faster updatetime so that GitGutter can update instantly
-set updatetime=100
 
 "----------------------------------------------------------
 " Airline settings
