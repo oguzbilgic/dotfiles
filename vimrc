@@ -1,5 +1,5 @@
 "----------------------------------------------------------
-" Vundle Plugins
+" Plugins
 "----------------------------------------------------------
 
 " Initialize vundle
@@ -162,7 +162,7 @@ map <left> <nop>
 map <right> <nop>
 
 "----------------------------------------------------------
-" Airline settings
+" Airline Settings
 "----------------------------------------------------------
 
 " let w:airline_disabled = 1
@@ -212,7 +212,7 @@ map ˙ :Helptags<CR>
 map ç :Commands<CR>
 
 "----------------------------------------------------------
-" GitGutter
+" GitGutter Settings
 "----------------------------------------------------------
 
 " Use line highlighting instead of signs if light background
@@ -239,6 +239,11 @@ map <ScrollWheelDown> <C-E>
 " Exit visual mode immediately
 " vmap <esc> <C-c>
 
+" Open vimrc in a new tab
+nnoremap <leader>ev :tabe $MYVIMRC<CR>
+
+" Source vimrc
+nnoremap <leader>sv :source $MYVIMRC<CR>
 
 "----------------------------------------------------------
 " Experimental Highlight Overwrites
