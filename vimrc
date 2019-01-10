@@ -263,9 +263,11 @@ if &background == "light"
   highlight clear DiffAdd
   highlight clear DiffChange
   highlight clear DiffDelete
+  highlight clear DiffText
   highlight DiffAdd    ctermbg=194 guibg=#e7feed
   highlight DiffChange ctermbg=230 guibg=#ffffd7
   highlight DiffDelete ctermbg=224 guibg=#feeef0
+  highlight DiffText guibg=#ffe6bc
 endif
 
 if g:colors_name == 'spacegray'
