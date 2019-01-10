@@ -101,6 +101,10 @@ set fillchars+=fold:\                   " Don't use fold divider character
 " Diff
 set fillchars+=diff:\                   " Don't fill deleted diff lines
 
+" Performence
+set lazyredraw
+set ttyfast
+
 "----------------------------------------------------------
 " UI Settings
 "----------------------------------------------------------
