@@ -19,15 +19,15 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'michaeljsmith/vim-indent-object' " Adds i text-object for indentation
-Plug 'tpope/vim-surround'              " Adds text object for surrounding ' } ) etc ..
+Plug 'tpope/vim-surround'              " Adds text object for surrounding ' } )
 Plug 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
 Plug 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
 Plug 'tpope/vim-fugitive'              " Shows git branch in airline and more...
 Plug 'Kazark/vim-SimpleSmoothScroll'   " Slows down scroll speed
-Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for wildignore option
+Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for 'wildignore'
 Plug 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
 Plug 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars in insert mode
-Plug 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal etc..
+Plug 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal
 Plug 'w0rp/ale'                        " Shows inline lint errors
 
 " Compilers
@@ -69,44 +69,44 @@ call plug#end()
 "----------------------------------------------------------
 
 " General Settings
-set nocompatible                        " Don't try to be compatible with Vi
-filetype on                             " Enable filetype detection
-filetype plugin indent on               " Enable Automatic Indentation
-set hidden                              " Enable unsaved buffers to be hidden
-set clipboard=unnamed                   " Use system clipboard for copy/paste
+set nocompatible                       " Don't try to be compatible with Vi
+filetype on                            " Enable filetype detection
+filetype plugin indent on              " Enable Automatic entation
+set hidden                             " Enable unsaved buffers to be hidden
+set clipboard=unnamed                  " Use system clipboard for copy/paste
 
 " Insert settings
-set backspace=indent,eol,start          " Enable backspace for deleting after insert
+set backspace=indent,eol,start         " Enable backspace for deleting after insert
 
 " Backup settings
-set nobackup                            " Disable backup files
-set nowritebackup                       " No backup files
-set noswapfile                          " No swap files
+set nobackup                           " Disable backup files
+set nowritebackup                      " No backup files
+set noswapfile                         " No swap files
 
 " Search Settings
-set ignorecase                          " Disable search case sensitivity
-set incsearch                           " Enable instant search
-set hlsearch                            " Highlight search term
+set ignorecase                         " Disable search case sensitivity
+set incsearch                          " Enable instant search
+set hlsearch                           " Highlight search term
 
 " Indentation Settings
-set tabstop=4                           " Width of a tab character
-set softtabstop=2                       " Tab lenght is 2 space
-set shiftwidth=2                        " Tab lenght is 2 space
+set tabstop=4                          " Width of a tab character
+set softtabstop=2                      " Tab lenght is 2 space
+set shiftwidth=2                       " Tab lenght is 2 space
 set smartindent
 set autoindent
 set expandtab
 set smarttab
 
 " Folding
-set foldmethod=indent                   " Fold based on indentation
-set foldlevel=9                         " Fold all starting from the first
-set foldclose=all                       " Close folds if you leave them in any way
-set foldopen=all                        " Open folds if you touch them in any way
-set foldnestmax=5                       " Fold only maximum of 5 levels of indenation
-set fillchars+=fold:\                   " Don't use fold divider character
+set foldmethod=indent                  " Fold based on indentation
+set foldlevel=9                        " Fold all starting from the first
+set foldclose=all                      " Close folds if you leave them in any way
+set foldopen=all                       " Open folds if you touch them in any way
+set foldnestmax=5                      " Fold only maximum of 5 levels of indenation
+set fillchars+=fold:\                  " Don't use fold divider character
 
 " Diff
-set fillchars+=diff:\                   " Don't fill deleted diff lines
+set fillchars+=diff:\                  " Don't fill deleted diff lines
 
 " Performence
 set lazyredraw
@@ -127,20 +127,20 @@ endif
 
 " Color Settings
 syntax on
-set t_Co=256                            " Enable 256 color
+set t_Co=256                           " Enable 256 color
 
 " UI Settings
-set mouse=a                             " Enable mouse
-set showcmd                             " Show current command bottom right
-set wildmenu                            " Show command line suggestions
-set number                              " Show line numbers
-set nowrap                              " Disable  wrapping of long lines
-set shortmess+=I                        " Hide :intro message
+set mouse=a                            " Enable mouse
+set showcmd                            " Show current command bottom right
+set wildmenu                           " Show command line suggestions
+set number                             " Show line numbers
+set nowrap                             " Disable  wrapping of long lines
+set shortmess+=I                       " Hide :intro message
 
 " Window Settings
-set laststatus=2                        " Always show window status line
-set splitright                          " Vertical split to right side
-set fillchars+=vert:\                   " Don't use window divider character
+set laststatus=2                       " Always show window status line
+set splitright                         " Vertical split to right side
+set fillchars+=vert:\                  " Don't use window divider character
 
 " Set truecolor for 16 million colors
 " https://gist.github.com/XVilka/8346728
@@ -152,11 +152,11 @@ endif
 
 " GUI Settings
 if has("gui_running")
-  set fuoptions=maxvert,maxhorz         " Fullscreen mode settings
-  " set guioptions=emgt                   " Hide toolbar and scrollbars
-  set guifont=SF\ Mono\ Regular:h12
-  set linespace=7                       " Increase line height
-  set lines=999 columns=95              " Set window size
+  set fuoptions=maxvert,maxhorz        " Fullscreen mode settings
+  " set guioptions=emgt                  " Hide toolbar and scrollbars
+  set guifont=Roboto\ Mono:h13
+  set linespace=3                      " Increase line height
+  set lines=999 columns=95             " Set window size
 endif
 
 "----------------------------------------------------------
