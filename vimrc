@@ -25,7 +25,10 @@ Plugin 'vim-scripts/gitignore'           " Makes vim use gitignore for wildignor
 Plugin 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
 Plugin 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars
 Plugin 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal etc..
-Plugin 'w0rp/ale'
+Plugin 'w0rp/ale'                        " Shows inline lint errors
+
+" Compilers
+Plugin 'salomvary/vim-eslint-compiler'   " Adds eslint compiler. ':compiler estlint' then ':make .'
 
 " Filetype
 Plugin 'rhysd/vim-crystal'               " Adds .cr file type support
@@ -170,7 +173,7 @@ map <right> <nop>
 "----------------------------------------------------------
 
 " let w:airline_disabled = 1
-let g:airline_theme='one'
+let g:airline_theme = 'one'
 
 " Airline + A.L.E Integration
 let g:airline#extensions#ale#enabled = 1
