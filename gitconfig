@@ -1,11 +1,12 @@
 [user]
-	email = fisyonet@gmail.com
-	name = Oguz Bilgic
+  email = fisyonet@gmail.com
+  name = Oguz Bilgic
 [color]
-	ui = true
+  ui = true
 [core]
-	editor = vim
-	quotepath = false
-	excludesfile =  ~/.gitignore
+  editor = vim
+  quotepath = false
+  excludesfile =  ~/.gitignore
 [alias]
-	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+  tree = log --graph --decorate --pretty=oneline --abbrev-commit
+  cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
