@@ -28,7 +28,7 @@ Plugin 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/c
 Plugin 'w0rp/ale'                        " Shows inline lint errors
 
 " Compilers
-Plugin 'salomvary/vim-eslint-compiler'   " Adds eslint compiler. ':compiler estlint' then ':make .'
+Plugin 'dgraham/vim-eslint'              " Adds eslint compiler. ':make .' populates quickfix
 
 " Filetype
 Plugin 'rhysd/vim-crystal'               " Adds .cr file type support
