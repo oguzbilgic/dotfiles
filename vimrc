@@ -2,70 +2,74 @@
 " Plugins
 "----------------------------------------------------------
 
-" Initialize vundle
-set nocompatible
-filetype off
+" Auto install vim-plug if It's missing
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" Start Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Start vim-plug
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'bling/vim-airline'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plugin 'junegunn/fzf.vim'
-Plugin 'michaeljsmith/vim-indent-object' " Adds i text-object for indentation
-Plugin 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
-Plugin 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
-Plugin 'tpope/vim-fugitive'              " Shows git branch in airline and more...
-Plugin 'Kazark/vim-SimpleSmoothScroll'   " Slows down scroll speed
-Plugin 'vim-scripts/gitignore'           " Makes vim use gitignore for wildignore option
-Plugin 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
-Plugin 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars
-Plugin 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal etc..
-Plugin 'w0rp/ale'                        " Shows inline lint errors
+Plug 'VundleVim/Vundle.vim'
+Plug 'bling/vim-airline'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'michaeljsmith/vim-indent-object' " Adds i text-object for indentation
+Plug 'tpope/vim-surround'              " Adds text object for surrounding ' } ) etc ..
+Plug 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
+Plug 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
+Plug 'tpope/vim-fugitive'              " Shows git branch in airline and more...
+Plug 'Kazark/vim-SimpleSmoothScroll'   " Slows down scroll speed
+Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for wildignore option
+Plug 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
+Plug 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars in insert mode
+Plug 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal etc..
+Plug 'w0rp/ale'                        " Shows inline lint errors
 
 " Compilers
-Plugin 'dgraham/vim-eslint'              " Adds eslint compiler. ':make .' populates quickfix
+Plug 'dgraham/vim-eslint'              " Adds eslint compiler. ':make .' populates quickfix
 
 " Filetype
-Plugin 'rhysd/vim-crystal'               " Adds .cr file type support
-Plugin 'udalov/kotlin-vim'               " Adds .kt file type support
-Plugin 'pangloss/vim-javascript'         " Improved .js support
-" Plugin 'vim-ruby/vim-ruby'
-" Plugin 'mxw/vim-jsx'
-" Plugin 'leafgarland/typescript-vim'
+Plug 'rhysd/vim-crystal'               " Adds .cr file type support
+Plug 'udalov/kotlin-vim'               " Adds .kt file type support
+Plug 'pangloss/vim-javascript'         " Improved .js support
+" Plug 'vim-ruby/vim-ruby'
+" Plug 'mxw/vim-jsx'
+" Plug 'leafgarland/typescript-vim'
 
 " Colorschemes
-Plugin 'felixhummel/setcolors.vim'       " :SetColors all then F8 to switch colorschemes
-" Plugin 'daviddavis/vim-colorpack'
-Plugin 'noahfrederick/vim-hemisu'
-Plugin 'ajh17/Spacegray.vim'
-Plugin 'rakr/vim-one'
-Plugin 'junegunn/seoul256.vim'
-Plugin 'vim-scripts/playroom'
-Plugin 'lifepillar/vim-wwdc17-theme'
-Plugin 'oguzbilgic/sexy-railscasts-theme'
-Plugin 'cormacrelf/vim-colors-github'
-Plugin 'cocopon/iceberg.vim'
-Plugin 'tomasr/molokai'
-Plugin 'morhetz/gruvbox'
+Plug 'felixhummel/setcolors.vim'       " :SetColors all then F8 to switch colorschemes
+" Plug 'daviddavis/vim-colorpack'
+Plug 'noahfrederick/vim-hemisu'
+Plug 'ajh17/Spacegray.vim'
+Plug 'rakr/vim-one'
+Plug 'junegunn/seoul256.vim'
+Plug 'vim-scripts/playroom'
+Plug 'lifepillar/vim-wwdc17-theme'
+Plug 'oguzbilgic/sexy-railscasts-theme'
+Plug 'cormacrelf/vim-colors-github'
+Plug 'cocopon/iceberg.vim'
+Plug 'tomasr/molokai'
+Plug 'morhetz/gruvbox'
 
 " brew install cmake
 " cd ~/.vim/bundle/YouCompleteMe
 " ./install.py --js-completer
-" Plugin 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 
-" End Vundle plugin list
-call vundle#end()
+" End plugin list
+call plug#end()
 
 "----------------------------------------------------------
 " Vim Settings
 "----------------------------------------------------------
 
 " General Settings
+set nocompatible                        " Don't try to be compatible with Vi
 filetype on                             " Enable filetype detection
 filetype plugin indent on               " Enable Automatic Indentation
 set hidden                              " Enable unsaved buffers to be hidden
