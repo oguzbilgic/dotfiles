@@ -155,9 +155,6 @@ if has("gui_running")
   set lines=999 columns=95              " Set window size
 endif
 
-" Faster updatetime so that GitGutter can update instantly
-set updatetime=100
-
 "----------------------------------------------------------
 " Mappings
 "----------------------------------------------------------
@@ -227,6 +224,9 @@ if &background == "light"
   let g:gitgutter_signs = 0
   let g:gitgutter_highlight_lines = 1
 endif
+
+" Faster updatetime so that GitGutter can update instantly
+set updatetime=100
 
 "----------------------------------------------------------
 " SimpleSmoothScroll Settings
