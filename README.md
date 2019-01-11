@@ -15,29 +15,32 @@ my workstation configuration
 
 + Google Chrome
 + Xcode Cli Tools
-+ Atom Editor
-+ [Hyper.js](https://hyper.is)
 + [iTerm2](https://www.iterm2.com/)
 + [Color Picker](https://itunes.apple.com/us/app/color-picker/id641027709?l=en&mt=12)
-+ [Kitematic](https://kitematic.com/)
++ [Kitematic](https://kitematic.com/) for Docker containers
 + [Sequel Pro](https://www.sequelpro.com/) for MySQL
 + [robo 3T](https://robomongo.org/) for MongoDB
++ Atom Editor (Replaced with Vim)
++ [Hyper.js](https://hyper.is) (Replaced with iTerm2)
 
 ## dot files
 
 ```bash
-ln -s ~/.bash bash
-ln -s ~/.bash_profile bash_profile
-ln -s ~/.bashrc bashrc
-ln -s ~/.gitconfig config
-ln -s ~/.vim vim
-ln -s ~/.vimrc vimrc
-ln -s ~/.hyper.js hyper.js
+ln -s ~/code/dotfiles/vimrc   ~/.vimrc
+ln -s ~/code/dotfiles/vim   ~/.vim
+ln -s ~/code/dotfiles/gitconfig   ~/.gitconfig
+ln -s ~/code/dotfiles/hyper.js   ~/.hyper.js
 ```
 
-## Install Packages 
+## Install Homebrew
 
-+ homebrew
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+## Install Packages
+
 + vim
 + irssi
 + git
++ tmux
