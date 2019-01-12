@@ -44,3 +44,12 @@ ln -s ~/code/dotfiles/hyper.js   ~/.hyper.js
 + irssi
 + git
 + tmux
+
+## Italics in iTerm and Tmux
+
+https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
+
+```bash
+tic -x xterm-256color-italic.terminfo
+tic -x tmux-256color.terminfo
+```
