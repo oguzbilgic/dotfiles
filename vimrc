@@ -70,10 +70,11 @@ call plug#end()
 
 " General Settings
 set nocompatible                       " Don't try to be compatible with Vi
-filetype on                            " Enable filetype detection
-filetype plugin indent on              " Enable Automatic entation
 set hidden                             " Enable unsaved buffers to be hidden
 set clipboard=unnamed                  " Use system clipboard for copy/paste
+
+" File type
+filetype plugin indent on              " Enable Automatic entation
 
 " Insert settings
 set backspace=indent,eol,start         " Enable backspace for deleting after insert
