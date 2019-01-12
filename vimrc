@@ -144,18 +144,12 @@ set splitright                         " Vertical split to right side
 set fillchars+=vert:\                  " Don't use window divider character
 
 " Set truecolor for 16 million colors
-" https://gist.github.com/XVilka/8346728
-" BUG: Shouldn't be set if term doesn't support
-" BUG: Currently hyper doesn't support this?
+" INFO: https://gist.github.com/XVilka/8346728
+" BUG: This checks if vim is built with +termguicolors feature.
+"      We need a way to check if the current terminal supports truecolor.
+"      Hyper.js and Terminal.app don't support truecolor.
 if has('termguicolors')
   set termguicolors
-
-  " Experimental
-  " Italics and true color support in tmux+vim
-  " https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set ttymouse=xterm2
 endif
 
 " GUI Settings
@@ -165,6 +159,18 @@ if has("gui_running")
   set guifont=Roboto\ Mono:h13
   set linespace=3                      " Increase line height
   set lines=999 columns=95             " Set window size
+endif
+
+" Experimental tmux settings
+if $TERM == 'tmux-256color'
+  " Italics and true color support in tmux+vim
+  " INFO: https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+  " Mouse in tmux doesn't resize windows, but this option makes
+  " scrolling very slow in vim without tmux
+  set ttymouse=xterm2
 endif
 
 "----------------------------------------------------------
