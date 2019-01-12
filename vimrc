@@ -191,6 +191,12 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 "----------------------------------------------------------
+" Ale Settings
+"----------------------------------------------------------
+
+let g:ale_sign_error = '➤'
+
+"----------------------------------------------------------
 " NERD Commenter Settings
 "----------------------------------------------------------
 
