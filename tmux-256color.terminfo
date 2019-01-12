@@ -1,4 +1,4 @@
-screen-256color|screen with 256 colors,
+tmux-256color|tmux with 256 colors,
   ritm=\E[23m, rmso=\E[27m, sitm=\E[3m, smso=\E[7m, Ms@,
   khome=\E[1~, kend=\E[4~,
-  use=screen-256color, use=screen-256color,
+  use=xterm-256color, use=screen-256color,
