@@ -4,7 +4,7 @@
   * CTRL-O
 
 # 2 - The First Steps in Vim
-- Inserting text 
+- Inserting text
   * i, a, o
 - Moving
   * h, j, k, l
@@ -12,6 +12,8 @@
   * x, d, J
 - Undo
   * u, CTRL-R
+- Getting out
+  * ZZ
 - Finding help
 
 # 3 - Moving Around
@@ -29,7 +31,8 @@
   * CTRL-E CTRL-Y
   * CTRL-F CTRL-B
 - Search
-  * n
+  * /
+  * n, N
   * \> end of word
   * \< start of word
   * ^ beginning of line
@@ -85,13 +88,45 @@
   * CTRL-W {+, -, _, |, =}
   * CTRL-W {t, b}
 - Tabs
- 
+
 # 9 - Using the GUI
 - GUI
 - Mouse
 - Clipboard
 
 # 10 - Making Big Changes
+- Macros
+  * . repeats change
+  * q{a-z} record macro
+  * @{a-z} run macro
+  * q{A-z} append to macro
+- Substitution
+  * :(%)s/from/to/[g, p, c]
+- Ranges
+  * :x,ycommand lines x to y
+  * :xcommand on line x
+  * :.command current line
+  * :$command last line
+  * :/pattern/,/pattern/command
+  * :.+3,$-5command
+  * :'t,'bcommand marks t to b
+  * :'<,'>command visual 
+- Global
+  * :g/pattern/command
+- Visual block
+  * CTRL-V
+  * ~, u, U
+  * >, <
+- Read & Write
+  * :read, :write filename
+- Formatting & Case
+  * gq reformat
+  * gu, gU, g~
+- External
+  * :!{motion}{program}
+  * :read !{command}
+  * :write !{command}
+  * CTRL-L
 
 # 11 - Recovering from a crash
 
