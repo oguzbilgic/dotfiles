@@ -41,7 +41,9 @@
   * \. match dot
 - Marks
   * ma `a
-  * ' " [ ] special marks
+  * '' last jump
+  * '" last edit
+  * '[, '] last change
 - Jumps
   * CTRL-O CTRL-I
 
@@ -73,26 +75,39 @@
 
 # 6 - Using Synctax Highlighting
 - Syntax
+  * :syntax
 - Colors
+  * :colorscheme
+  * :highlight
 
 # 7 - Editing more than one file
 - Args
+  * :args
 - Backups
 - Registers
 - Rename
 - File Marks
+  * m{A-Z}
+  * '. last delete
 
 # 8 - Splitting Windows
 - Windows
+  * :split, :vsplit, :new
   * CTRL-W {c, n, v, o}
   * CTRL-W {+, -, _, |, =}
   * CTRL-W {t, b}
+  * :qa, :wa
 - Tabs
+  * :tabe, :tabo
+  * :tab {command}
+  * gt
 
 # 9 - Using the GUI
 - GUI
 - Mouse
 - Clipboard
+  * "+ real clipboard
+  * "* current selection
 
 # 10 - Making Big Changes
 - Macros
