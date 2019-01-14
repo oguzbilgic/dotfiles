@@ -43,6 +43,7 @@ Plug 'pangloss/vim-javascript'         " Improved .js support
 
 " Colorschemes
 Plug 'felixhummel/setcolors.vim'       " :SetColors all then F8 to switch colorschemes
+Plug 'vim-airline/vim-airline-themes'
 " Plug 'daviddavis/vim-colorpack'
 Plug 'noahfrederick/vim-hemisu'
 Plug 'ajh17/Spacegray.vim'
@@ -188,10 +189,10 @@ map <right> <nop>
 " Airline Settings
 "----------------------------------------------------------
 
-" let w:airline_disabled = 1
-
-" Airline picks the current theme, so this is not needed:
-" let g:airline_theme = 'one'
+" Airline picks the current theme, but specify for spacegray
+if g:colors_name == 'spacegray'
+  let g:airline_theme = 'distinguished'
+end
 
 " Airline + A.L.E Integration
 let g:airline#extensions#ale#enabled = 1
