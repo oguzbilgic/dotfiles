@@ -76,7 +76,7 @@ set clipboard=unnamed                  " Use system clipboard for copy/paste
 set visualbell                         " Disable beeping by using visual bell
 
 " File type
-filetype plugin indent on              " Enable Automatic entation
+filetype plugin indent on              " Enable filetype system
 
 " Insert settings
 set backspace=indent,eol,start         " Enable backspace for deleting after insert
@@ -93,8 +93,8 @@ set hlsearch                           " Highlight search term
 
 " Indentation Settings
 set tabstop=2                          " Width of a tab character
-set softtabstop=2                      " Tab lenght is 2 space
-set shiftwidth=2                       " Tab lenght is 2 space
+set softtabstop=2                      " Tab length is 2 space
+set shiftwidth=2                       " Tab length is 2 space
 set smartindent                        " Add extra indent if new block started
 set autoindent                         " Use current lines indent for new line
 set expandtab                          " Insert <space> instead of tab
@@ -105,13 +105,13 @@ set foldmethod=indent                  " Fold based on indentation
 set foldlevel=9                        " Fold all starting from the first
 " set foldclose=all                      " Close folds if you leave them in any way
 " set foldopen=all                       " Open folds if you touch them in any way
-set foldnestmax=5                      " Fold only maximum of 5 levels of indenation
+set foldnestmax=5                      " Fold only maximum of 5 levels of indentation
 set fillchars+=fold:\                  " Don't use fold divider character
 
 " Diff
 set fillchars+=diff:\                  " Don't fill deleted diff lines
 
-" Performence
+" Performance
 set lazyredraw
 set ttyfast
 
@@ -162,7 +162,7 @@ endif
 
 " GUI Settings
 if has("gui_running")
-  set fuoptions=maxvert,maxhorz        " Fullscreen mode settings
+  set fuoptions=maxvert,maxhorz        " Full screen mode settings
   " set guioptions=emgt                  " Hide toolbar and scrollbars
   set guifont=Roboto\ Mono:h13
   set linespace=3                      " Increase line height
