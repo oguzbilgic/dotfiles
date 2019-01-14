@@ -92,12 +92,12 @@ set incsearch                          " Enable instant search
 set hlsearch                           " Highlight search term
 
 " Indentation Settings
-set tabstop=4                          " Width of a tab character
+set tabstop=2                          " Width of a tab character
 set softtabstop=2                      " Tab lenght is 2 space
 set shiftwidth=2                       " Tab lenght is 2 space
-set smartindent
-set autoindent
-set expandtab
+set smartindent                        " Add extra indent if new block started
+set autoindent                         " Use current lines indent for new line
+set expandtab                          " Insert <space> instead of tab
 set smarttab
 
 " Folding
