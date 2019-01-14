@@ -189,7 +189,9 @@ map <right> <nop>
 "----------------------------------------------------------
 
 " let w:airline_disabled = 1
-let g:airline_theme = 'one'
+
+" Airline picks the current theme, so this is not needed:
+" let g:airline_theme = 'one'
 
 " Airline + A.L.E Integration
 let g:airline#extensions#ale#enabled = 1
