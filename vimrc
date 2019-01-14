@@ -314,6 +314,7 @@ if g:colors_name == 'spacegray'
 
   highlight DiffText guibg=#d88735 guifg=black cterm=italic,bold
   highlight DiffChange guibg=#815d3a guifg=black
+  highlight Error cterm=NONE
 end
 
 if g:colors_name == 'one'
