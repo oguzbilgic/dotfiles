@@ -304,6 +304,9 @@ if g:colors_name == 'spacegray'
   highlight! link VertSplit StatusLineNC
   highlight! link TabLineFill StatusLineNC
   highlight! link TabLineSel StatusLine
+
+  highlight DiffText guibg=#d88735 guifg=black cterm=italic,bold
+  highlight DiffChange guibg=#815d3a guifg=black
 end
 
 if g:colors_name == 'one'
