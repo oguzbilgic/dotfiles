@@ -72,6 +72,7 @@ call plug#end()
 set nocompatible                       " Don't try to be compatible with Vi
 set hidden                             " Enable unsaved buffers to be hidden
 set clipboard=unnamed                  " Use system clipboard for copy/paste
+set visualbell                         " Disable beeping by using visual bell
 
 " File type
 filetype plugin indent on              " Enable Automatic entation
