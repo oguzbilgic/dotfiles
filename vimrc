@@ -138,7 +138,13 @@ set showcmd                            " Show current command bottom right
 set wildmenu                           " Show command line suggestions
 set number                             " Show line numbers
 set nowrap                             " Disable  wrapping of long lines
-set shortmess+=I                       " Hide :intro message
+set shortmess+=I                       " Hide Vim's welcome message
+
+" Invisible Character
+set list                               " Show invisible characters
+set showbreak=↪\
+set listchars=tab:→\ ,nbsp:␣,trail:·,extends:⟩,precedes:⟨
+" │ » → •
 
 " Window Settings
 set laststatus=2                       " Always show window status line
