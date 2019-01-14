@@ -26,10 +26,9 @@ my workstation configuration
 ## dot files
 
 ```bash
-ln -s ~/code/dotfiles/vimrc   ~/.vimrc
-ln -s ~/code/dotfiles/vim   ~/.vim
-ln -s ~/code/dotfiles/gitconfig   ~/.gitconfig
-ln -s ~/code/dotfiles/hyper.js   ~/.hyper.js
+ln -s ~/code/dotfiles/vim       ~/.vim
+ln -s ~/code/dotfiles/gitconfig ~/.gitconfig
+ln -s ~/code/dotfiles/tmux.conf ~/.tmux.conf
 ```
 
 ## Install Homebrew
