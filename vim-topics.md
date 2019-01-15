@@ -18,3 +18,4 @@
 - Change list
 - Jump list
 - Quickfix list
+- Preview Window
