@@ -20,8 +20,7 @@ my workstation configuration
 + [Kitematic](https://kitematic.com/) for Docker containers
 + [Sequel Pro](https://www.sequelpro.com/) for MySQL
 + [robo 3T](https://robomongo.org/) for MongoDB
-+ Atom Editor (Replaced with Vim)
-+ [Hyper.js](https://hyper.is) (Replaced with iTerm2)
++ [Postman](https://www.getpostman.com/)
 
 ## dot files
 
