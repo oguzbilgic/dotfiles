@@ -312,6 +312,8 @@ if &background == "light"
 endif
 
 if g:colors_name == 'spacegray'
+  highlight clear Todo
+
   highlight! link VertSplit StatusLineNC
   highlight! link TabLineFill StatusLineNC
   highlight! link TabLineSel StatusLine
