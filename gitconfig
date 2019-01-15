@@ -7,10 +7,12 @@
   editor = vim
   quotepath = false
   excludesfile =  ~/.gitignore
-[alias]
-  tree = log --graph --decorate --pretty=oneline --abbrev-commit
-  cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
 [diff]
   tool = vimdiff
 [status]
   short = true
+[fetch]
+  prune = true
+[alias]
+  tree = log --all --graph --decorate --pretty=oneline --abbrev-commit
+  cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
