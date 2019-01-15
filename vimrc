@@ -230,6 +230,10 @@ let g:ale_sign_error = '➤'
 " nmap ÷ <Plug>NERDCommenterToggle
 " vmap ÷ <Plug>NERDCommenterToggle<CR>gv
 
+" Show reminder about the new plugin when old keybinds are used
+nmap ÷ :echoerr 'Use new commentary plugin'<enter>
+vmap ÷ :<C-U>echoerr 'Use new commentary plugin'<enter>
+
 "----------------------------------------------------------
 " NERDTree Settings
 "----------------------------------------------------------
