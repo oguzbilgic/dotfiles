@@ -13,12 +13,13 @@ endif
 call plug#begin()
 
 Plug 'bling/vim-airline'
-Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+" Plug 'scrooloose/nerdcommenter'      " Deprecated: Replaced by commentary
+Plug 'tpope/vim-commentary'            " Adds gc operator for toggling comments
 Plug 'michaeljsmith/vim-indent-object' " Adds i text-object for indentation
-Plug 'tpope/vim-surround'              " Adds text object for surrounding ' } )
+Plug 'tpope/vim-surround'              " Adds s text-object for surrounding ' } )
 Plug 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
 Plug 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
 Plug 'tpope/vim-fugitive'              " Shows git branch in airline and more...
@@ -215,19 +216,19 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:ale_sign_error = '➤'
 
 "----------------------------------------------------------
-" NERD Commenter Settings
+" Deprecated: NERD Commenter Settings
 "----------------------------------------------------------
 
 " Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
+" let g:NERDSpaceDelims = 1
 
 " Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'left'
+" let g:NERDDefaultAlign = 'left'
 
 " Use atom's mapping for comment toggles
 " Command key doesn't work, we are using option/alt key
-nmap ÷ <Plug>NERDCommenterToggle
-vmap ÷ <Plug>NERDCommenterToggle<CR>gv
+" nmap ÷ <Plug>NERDCommenterToggle
+" vmap ÷ <Plug>NERDCommenterToggle<CR>gv
 
 "----------------------------------------------------------
 " NERDTree Settings
