@@ -12,7 +12,6 @@ endif
 " Start vim-plug
 call plug#begin()
 
-Plug 'VundleVim/Vundle.vim'
 Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
