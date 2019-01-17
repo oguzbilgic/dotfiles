@@ -18,6 +18,7 @@
  '(line-spacing 0.2)
  '(menu-bar-mode nil)
  '(pixel-scroll-mode t)
+ '(ring-bell-function (quote ignore))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
