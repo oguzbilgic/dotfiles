@@ -213,6 +213,11 @@ let g:which_key_map.v = { 'name' : '+vim' }
 let g:which_key_map.v.s = 'source-vimrc'
 let g:which_key_map.v.e = 'edit-vimrc'
 
+let g:which_key_map.f = { 'name' : '+fuzy-finder' }
+let g:which_key_map.f.f = 'file-finder'
+let g:which_key_map.f.h = 'help-finder'
+let g:which_key_map.f.c = 'command-finder'
+
 let g:which_key_map.g = { 'name' : '+git' }
 let g:which_key_map.g.p = 'git-push'
 let g:which_key_map.g.c = 'git-commit'
@@ -283,11 +288,9 @@ map <leader>nt :NERDTreeFind<CR>
 "----------------------------------------------------------
 
 " Command key doesn't work, we are using option/alt key <command-t>
-map † :GFiles<CR>
-
-map ˙ :Helptags<CR>
-
-map ç :Commands<CR>
+nnoremap <leader>ff :GFiles<CR>
+nnoremap <leader>fh :Helptags<CR>
+nnoremap <leader>fc :Commands<CR>
 
 "----------------------------------------------------------
 " GitGutter Settings
