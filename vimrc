@@ -266,6 +266,8 @@ endif
 " Faster updatetime so that GitGutter can update instantly
 set updatetime=100
 
+noremap <leader>ggf :GitGutterFold<cr>
+
 "----------------------------------------------------------
 " Fugitive Settings
 "----------------------------------------------------------
