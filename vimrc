@@ -194,6 +194,8 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+nnoremap <leader>db :terminal<cr>docker-compose up -d --build<cr><c-w>J<c-w>p
+
 "----------------------------------------------------------
 " WhichKey Settings
 "----------------------------------------------------------
