@@ -222,8 +222,12 @@ let g:which_key_map.f.c = 'command-finder'
 let g:which_key_map.g = { 'name' : '+git' }
 let g:which_key_map.g.p = 'git-push'
 let g:which_key_map.g.c = 'git-commit'
+let g:which_key_map.g.d = 'git-diff'
 let g:which_key_map.g.s = 'git-status'
 let g:which_key_map.g.f = 'git-fold'
+
+let g:which_key_map.d = { 'name' : '+docker' }
+let g:which_key_map.d.b = 'docker-compose-build'
 
 call which_key#register('<space>', "g:which_key_map")
 nnoremap <silent> <leader> :<c-u>WhichKey '<leader>'<CR>
@@ -321,9 +325,8 @@ autocmd Filetype gitcommit setlocal nonumber
 
 noremap <silent> <leader>gs :Gstatus<CR>
 " noremap <silent> <leader>gs :Gstatus<CR>:exe "resize " . line('$')<CR>
-
 noremap <leader>gc :Gcommit<cr>
-
+noremap <leader>gd :Gdiff<cr>
 noremap <leader>gp :echo system("git push")<cr>
 
 "----------------------------------------------------------
