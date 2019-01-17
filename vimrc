@@ -185,6 +185,8 @@ endif
 " Mappings
 "----------------------------------------------------------
 
+let g:mapleader = "\<space>"
+
 " Disable Arrow Keys
 map <up> <nop>
 map <down> <nop>
