@@ -267,6 +267,23 @@ endif
 set updatetime=100
 
 "----------------------------------------------------------
+" Fugitive Settings
+"----------------------------------------------------------
+
+autocmd Filetype fugitive setlocal nonumber
+" autocmd Filetype fugitive setlocal winfixheight
+
+autocmd Filetype gitcommit setlocal nonumber
+" autocmd Filetype gitcommit exe "resize " . line('$')
+
+noremap <silent> <leader>gs :Gstatus<CR>
+" noremap <silent> <leader>gs :Gstatus<CR>:exe "resize " . line('$')<CR>
+
+noremap <leader>gc :Gcommit<cr>
+
+noremap <leader>gp :echo system("git push")<cr>
+
+"----------------------------------------------------------
 " SimpleSmoothScroll Settings
 "----------------------------------------------------------
 
