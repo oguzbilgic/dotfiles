@@ -208,6 +208,7 @@ let g:which_key_map.h.p = 'preview-hunk'
 
 let g:which_key_map.n = { 'name' : '+nerd-tree' }
 let g:which_key_map.n.t = 'toggle-nerd-tree'
+let g:which_key_map.n.f = 'find-nerd-tree'
 
 let g:which_key_map.v = { 'name' : '+vim' }
 let g:which_key_map.v.s = 'source-vimrc'
@@ -224,7 +225,7 @@ let g:which_key_map.g.c = 'git-commit'
 let g:which_key_map.g.s = 'git-status'
 let g:which_key_map.g.f = 'git-fold'
 
-call which_key#register('<leader>', "g:which_key_map")
+call which_key#register('<space>', "g:which_key_map")
 nnoremap <silent> <leader> :<c-u>WhichKey '<leader>'<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<leader>'<CR>
 
@@ -281,7 +282,8 @@ vmap ÷ :<C-U>echoerr 'Use new commentary plugin'<enter>
 
 let NERDTreeMinimalUI=1
 
-map <leader>nt :NERDTreeFind<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
 
 "----------------------------------------------------------
 " FZF Settings
