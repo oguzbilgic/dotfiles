@@ -12,7 +12,9 @@
 [status]
   short = true
 [fetch]
+  # Delete local branches that are deleted remotely
   prune = true
 [alias]
-  tree = log --all --graph --decorate --pretty=oneline --abbrev-commit
+  tree = log --graph --decorate --oneline --abbrev-commit
+  # Delete local branches that are already merged to master
   cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
