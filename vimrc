@@ -29,6 +29,7 @@ Plug 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
 Plug 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars in insert mode
 Plug 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal
 Plug 'w0rp/ale'                        " Shows inline lint errors
+Plug 'liuchengxu/vim-which-key'
 
 " Compilers
 Plug 'dgraham/vim-eslint'              " Adds eslint compiler. ':make .' populates quickfix
@@ -192,6 +193,39 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
+
+"----------------------------------------------------------
+" WhichKey Settings
+"----------------------------------------------------------
+
+set timeoutlen=500
+
+let g:which_key_map = {}
+let g:which_key_map.h = { 'name' : '+hunk' }
+let g:which_key_map.h.s = 'stage-hunk'
+let g:which_key_map.h.u = 'unstage-hunk'
+let g:which_key_map.h.p = 'preview-hunk'
+
+let g:which_key_map.n = { 'name' : '+nerd-tree' }
+let g:which_key_map.n.t = 'toggle-nerd-tree'
+
+let g:which_key_map.v = { 'name' : '+vim' }
+let g:which_key_map.v.s = 'source-vimrc'
+let g:which_key_map.v.e = 'edit-vimrc'
+
+let g:which_key_map.g = { 'name' : '+git' }
+let g:which_key_map.g.p = 'git-push'
+let g:which_key_map.g.c = 'git-commit'
+let g:which_key_map.g.s = 'git-status'
+let g:which_key_map.g.f = 'git-fold'
+
+call which_key#register('<leader>', "g:which_key_map")
+nnoremap <silent> <leader> :<c-u>WhichKey '<leader>'<CR>
+vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<leader>'<CR>
+
+autocmd! FileType which_key
+autocmd  FileType which_key set laststatus=0 noshowmode noruler
+      \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 "----------------------------------------------------------
 " Airline Settings
