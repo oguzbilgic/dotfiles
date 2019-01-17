@@ -14,6 +14,8 @@
 - Folding
 - Diffing
 - Compilers
+- Sessions
+- Completion
 - Args list
 - Change list
 - Jump list

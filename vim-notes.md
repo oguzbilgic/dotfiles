@@ -116,7 +116,7 @@
   * @{a-z} run macro
   * q{A-z} append to macro
 - Substitution
-  * :(%)s/from/to/[g, p, c]
+  * :[%]s/from/to/[g, p, c, e]
 - Ranges
   * :x,ycommand lines x to y
   * :xcommand on line x
@@ -125,7 +125,7 @@
   * :/pattern/,/pattern/command
   * :.+3,$-5command
   * :'t,'bcommand marks t to b
-  * :'<,'>command visual 
+  * :'<,'>command visual
 - Global
   * :g/pattern/command
 - Visual block
@@ -146,3 +146,14 @@
 # 11 - Recovering from a crash
 
 # 12 - Clever Tricks
+- Replace
+  * \( \) matching
+  * :.,/^$ search in range
+  * :'t+1,.g/^/m 't
+- Counting
+  * g CTRL-G
+- Man
+  * K
+- Grep
+  * :grep word *.c
+  * :clist
