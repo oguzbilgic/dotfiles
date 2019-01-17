@@ -306,10 +306,10 @@ map <ScrollWheelDown> <C-E>
 " vmap <esc> <C-c>
 
 " Open vimrc in a new tab
-nnoremap <leader>ev :tabe $MYVIMRC<CR>
+nnoremap <leader>ve :tabe $MYVIMRC<CR>
 
 " Source vimrc
-nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>vs :source $MYVIMRC<CR>
 
 "----------------------------------------------------------
 " Experimental Highlight Overwrites
