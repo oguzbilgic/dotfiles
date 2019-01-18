@@ -29,7 +29,7 @@ Plug 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
 Plug 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars in insert mode
 Plug 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal
 Plug 'w0rp/ale'                        " Shows inline lint errors
-Plug 'liuchengxu/vim-which-key'
+Plug 'liuchengxu/vim-which-key'        " Displays mappings for <leader> in window
 
 " Compilers
 Plug 'dgraham/vim-eslint'              " Adds eslint compiler. ':make .' populates quickfix
@@ -314,6 +314,7 @@ endif
 " Faster updatetime so that GitGutter can update instantly
 set updatetime=100
 
+" Folds all unchanged lines in the buffer
 noremap <leader>gf :GitGutterFold<cr>
 
 "----------------------------------------------------------
@@ -326,8 +327,7 @@ autocmd Filetype fugitive setlocal nonumber
 autocmd Filetype gitcommit setlocal nonumber
 " autocmd Filetype gitcommit exe "resize " . line('$')
 
-noremap <silent> <leader>gs :Gstatus<CR>
-" noremap <silent> <leader>gs :Gstatus<CR>:exe "resize " . line('$')<CR>
+noremap <leader>gs :Gstatus<CR>
 noremap <leader>gc :Gcommit<cr>
 noremap <leader>gd :Gdiff<cr>
 noremap <leader>gp :echo system("git push")<cr>
