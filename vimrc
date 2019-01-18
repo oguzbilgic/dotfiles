@@ -49,20 +49,20 @@ Plug 'pangloss/vim-javascript'         " Improved .js support
 " Plug 'leafgarland/typescript-vim'
 
 " Colorschemes
-Plug 'felixhummel/setcolors.vim'       " :SetColors all then F8 to switch colorschemes
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'daviddavis/vim-colorpack'
-Plug 'noahfrederick/vim-hemisu'
 Plug 'ajh17/Spacegray.vim'
 Plug 'rakr/vim-one'
-Plug 'junegunn/seoul256.vim'
-Plug 'vim-scripts/playroom'
-Plug 'lifepillar/vim-wwdc17-theme'
-Plug 'oguzbilgic/sexy-railscasts-theme'
-Plug 'cormacrelf/vim-colors-github'
-Plug 'cocopon/iceberg.vim'
-Plug 'tomasr/molokai'
-Plug 'morhetz/gruvbox'
+" Plug 'felixhummel/setcolors.vim'       " :SetColors all then F8 to switch colorschemes
+" Plug 'daviddavis/vim-colorpack'
+" Plug 'noahfrederick/vim-hemisu'
+" Plug 'junegunn/seoul256.vim'
+" Plug 'vim-scripts/playroom'
+" Plug 'lifepillar/vim-wwdc17-theme'
+" Plug 'oguzbilgic/sexy-railscasts-theme'
+" Plug 'cormacrelf/vim-colors-github'
+" Plug 'cocopon/iceberg.vim'
+" Plug 'tomasr/molokai'
+" Plug 'morhetz/gruvbox'
 
 " brew install cmake
 " cd ~/.vim/bundle/YouCompleteMe
