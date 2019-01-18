@@ -1,7 +1,7 @@
 "----------------------------------------------------------
 " Plugins
 "----------------------------------------------------------
-
+first change
 " Auto install vim-plug if It's missing
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -12,24 +12,30 @@ endif
 " Start vim-plug
 call plug#begin()
 
-Plug 'bling/vim-airline'
-Plug 'scrooloose/nerdtree'
-Plug 'junegunn/fzf'
+" Visual
+Plug 'bling/vim-airline'               " Improved status line
+Plug 'scrooloose/nerdtree'             " Adds file browser window
+Plug 'junegunn/fzf'                    " Adds fuzzy finder
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-commentary'            " Adds gc operator for toggling comments
-Plug 'michaeljsmith/vim-indent-object' " Adds i text-object for indentation
-Plug 'tpope/vim-surround'              " Adds s text-object for surrounding ' } )
-Plug 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
-Plug 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
-Plug 'tpope/vim-fugitive'              " Shows git branch in airline and more...
-Plug 'tpope/vim-rhubarb'               " Enables :Gbrowse for Fugitive plugin
-Plug 'Kazark/vim-SimpleSmoothScroll'   " Slows down scroll speed
-Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for 'wildignore'
-Plug 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
-Plug 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars in insert mode
-Plug 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal
 Plug 'w0rp/ale'                        " Shows inline lint errors
 Plug 'liuchengxu/vim-which-key'        " Displays mappings for <leader> in window
+Plug 'Kazark/vim-SimpleSmoothScroll'   " Slows down scroll speed
+
+" Text
+Plug 'tpope/vim-commentary'            " Adds gc operator for toggling comments
+Plug 'tpope/vim-surround'              " Adds s text-object for surrounding ' } )
+Plug 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal
+Plug 'michaeljsmith/vim-indent-object' " Adds i text-object for indentation
+Plug 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
+Plug 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars in insert mode
+
+" Git
+Plug 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
+Plug 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
+Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for 'wildignore'
+Plug 'tpope/vim-fugitive'              " Shows git branch in airline and more...
+Plug 'tpope/vim-rhubarb'               " Enables :Gbrowse for Fugitive plugin
+Plug 'junegunn/gv.vim'                 " Adds :GV command for viewing git logs
 
 " Compilers
 Plug 'dgraham/vim-eslint'              " Adds eslint compiler. ':make .' populates quickfix
@@ -255,6 +261,7 @@ let g:which_key_map.g.o = 'checkout'
 let g:which_key_map.g.b = 'branch'
 let g:which_key_map.g.t = 'tree'
 let g:which_key_map.g.f = 'fold'
+let g:which_key_map.g.v = 'view'
 
 let g:which_key_map.d = { 'name' : '+docker' }
 let g:which_key_map.d.b = 'docker-compose-build'
@@ -348,6 +355,12 @@ noremap <leader>gg :Git<space>
 noremap <leader>go :Git checkout<space>
 noremap <leader>gb :Git branch<cr>
 noremap <leader>gt :Git tree --all<cr>
+
+"----------------------------------------------------------
+" GV Settings
+"----------------------------------------------------------
+
+noremap <leader>gv :GV --all<cr>
 
 "----------------------------------------------------------
 " SimpleSmoothScroll Settings
