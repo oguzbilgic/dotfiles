@@ -22,6 +22,7 @@ Plug 'tpope/vim-surround'              " Adds s text-object for surrounding ' } 
 Plug 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
 Plug 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
 Plug 'tpope/vim-fugitive'              " Shows git branch in airline and more...
+Plug 'tpope/vim-rhubarb'               " Enables :Gbrowse for Fugitive plugin
 Plug 'Kazark/vim-SimpleSmoothScroll'   " Slows down scroll speed
 Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for 'wildignore'
 Plug 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
