@@ -265,7 +265,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 " Airline picks the current theme, but specify for spacegray
 if g:colors_name == 'spacegray'
-  let g:airline_theme = 'distinguished'
+  let g:airline_theme = 'zenburn'
 end
 
 " Airline + A.L.E Integration
