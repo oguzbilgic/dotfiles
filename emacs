@@ -16,6 +16,7 @@
  '(fringe-mode 0 nil (fringe))
  '(horizontal-scroll-bar-mode nil)
  '(line-spacing 0.2)
+ '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(pixel-scroll-mode t)
  '(ring-bell-function (quote ignore))
