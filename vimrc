@@ -218,7 +218,7 @@ nnoremap <leader>db :terminal<cr>docker-compose up -d --build<cr><c-w>J<c-w>p
 " vmap <esc> <C-c>
 
 "----------------------------------------------------------
-" WhichKey Settings
+" Which Key Settings
 "----------------------------------------------------------
 
 set timeoutlen=500
@@ -243,11 +243,18 @@ let g:which_key_map.f.h = 'help-finder'
 let g:which_key_map.f.c = 'command-finder'
 
 let g:which_key_map.g = { 'name' : '+git' }
-let g:which_key_map.g.p = 'git-push'
-let g:which_key_map.g.c = 'git-commit'
-let g:which_key_map.g.d = 'git-diff'
-let g:which_key_map.g.s = 'git-status'
-let g:which_key_map.g.f = 'git-fold'
+let g:which_key_map.g.s = 'status'
+let g:which_key_map.g.c = 'commit'
+let g:which_key_map.g.d = 'diff'
+let g:which_key_map.g.p = 'push'
+let g:which_key_map.g.r = ':Gread'
+let g:which_key_map.g.w = ':Gwrite'
+let g:which_key_map.g.e = ':Gedit'
+let g:which_key_map.g.g = ':Git'
+let g:which_key_map.g.o = 'checkout'
+let g:which_key_map.g.b = 'branch'
+let g:which_key_map.g.t = 'tree'
+let g:which_key_map.g.f = 'fold'
 
 let g:which_key_map.d = { 'name' : '+docker' }
 let g:which_key_map.d.b = 'docker-compose-build'
@@ -331,7 +338,16 @@ autocmd Filetype gitcommit setlocal nonumber
 noremap <leader>gs :Gstatus<CR>
 noremap <leader>gc :Gcommit<cr>
 noremap <leader>gd :Gdiff<cr>
-noremap <leader>gp :echo system("git push")<cr>
+noremap <leader>gp :Gpush<cr>
+noremap <leader>gr :Gread<cr>
+noremap <leader>gw :Gwrite<cr>
+noremap <leader>ge :Gedit<space>
+
+" Shell aliases
+noremap <leader>gg :Git<space>
+noremap <leader>go :Git checkout<space>
+noremap <leader>gb :Git branch<cr>
+noremap <leader>gt :Git tree --all<cr>
 
 "----------------------------------------------------------
 " SimpleSmoothScroll Settings
