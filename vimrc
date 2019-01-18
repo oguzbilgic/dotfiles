@@ -16,7 +16,6 @@ Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-" Plug 'scrooloose/nerdcommenter'      " Deprecated: Replaced by commentary
 Plug 'tpope/vim-commentary'            " Adds gc operator for toggling comments
 Plug 'michaeljsmith/vim-indent-object' " Adds i text-object for indentation
 Plug 'tpope/vim-surround'              " Adds s text-object for surrounding ' } )
@@ -270,25 +269,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 "----------------------------------------------------------
 
 let g:ale_sign_error = '➤'
-
-"----------------------------------------------------------
-" Deprecated: NERD Commenter Settings
-"----------------------------------------------------------
-
-" Add spaces after comment delimiters by default
-" let g:NERDSpaceDelims = 1
-
-" Align line-wise comment delimiters flush left instead of following code indentation
-" let g:NERDDefaultAlign = 'left'
-
-" Use atom's mapping for comment toggles
-" Command key doesn't work, we are using option/alt key
-" nmap ÷ <Plug>NERDCommenterToggle
-" vmap ÷ <Plug>NERDCommenterToggle<CR>gv
-
-" Show reminder about the new plugin when old keybinds are used
-nmap ÷ :echoerr 'Use new commentary plugin'<enter>
-vmap ÷ :<C-U>echoerr 'Use new commentary plugin'<enter>
 
 "----------------------------------------------------------
 " NERDTree Settings
