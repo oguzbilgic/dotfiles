@@ -1,7 +1,7 @@
 "----------------------------------------------------------
 " Plugins
 "----------------------------------------------------------
-first change
+
 " Auto install vim-plug if It's missing
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -306,6 +306,9 @@ let NERDTreeMinimalUI=1
 
 nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>nt :NERDTreeToggle<CR>
+
+" Make `/` character same as the folder name
+hi link NERDTreeDirSlash NERDTreeDir
 
 "----------------------------------------------------------
 " FZF Settings
