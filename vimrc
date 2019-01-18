@@ -193,6 +193,7 @@ endif
 " Mappings
 "----------------------------------------------------------
 
+" Set <space> as the <leader> key
 let g:mapleader = "\<space>"
 
 " Disable Arrow Keys
@@ -201,7 +202,19 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+" Open vimrc in a new tab
+nnoremap <leader>ve :tabe $MYVIMRC<CR>
+" Source vimrc
+nnoremap <leader>vs :source $MYVIMRC<CR>
+
 nnoremap <leader>db :terminal<cr>docker-compose up -d --build<cr><c-w>J<c-w>p
+
+" Ipad Settings
+" map! ` <ESC>
+" vmap! ` <ESC>
+
+" Exit visual mode immediately
+" vmap <esc> <C-c>
 
 "----------------------------------------------------------
 " WhichKey Settings
@@ -325,23 +338,6 @@ noremap <leader>gp :echo system("git push")<cr>
 
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
-
-"----------------------------------------------------------
-" Experimental Mappings
-"----------------------------------------------------------
-
-" Ipad Settings
-" map! ` <ESC>
-" vmap! ` <ESC>
-
-" Exit visual mode immediately
-" vmap <esc> <C-c>
-
-" Open vimrc in a new tab
-nnoremap <leader>ve :tabe $MYVIMRC<CR>
-
-" Source vimrc
-nnoremap <leader>vs :source $MYVIMRC<CR>
 
 "----------------------------------------------------------
 " Experimental Highlight Overwrites
