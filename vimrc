@@ -328,7 +328,7 @@ autocmd Filetype gitcommit setlocal nonumber
 noremap <silent> <leader>gs :Gstatus<CR>
 " noremap <silent> <leader>gs :Gstatus<CR>:exe "resize " . line('$')<CR>
 noremap <leader>gc :Gcommit<cr>
-noremap <leader>gd :Gdiff<cr>
+noremap <leader>gd :Gvdiff<cr>
 noremap <leader>gp :echo system("git push")<cr>
 
 "----------------------------------------------------------
