@@ -255,9 +255,9 @@ let g:which_key_map.g.d = 'diff'
 let g:which_key_map.g.p = 'push'
 let g:which_key_map.g.r = ':Gread'
 let g:which_key_map.g.w = ':Gwrite'
-let g:which_key_map.g.e = ':Gedit'
-let g:which_key_map.g.g = ':Git'
-let g:which_key_map.g.o = 'checkout'
+let g:which_key_map.g.e = ':Gedit...'
+let g:which_key_map.g.g = ':Git...'
+let g:which_key_map.g.o = 'checkout...'
 let g:which_key_map.g.b = 'branch'
 let g:which_key_map.g.t = 'tree'
 let g:which_key_map.g.f = 'fold'
@@ -308,7 +308,7 @@ nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>nt :NERDTreeToggle<CR>
 
 " Make `/` character same as the folder name
-hi link NERDTreeDirSlash NERDTreeDir
+highlight link NERDTreeDirSlash NERDTreeDir
 
 "----------------------------------------------------------
 " FZF Settings
@@ -345,7 +345,7 @@ autocmd Filetype fugitive setlocal nonumber
 autocmd Filetype gitcommit setlocal nonumber
 " autocmd Filetype gitcommit exe "resize " . line('$')
 
-noremap <leader>gs :Gstatus<CR>
+noremap <leader>gs :Gstatus<cr>
 noremap <leader>gc :Gcommit<cr>
 noremap <leader>gd :Gdiff<cr>
 noremap <leader>gp :Gpush<cr>
