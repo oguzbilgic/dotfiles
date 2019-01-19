@@ -391,6 +391,13 @@ if &background == "light"
   highlight DiffChange ctermbg=230 guibg=#ffffd7
   highlight DiffDelete ctermbg=224 guibg=#feeef0
   highlight DiffText guibg=#ffe6bc
+
+  " Fugitive objects use these groups
+  highlight DiffFile guibg=NONE
+  highlight DiffNewFile guibg=NONE
+  highlight! link DiffAdded DiffAdd
+  highlight! link DiffRemoved DiffDelete
+  highlight! link DiffLine Folded
 endif
 
 if g:colors_name == 'spacegray'
