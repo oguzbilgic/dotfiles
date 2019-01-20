@@ -81,6 +81,7 @@ set nocompatible                       " Don't try to be compatible with Vi
 set hidden                             " Enable unsaved buffers to be hidden
 set clipboard=unnamed                  " Use system clipboard for copy/paste
 set visualbell                         " Disable beeping by using visual bell
+set history=500                        " Increase command history
 
 " File type
 filetype plugin indent on              " Enable filetype system
@@ -150,7 +151,7 @@ set shortmess+=I                       " Hide Vim's welcome message
 
 " Invisible Character
 set list                               " Show invisible characters
-set showbreak=↪\
+set showbreak=↪\                       " Line breaks for wrap option
 set listchars=tab:→\ ,nbsp:␣,trail:·,extends:⟩,precedes:⟨
 " │ » → •
 
@@ -211,7 +212,6 @@ map <right> <nop>
 
 " Open vimrc in a new tab
 nnoremap <leader>ve :tabe $MYVIMRC<CR>
-" Source vimrc
 nnoremap <leader>vs :source $MYVIMRC<CR>
 
 nnoremap <leader>db :terminal<cr>docker-compose up -d --build<cr><c-w>J<c-w>p
@@ -430,7 +430,7 @@ if g:colors_name == 'spacegray'
   highlight Error cterm=NONE
 end
 
-if g:colors_name == 'one'
+if g:colors_name == 'one' && &background == "light"
   highlight clear Folded
   highlight Folded guibg=#e8f1fb guifg=#868c90 cterm=italic
 
