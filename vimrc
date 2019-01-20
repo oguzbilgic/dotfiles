@@ -224,6 +224,14 @@ nnoremap <leader>db :terminal<cr>docker-compose up -d --build<cr><c-w>J<c-w>p
 " vmap <esc> <C-c>
 
 "----------------------------------------------------------
+" Vim Plug Settings
+"----------------------------------------------------------
+
+nnoremap <leader>pi :PlugInstall<cr>
+nnoremap <leader>pu :PlugUpdate<cr>
+nnoremap <leader>pc :PlugClean<cr>
+
+"----------------------------------------------------------
 " Which Key Settings
 "----------------------------------------------------------
 
@@ -242,6 +250,11 @@ let g:which_key_map.n.f = 'find-nerd-tree'
 let g:which_key_map.v = { 'name' : '+vim' }
 let g:which_key_map.v.s = 'source-vimrc'
 let g:which_key_map.v.e = 'edit-vimrc'
+
+let g:which_key_map.p = { 'name' : '+plugin' }
+let g:which_key_map.p.i = 'install-plugins'
+let g:which_key_map.p.c = 'clean-plugins'
+let g:which_key_map.p.u = 'update-plugins'
 
 let g:which_key_map.f = { 'name' : '+fuzy-finder' }
 let g:which_key_map.f.b = 'buffer-finder'
