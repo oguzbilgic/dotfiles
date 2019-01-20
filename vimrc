@@ -244,6 +244,7 @@ let g:which_key_map.v.s = 'source-vimrc'
 let g:which_key_map.v.e = 'edit-vimrc'
 
 let g:which_key_map.f = { 'name' : '+fuzy-finder' }
+let g:which_key_map.f.b = 'buffer-finder'
 let g:which_key_map.f.f = 'file-finder'
 let g:which_key_map.f.h = 'help-finder'
 let g:which_key_map.f.c = 'command-finder'
@@ -314,7 +315,11 @@ highlight link NERDTreeDirSlash NERDTreeDir
 " FZF Settings
 "----------------------------------------------------------
 
+" :Buffers Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
 " Command key doesn't work, we are using option/alt key <command-t>
+nnoremap <leader>fb :Buffers<CR>
 nnoremap <leader>ff :GFiles<CR>
 nnoremap <leader>fh :Helptags<CR>
 nnoremap <leader>fc :Commands<CR>
