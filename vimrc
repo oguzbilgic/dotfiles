@@ -33,8 +33,8 @@ Plug 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars in insert mo
 Plug 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
 Plug 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
 Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for 'wildignore'
-Plug 'tpope/vim-fugitive'              " Shows git branch in airline and more...
-Plug 'tpope/vim-rhubarb'               " Enables :Gbrowse for Fugitive plugin
+Plug 'tpope/vim-fugitive'              " Adds :Gstatus, :Gcommit, :Gdiff and more
+Plug 'tpope/vim-rhubarb'               " Adds :Gbrowse for opening in Github
 Plug 'junegunn/gv.vim'                 " Adds :GV command for viewing git logs
 
 " Compilers
@@ -270,6 +270,7 @@ let g:which_key_map.g.p = 'push'
 let g:which_key_map.g.r = ':Gread'
 let g:which_key_map.g.w = ':Gwrite'
 let g:which_key_map.g.e = ':Gedit...'
+let g:which_key_map.g.h = 'open-github'
 let g:which_key_map.g.g = ':Git...'
 let g:which_key_map.g.o = 'checkout...'
 let g:which_key_map.g.b = 'branch'
@@ -370,6 +371,7 @@ noremap <leader>gp :Gpush<cr>
 noremap <leader>gr :Gread<cr>
 noremap <leader>gw :Gwrite<cr>
 noremap <leader>ge :Gedit<space>
+noremap <leader>gh :Gbrowse @:<cr>
 
 " Shell aliases
 noremap <leader>gg :Git<space>
