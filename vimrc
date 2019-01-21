@@ -315,6 +315,8 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 "----------------------------------------------------------
 
 let g:ale_sign_error = '✖'
+let g:ale_sign_warning = '⚠'
+
 let g:ale_completion_enabled = 1
 
 nnoremap <silent> <leader>ah :ALEHover<CR>
