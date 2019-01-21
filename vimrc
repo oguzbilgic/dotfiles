@@ -64,10 +64,9 @@ Plug 'rakr/vim-one'
 " Plug 'tomasr/molokai'
 " Plug 'morhetz/gruvbox'
 
-" brew install cmake
-" cd ~/.vim/bundle/YouCompleteMe
-" ./install.py --js-completer
-" Plug 'Valloric/YouCompleteMe'
+Plug 'autozimu/LanguageClient-neovim', {
+  \ 'branch': 'next', 'do': 'bash install.sh',
+  \ }
 
 " End plugin list
 call plug#end()
@@ -82,6 +81,8 @@ set hidden                             " Enable unsaved buffers to be hidden
 set clipboard=unnamed                  " Use system clipboard for copy/paste
 set visualbell                         " Disable beeping by using visual bell
 set history=500                        " Increase command history
+" Auto complete settings
+set completeopt+=noinsert              " Insert suggest only when selected
 
 " File type
 filetype plugin indent on              " Enable filetype system
@@ -306,6 +307,40 @@ let g:airline#extensions#ale#enabled = 1
 
 " Don't show the file path in Airline's Tabline
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+"----------------------------------------------------------
+" Language Client Settings
+"----------------------------------------------------------
+
+let g:LanguageClient_serverCommands = {}
+
+" gem install solargraph
+let s:rb_lang_server = 'solargraph'
+if executable(s:rb_lang_server)
+  let g:LanguageClient_serverCommands['ruby'] = [ s:rb_lang_server, 'stdio' ]
+endif
+
+" npm install -g javascript-typescript-langserver``
+let s:js_lang_server = 'javascript-typescript-stdio'
+if executable(s:js_lang_server)
+  let g:LanguageClient_serverCommands['typescript'] = [ s:js_lang_server ]
+  let g:LanguageClient_serverCommands['javascript'] = [ s:js_lang_server ]
+endif
+
+" Mappings
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> KK :call LanguageClient#textDocument_signatureHelp()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+
+" function! CleverTab()
+"   if pumvisible()
+"     return "\<C-N>"
+"   else
+"     return "\<C-X>\<C-O>"
+"   endif
+" endfunction
+
+" inoremap <Tab> <C-R>=CleverTab()<CR>
 
 "----------------------------------------------------------
 " Ale Settings
