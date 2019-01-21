@@ -311,7 +311,16 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 " Ale Settings
 "----------------------------------------------------------
 
-let g:ale_sign_error = '➤'
+let g:ale_sign_error = '✖'
+let g:ale_completion_enabled = 1
+
+nnoremap <silent> <leader>ah :ALEHover<CR>
+nnoremap <silent> <leader>ad :ALEDetail<CR>
+nnoremap <silent> <leader>af :ALEFix<CR>
+nnoremap <silent> <leader>ai :ALEInfo<CR>
+nnoremap <silent> <leader>at :ALEToggle<CR>
+nnoremap <silent> <leader>ar :ALEFindReferences<CR>
+nnoremap <silent> <leader>ag :ALEGoToDefinition<CR>
 
 "----------------------------------------------------------
 " NERDTree Settings
