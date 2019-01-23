@@ -21,6 +21,8 @@ my workstation configuration
 + [Sequel Pro](https://www.sequelpro.com/) for MySQL
 + [robo 3T](https://robomongo.org/) for MongoDB
 + [Postman](https://www.getpostman.com/)
++ [Amethyst](https://github.com/ianyh/Amethyst) window manager
++ [Irvue](http://irvue.tumblr.com/)
 
 ## dot files
 
