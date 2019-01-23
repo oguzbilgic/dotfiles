@@ -214,7 +214,9 @@ map <right> <nop>
 nnoremap <leader>ve :tabe $MYVIMRC<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
 
-nnoremap <leader>db :terminal<cr>docker-compose up -d --build<cr><c-w>J<c-w>p
+" Terminal mappings
+nnoremap <leader>td :terminal<cr>docker-compose up -d --build
+nnoremap <leader>tn :terminal<cr>npm install
 
 " Ipad Settings
 " map! ` <ESC>
@@ -240,9 +242,6 @@ set timeoutlen=500
 let g:which_key_map = {}
 
 let g:which_key_map.a = { 'name' : '+ale' }
-
-let g:which_key_map.d = { 'name' : '+docker' }
-let g:which_key_map.d.b = 'docker-compose-build'
 
 let g:which_key_map.f = { 'name' : '+fuzy-finder' }
 let g:which_key_map.f.b = 'buffer-finder'
@@ -279,6 +278,10 @@ let g:which_key_map.p = { 'name' : '+plugin' }
 let g:which_key_map.p.i = 'install-plugins'
 let g:which_key_map.p.c = 'clean-plugins'
 let g:which_key_map.p.u = 'update-plugins'
+
+let g:which_key_map.t = { 'name' : '+terminal' }
+let g:which_key_map.t.d = 'docker-compose-build'
+let g:which_key_map.t.n = 'npm-install'
 
 let g:which_key_map.v = { 'name' : '+vim' }
 let g:which_key_map.v.s = 'source-vimrc'
