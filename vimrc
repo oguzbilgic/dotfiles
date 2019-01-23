@@ -432,7 +432,14 @@ map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
 "----------------------------------------------------------
-" Experimental Highlight Overwrites
+" Vim Javascript Settings
+"----------------------------------------------------------
+
+" Highlight js code within JSDoc comment blocks
+let g:javascript_plugin_jsdoc = 1
+
+"----------------------------------------------------------
+" Highlight Overwrites
 "----------------------------------------------------------
 
 if &background == "light"
