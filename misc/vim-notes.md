@@ -13,7 +13,7 @@
 - Undo
   * u, CTRL-R
 - Getting out
-  * ZZ
+  * ZZ, ZQ
 - Finding help
 
 # 3 - Moving Around
