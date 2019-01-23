@@ -38,10 +38,13 @@ ln -s ~/code/dotfiles/tmux.conf ~/.tmux.conf
 
 ## Install Packages
 
++ fish
 + vim
 + irssi
 + git
 + tmux
++ ranger
++ highlight
 
 ## Italics in iTerm and Tmux
 
