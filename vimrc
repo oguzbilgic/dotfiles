@@ -210,6 +210,24 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+" Experimental: Quickfix motions
+nnoremap [q :cprevious<cr>
+nnoremap ]q :cnext<cr>
+nnoremap [Q :cfirst<cr>
+nnoremap ]Q :clast<cr>
+
+" Experimental: Location list motions
+nnoremap [l :lprevious<cr>
+nnoremap ]l :lnext<cr>
+nnoremap [L :lfirst<cr>
+nnoremap ]L :llast<cr>
+
+" Experimental: Buffer motions
+nnoremap [b :bprevious<cr>
+nnoremap ]b :bnext<cr>
+nnoremap [B :bfirst<cr>
+nnoremap ]B :blast<cr>
+
 " Open vimrc in a new tab
 nnoremap <leader>ve :tabe $MYVIMRC<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
