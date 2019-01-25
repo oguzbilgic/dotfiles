@@ -43,10 +43,11 @@ Plug 'dgraham/vim-eslint'              " Adds eslint compiler. ':make .' populat
 " Filetype
 Plug 'rhysd/vim-crystal'               " Adds .cr file type support
 Plug 'udalov/kotlin-vim'               " Adds .kt file type support
-Plug 'pangloss/vim-javascript'         " Improved .js support
+Plug 'pangloss/vim-javascript'         " Improves .js file type support
+Plug 'kchmck/vim-coffee-script'        " Adds .coffee file type support
+Plug 'leafgarland/typescript-vim'      " Adds .ts file type support
 " Plug 'vim-ruby/vim-ruby'
 " Plug 'mxw/vim-jsx'
-" Plug 'leafgarland/typescript-vim'
 
 " Colorschemes
 Plug 'vim-airline/vim-airline-themes'
