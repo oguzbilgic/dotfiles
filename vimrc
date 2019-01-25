@@ -27,7 +27,7 @@ Plug 'tpope/vim-surround'              " Adds s text-object for surrounding ' } 
 Plug 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal
 Plug 'michaeljsmith/vim-indent-object' " Adds i text-object for indentation
 Plug 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
-Plug 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars in insert mode
+" Plug 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars in insert mode
 
 " Git
 Plug 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
