@@ -397,11 +397,15 @@ noremap <leader>gf :GitGutterFold<cr>
 " Fugitive Settings
 "----------------------------------------------------------
 
-autocmd Filetype fugitive setlocal nonumber
-" autocmd Filetype fugitive setlocal winfixheight
+augroup fugitive_autocmds
+  autocmd!
+  autocmd Filetype fugitive setlocal nonumber
+  " autocmd Filetype fugitive setlocal winfixheight
 
-autocmd Filetype gitcommit setlocal nonumber
-" autocmd Filetype gitcommit exe "resize " . line('$')
+  autocmd Filetype gitcommit setlocal nonumber
+  autocmd Filetype gitcommit setlocal spell
+  " autocmd Filetype gitcommit exe "resize " . line('$')
+augroup END
 
 noremap <leader>gs :Gstatus<cr>
 noremap <leader>gc :Gcommit<cr>
