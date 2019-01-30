@@ -125,6 +125,11 @@ set diffopt+=vertical                  " Always show diffs in a vertical split
 set lazyredraw
 set ttyfast
 
+" Experimental: Enable project specific .vimrc
+" Dangerous because untrust code can be executed
+set exrc
+set secure
+
 "----------------------------------------------------------
 " UI Settings
 "----------------------------------------------------------
