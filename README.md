@@ -27,9 +27,8 @@ my workstation configuration
 ## dot files
 
 ```bash
-ln -s ~/code/dotfiles/vim       ~/.vim
-ln -s ~/code/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/code/dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/code/dotfiles/vimrc  ~/.vimrc
+ln -s ~/code/dotfiles/config ~/.config
 ```
 
 ## Install Homebrew
@@ -44,11 +43,10 @@ ln -s ~/code/dotfiles/tmux.conf ~/.tmux.conf
 + vim
 + irssi
 + git
-+ tmux
 + ranger
 + highlight
 
-## Italics in iTerm and Tmux
+## Italics in iTerm
 
 https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
 
