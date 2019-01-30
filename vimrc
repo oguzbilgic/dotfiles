@@ -347,12 +347,18 @@ let g:ale_sign_warning = '⚠'
 let g:ale_completion_enabled = 1
 
 nnoremap <silent> <leader>ah :ALEHover<CR>
-nnoremap <silent> <leader>ad :ALEDetail<CR>
+nnoremap <silent> <leader>ad :ALEDocumentation<CR>
+nnoremap <silent> <leader>ae :ALEDetail<CR>
 nnoremap <silent> <leader>af :ALEFix<CR>
 nnoremap <silent> <leader>ai :ALEInfo<CR>
 nnoremap <silent> <leader>at :ALEToggle<CR>
 nnoremap <silent> <leader>ar :ALEFindReferences<CR>
 nnoremap <silent> <leader>ag :ALEGoToDefinition<CR>
+nnoremap <silent> <leader>as :ALESymbolSearch<space>
+
+nnoremap <silent> gd :ALEGoToDefinition<CR>
+nnoremap <silent> gD :ALEGoToDefinition<CR>
+nnoremap <silent> K :ALEHover<CR>
 
 "----------------------------------------------------------
 " NERDTree Settings
