@@ -401,7 +401,7 @@ endif
 let g:gitgutter_sign_added = '┃'
 let g:gitgutter_sign_modified = '┃'
 let g:gitgutter_sign_removed = '━'
-let g:gitgutter_sign_modified_removed = '┳'
+let g:gitgutter_sign_modified_removed = '╋━'
 
 " Folds all unchanged lines in the buffer
 noremap <leader>hf :GitGutterFold<cr>
@@ -495,6 +495,10 @@ if g:colors_name == 'spacegray'
   highlight DiffText guibg=#d88735 guifg=black cterm=italic,bold
   highlight DiffChange guibg=#815d3a guifg=black
   highlight Error cterm=NONE
+
+  " GitGutter
+  hi link GitGutterAdd String
+  hi link GitGutterChange Identifier
 end
 
 if g:colors_name == 'one' && &background == "light"
