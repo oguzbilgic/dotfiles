@@ -32,7 +32,7 @@ Plug 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
 " Git
 Plug 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
 Plug 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
-Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for 'wildignore'
+" Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for 'wildignore'
 Plug 'tpope/vim-fugitive'              " Adds :Gstatus, :Gcommit, :Gdiff and more
 Plug 'tpope/vim-rhubarb'               " Adds :Gbrowse for opening in Github
 Plug 'junegunn/gv.vim'                 " Adds :GV command for viewing git logs
