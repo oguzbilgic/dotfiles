@@ -6,7 +6,6 @@
 [core]
   editor = vim
   quotepath = false
-  excludesfile =  ~/.gitignore
 [diff]
   tool = vimdiff
 [status]
