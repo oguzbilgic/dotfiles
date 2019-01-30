@@ -286,13 +286,13 @@ let g:which_key_map.g.g = ':Git...'
 let g:which_key_map.g.o = 'checkout...'
 let g:which_key_map.g.b = 'branch'
 let g:which_key_map.g.t = 'tree'
-let g:which_key_map.g.f = 'fold'
 let g:which_key_map.g.v = 'view'
 
 let g:which_key_map.h = { 'name' : '+hunk' }
 let g:which_key_map.h.s = 'stage-hunk'
 let g:which_key_map.h.u = 'unstage-hunk'
 let g:which_key_map.h.p = 'preview-hunk'
+let g:which_key_map.h.f = 'fold-unchanged'
 
 let g:which_key_map.n = { 'name' : '+nerd-tree' }
 let g:which_key_map.n.t = 'toggle-nerd-tree'
@@ -398,7 +398,9 @@ let g:gitgutter_sign_removed = '━'
 let g:gitgutter_sign_modified_removed = '┳'
 
 " Folds all unchanged lines in the buffer
-noremap <leader>gf :GitGutterFold<cr>
+noremap <leader>hf :GitGutterFold<cr>
+" Toggle git gutter
+noremap <leader>ht :GitGutterToggle<cr>
 
 "----------------------------------------------------------
 " Fugitive Settings
