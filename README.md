@@ -13,19 +13,19 @@ my workstation configuration
 
 ## Mac Apps
 
-+ Google Chrome
++ Google Chrome: Web browser
 + Xcode Cli Tools
 + [iTerm2](https://www.iterm2.com/)
 + [Color Picker](https://itunes.apple.com/us/app/color-picker/id641027709?l=en&mt=12)
-+ [Kitematic](https://kitematic.com/) for Docker containers
-+ [Sequel Pro](https://www.sequelpro.com/) for MySQL
-+ [robo 3T](https://robomongo.org/) for MongoDB
-+ [Postman](https://www.getpostman.com/)
-+ [Amethyst](https://github.com/ianyh/Amethyst) window manager
-+ [Irvue](http://irvue.tumblr.com/) for random wallpapers
-+ [Slack](http://slack.com/) for team chat
-+ [Zoom](http://zoom.us/) for video conference
-+ [Tunnelblick](https://tunnelblick.net)
++ [Kitematic](https://kitematic.com/): Docker GUI
++ [Sequel Pro](https://www.sequelpro.com/): MySQL client
++ [robo 3T](https://robomongo.org/): MongoDB client
++ [Postman](https://www.getpostman.com/): API client
++ [Amethyst](https://github.com/ianyh/Amethyst): Window manager
++ [Irvue](http://irvue.tumblr.com/): Wallpaper manager
++ [Slack](http://slack.com/): Team chat
++ [Zoom](http://zoom.us/) Video conference
++ [Tunnelblick](https://tunnelblick.net): VPN Client
 
 ## dot files
 
@@ -42,12 +42,12 @@ ln -s ~/code/dotfiles/config ~/.config
 
 ## Install Packages
 
-+ fish
-+ vim
-+ irssi
-+ git
-+ ranger
-+ highlight
++ fish: shell
++ vim: text editor
++ irssi: irc client
++ git: version controller
++ ranger: file browser
++ highlight: syntax highlighter
 
 ## Italics in iTerm
 
