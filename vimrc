@@ -39,6 +39,7 @@ Plug 'junegunn/gv.vim'                 " Adds :GV command for viewing git logs
 
 " Compilers
 Plug 'dgraham/vim-eslint'              " Adds eslint compiler. ':make .' populates quickfix
+Plug 'tfnico/vim-gradle'
 
 " Filetype
 Plug 'rhysd/vim-crystal'               " Adds .cr file type support
