@@ -34,13 +34,13 @@ ln -s ~/code/dotfiles/vimrc  ~/.vimrc
 ln -s ~/code/dotfiles/config ~/.config
 ```
 
-## Install Homebrew
+## Homebrew
 
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## Install Packages
+### Install Packages
 
 + fish: shell
 + vim: text editor
@@ -48,6 +48,14 @@ ln -s ~/code/dotfiles/config ~/.config
 + git: version controller
 + ranger: file browser
 + highlight: syntax highlighter
+
+## Google Chrome Plugins
+
++ LastPass
++ Hangouts
++ Zoom
++ React Developer tools
++ JSONView
 
 ## Italics in iTerm
 
