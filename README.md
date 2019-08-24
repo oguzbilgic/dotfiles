@@ -22,7 +22,10 @@ my workstation configuration
 + [robo 3T](https://robomongo.org/) for MongoDB
 + [Postman](https://www.getpostman.com/)
 + [Amethyst](https://github.com/ianyh/Amethyst) window manager
-+ [Irvue](http://irvue.tumblr.com/)
++ [Irvue](http://irvue.tumblr.com/) for random wallpapers
++ [Slack](http://slack.com/) for team chat
++ [Zoom](http://zoom.us/) for video conference
++ [Tunnelblick](https://tunnelblick.net)
 
 ## dot files
 
