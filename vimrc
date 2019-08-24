@@ -341,6 +341,8 @@ let g:airline#extensions#ale#enabled = 1
 " Don't show the file path in Airline's Tabline
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
+nnoremap <leader>va :AirlineToggle<CR>
+
 "----------------------------------------------------------
 " Ale Settings
 "----------------------------------------------------------
