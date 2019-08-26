@@ -62,6 +62,6 @@ ln -s ~/code/dotfiles/config ~/.config
 https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
 
 ```bash
-tic -x xterm-256color-italic.terminfo
+tic -x xterm-256color.terminfo
 tic -x tmux-256color.terminfo
 ```
