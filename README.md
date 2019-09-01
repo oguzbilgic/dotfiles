@@ -44,10 +44,10 @@ ln -s ~/code/dotfiles/config ~/.config
 
 + fish: shell
 + vim: text editor
-+ irssi: irc client
 + git: version controller
 + ranger: file browser
 + highlight: syntax highlighter
++ fzf: fuzzy finder
 
 ## Google Chrome Plugins
 
