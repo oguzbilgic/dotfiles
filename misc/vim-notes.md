@@ -1,7 +1,7 @@
 # 1 - About The Manuals
 - Jumping around
-  * CTRL-]
-  * CTRL-O
+  * CTRL-]: jump to tag
+  * CTRL-O: jump backwards
 
 # 2 - The First Steps in Vim
 - Inserting text
@@ -10,11 +10,12 @@
   * h, j, k, l
 - Deleting
   * x, d, J
-- Undo
-  * u, CTRL-R
+- Undo / Redo
+  * u, CTRL-r
 - Getting out
   * ZZ, ZQ
 - Finding help
+  * CTRL-D
 
 # 3 - Moving Around
 - Horiz. movement
@@ -23,22 +24,24 @@
   * 0, ^, $
   * %
 - Vert. movement
-  * g, GG
+  * gg, G
   * %
   * H, M, L
 - Scrolling
-  * CTRL-U CTRL-D
-  * CTRL-E CTRL-Y
-  * CTRL-F CTRL-B
+  * CTRL-U, CTRL-D: half screen
+  * CTRL-E, CTRL-Y: line
+  * CTRL-F, CTRL-B: whole screen
+  * zt, zz, zb
 - Search
-  * /
-  * n, N
+  * / search
+  * \ escape character
+  * n, N next occurance
+  * * search current word
   * \> end of word
   * \< start of word
   * ^ beginning of line
   * $ end of line
   * . any single char
-  * \. match dot
 - Marks
   * ma `a
   * '' last jump
@@ -73,7 +76,7 @@
 - Option Window
 - Help files
 
-# 6 - Using Synctax Highlighting
+# 6 - Using Syntax Highlighting
 - Syntax
   * :syntax
 - Colors
