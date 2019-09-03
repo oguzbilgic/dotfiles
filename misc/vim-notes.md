@@ -129,6 +129,7 @@
   * . repeats change
   * q{a-z} record macro
   * @{a-z} run macro
+  * @@ run last macro
   * q{A-z} append to macro
 - Substitution
   * :[%]s/from/to/[g, p, c, e]
@@ -142,13 +143,14 @@
   * :'t,'bcommand marks t to b
   * :'<,'>command visual
 - Global
+  * :global match and run command
   * :g/pattern/command
 - Visual block
   * CTRL-V
-  * ~, u, U
+  * ~, u, U change case
   * >, <
 - Read & Write
-  * :read, :write filename
+  * :r[ead], :w[rite] filename
 - Formatting & Case
   * gq reformat
   * gu, gU, g~
@@ -156,7 +158,7 @@
   * :!{motion}{program}
   * :read !{command}
   * :write !{command}
-  * CTRL-L
+  * CTRL-L redraw screen
 
 # 11 - Recovering from a crash
 
