@@ -61,8 +61,9 @@
 - Copying & Moving
   * y, yy, dd
   * p, P
+  * "*yy, "*p clipboard
 - Replace
-  * R
+  * r, R
 - Text objects
   * a{w,s,p}, i{w,s,p}
 - Other ways
@@ -80,30 +81,41 @@
 - Syntax
   * :syntax
 - Colors
-  * :colorscheme
+  * :colo[rscheme]
   * :highlight
 
 # 7 - Editing more than one file
 - Args
   * :args
+  * :n[ext], :prev[ious]
 - Backups
 - Registers
 - Rename
+  * :sav[eas]
+  * :f[ile]
 - File Marks
   * m{A-Z}
   * '. last delete
+  * :marks
 
 # 8 - Splitting Windows
 - Windows
-  * :split, :vsplit, :new
-  * CTRL-W {c, n, v, o}
+  * :sp[lit], :vsp[lit], :new
+  * :close, :only
+  * CTRL-W {c, n, v, o, w}
   * CTRL-W {+, -, _, |, =}
   * CTRL-W {t, b}
-  * :qa, :wa
+  * :qa[ll], :wa[ll]
+- Vimdiff
+  * :vert[ical] diffsplit
+  * :vert[ical] diffpatch
+  * ]c, [c
+  * dp diff put
+  * do diff obtain
 - Tabs
-  * :tabe, :tabo
+  * :tabe[dit], :tabo[nly]
   * :tab {command}
-  * gt
+  * gt go to next tab
 
 # 9 - Using the GUI
 - GUI
