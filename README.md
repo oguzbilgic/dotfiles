@@ -11,7 +11,7 @@ my workstation configuration
 - SF Mono (12pt, 130% vertical spacing)
   * Can be found in `/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/`
 
-## Mac Apps
+## Install Mac apps
 
 + Google Chrome: Web browser
 + Xcode Cli Tools
@@ -27,20 +27,22 @@ my workstation configuration
 + [Zoom](http://zoom.us/) Video conference
 + [Tunnelblick](https://tunnelblick.net): VPN Client
 
-## dot files
+## Symlink dot files
 
 ```bash
 ln -s ~/code/dotfiles/vimrc  ~/.vimrc
 ln -s ~/code/dotfiles/config ~/.config
 ```
 
-## Homebrew
+## Install packages
+
+Install homebrew:
 
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-### Install Packages
+Install Packages:
 
 + fish: shell
 + vim: text editor
@@ -49,15 +51,13 @@ ln -s ~/code/dotfiles/config ~/.config
 + highlight: syntax highlighter
 + fzf: fuzzy finder
 
-## Google Chrome Plugins
+Set fish as the default shell:
 
-+ LastPass
-+ Hangouts
-+ Zoom
-+ React Developer tools
-+ JSONView
+``` bash
+chsh -s /usr/local/bin/fish
+```
 
-## Italics in iTerm
+## Enable italics in iTerm
 
 https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
 
