@@ -15,7 +15,7 @@ my workstation configuration
 
 + Google Chrome: Web browser
 + Xcode Cli Tools
-+ [iTerm2](https://www.iterm2.com/)
++ [iTerm2](https://www.iterm2.com/): Terminal
 + [Color Picker](https://itunes.apple.com/us/app/color-picker/id641027709?l=en&mt=12)
 + [Kitematic](https://kitematic.com/): Docker GUI
 + [Sequel Pro](https://www.sequelpro.com/): MySQL client
@@ -30,6 +30,9 @@ my workstation configuration
 ## Symlink dot files
 
 ```bash
+mkdir code
+cd code/
+git clone git@github.com:oguzbilgic/dotfiles.git
 ln -s ~/code/dotfiles/vimrc  ~/.vimrc
 ln -s ~/code/dotfiles/config ~/.config
 ```
@@ -47,7 +50,7 @@ Install Packages:
 + fish: shell
 + vim: text editor
 + git: version controller
-+ ranger: file browser
++ ranger: cli file browser
 + highlight: syntax highlighter
 + fzf: fuzzy finder
 
@@ -62,6 +65,6 @@ chsh -s /usr/local/bin/fish
 https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
 
 ```bash
-tic -x xterm-256color.terminfo
-tic -x tmux-256color.terminfo
+tic -x ~/code/dotfiles/misc/xterm-256color.terminfo
+tic -x ~/code/dotfiles/misc/tmux-256color.terminfo
 ```
