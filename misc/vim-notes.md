@@ -1,7 +1,8 @@
 # 1 - About The Manuals
 - Jumping around
   * CTRL-]: jump to tag
-  * CTRL-O: jump backwards
+  * CTRL-t: jump to previous tag
+  * CTRL-o: jump backwards
 
 # 2 - The First Steps in Vim
 - Inserting text
@@ -18,15 +19,17 @@
   * CTRL-D
 
 # 3 - Moving Around
-- Horiz. movement
+- Horizontal movement
   * w, b, e
   * f, t
   * 0, ^, $
   * %
-- Vert. movement
+- Vertical movement
   * gg, G
   * %
   * H, M, L
+- Current location
+  * CTRL-G
 - Scrolling
   * CTRL-U, CTRL-D: half screen
   * CTRL-E, CTRL-Y: line
@@ -48,7 +51,8 @@
   * '" last edit
   * '[, '] last change
 - Jumps
-  * CTRL-O CTRL-I
+  * CTRL-O older position
+  * CTRL-I newer position
 
 # 4 - Making Small Changes
 - Operators
