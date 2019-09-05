@@ -148,7 +148,7 @@
 - Visual block
   * CTRL-V
   * ~, u, U change case
-  * >, <
+  * >, < indent
 - Read & Write
   * :r[ead], :w[rite] filename
 - Formatting & Case
