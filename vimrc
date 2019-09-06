@@ -149,7 +149,8 @@ syntax on
 set t_Co=256                           " Enable 256 color
 
 " UI Settings
-set mouse=a                            " Enable mouse
+" set mouse=a                            " Enable mouse
+set mouse=                             " Experimental: full disable mouse
 set showcmd                            " Show current command bottom right
 set wildmenu                           " Show command line suggestions
 set number                             " Show line numbers
