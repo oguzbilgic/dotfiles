@@ -2,7 +2,7 @@
 - Jumping around
   * CTRL-]: jump to tag
   * CTRL-t: jump to previous tag
-  * CTRL-o: jump backwards
+  * CTRL-o: jump older position on jumplist
 
 # 2 - The First Steps in Vim
 - Inserting text
@@ -51,8 +51,8 @@
   * '" last edit
   * '[, '] last change
 - Jumps
-  * CTRL-O older position
-  * CTRL-I newer position
+  * CTRL-O older position on jumplist
+  * CTRL-I newer position on jumplist
 
 # 4 - Making Small Changes
 - Operators
