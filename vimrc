@@ -469,6 +469,28 @@ map <ScrollWheelDown> <C-E>
 let g:javascript_plugin_jsdoc = 1
 
 "----------------------------------------------------------
+" Experimental: Vim Help Settings
+"----------------------------------------------------------
+
+augroup vim_help_autocmds
+  autocmd!
+
+  " Easier way to navigate vim help
+  autocmd FileType help nnoremap <buffer> <cr> <c-]>
+  autocmd FileType help nnoremap <buffer> <bs> <c-t>
+
+  " Center the cursor vertically
+  autocmd FileType help setlocal scrolloff=999
+
+  " Scroll half page using J and K
+  autocmd FileType help nmap <buffer> J <c-d>
+  autocmd FileType help nmap <buffer> K <c-u>
+
+  " Use <tab> to jump to the next tag within the helpfile
+  autocmd FileType help nnoremap <buffer> <tab> /\|\zs\S\{-}\|/<cr>:noh<cr>
+augroup END
+
+"----------------------------------------------------------
 " Highlight Overwrites
 "----------------------------------------------------------
 
