@@ -4,7 +4,7 @@ my workstation configuration
 
 ## Fonts
 
-- Robot Mono
+- Roboto Mono (14pt, 110% vertical spacing)
 - Fira Code
 - Source Code Pro
 - Office Code Pro (12pt, 125% vertical spacing)
