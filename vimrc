@@ -488,8 +488,8 @@ augroup vim_help_autocmds
   autocmd FileType help setlocal scrolloff=999
 
   " Scroll half page using J and K
-  autocmd FileType help nmap <buffer> J <c-d>
-  autocmd FileType help nmap <buffer> K <c-u>
+  " autocmd FileType help nmap <buffer> J <c-d>
+  " autocmd FileType help nmap <buffer> K <c-u>
 augroup END
 
 "----------------------------------------------------------
