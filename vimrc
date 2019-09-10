@@ -65,6 +65,7 @@ Plug 'rakr/vim-one'
 " Plug 'cocopon/iceberg.vim'
 " Plug 'tomasr/molokai'
 " Plug 'morhetz/gruvbox'
+" Plug 'nanotech/jellybeans.vim'
 
 " brew install cmake
 " cd ~/.vim/bundle/YouCompleteMe
