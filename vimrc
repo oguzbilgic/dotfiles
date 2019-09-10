@@ -472,12 +472,17 @@ let g:javascript_plugin_jsdoc = 1
 " Experimental: Vim Help Settings
 "----------------------------------------------------------
 
+" Easier way to navigate vim help
 augroup vim_help_autocmds
   autocmd!
 
-  " Easier way to navigate vim help
+  " Use <CR> to move to tag
   autocmd FileType help nnoremap <buffer> <cr> <c-]>
+  " Use <BS> to go back
   autocmd FileType help nnoremap <buffer> <bs> <c-t>
+
+  " Use <tab> to jump to the next tag within the helpfile
+  autocmd FileType help nnoremap <buffer> <tab> /\|\zs\S\{-}\|/<cr>:noh<cr>
 
   " Center the cursor vertically
   autocmd FileType help setlocal scrolloff=999
@@ -485,9 +490,6 @@ augroup vim_help_autocmds
   " Scroll half page using J and K
   autocmd FileType help nmap <buffer> J <c-d>
   autocmd FileType help nmap <buffer> K <c-u>
-
-  " Use <tab> to jump to the next tag within the helpfile
-  autocmd FileType help nnoremap <buffer> <tab> /\|\zs\S\{-}\|/<cr>:noh<cr>
 augroup END
 
 "----------------------------------------------------------
