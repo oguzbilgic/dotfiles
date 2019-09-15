@@ -470,6 +470,17 @@ map <ScrollWheelDown> <C-E>
 let g:javascript_plugin_jsdoc = 1
 
 "----------------------------------------------------------
+" Vim Markdown Settings
+"----------------------------------------------------------
+
+augroup vim_markdown_autocmds
+  autocmd!
+
+  " Enable spell checker
+  autocmd FileType markdown setlocal spell
+augroup END
+
+"----------------------------------------------------------
 " Experimental: Vim Help Settings
 "----------------------------------------------------------
 
@@ -531,6 +542,7 @@ if g:colors_name == 'spacegray'
   highlight DiffText guibg=#d88735 guifg=black cterm=italic,bold
   highlight DiffChange guibg=#815d3a guifg=black
   highlight Error cterm=NONE
+  highlight SpellBad cterm=underline guibg=NONE
 
   " GitGutter
   hi link GitGutterAdd String
