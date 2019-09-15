@@ -1,5 +1,5 @@
 # 20 - Typing command-line commands quickly
-- Command line editting
+- Command line editing
   * S-Left, S-Right one word 
   * CTRL-B begin of command line
   * CTRL-E end of command line
