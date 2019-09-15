@@ -155,6 +155,7 @@ set t_Co=256                           " Enable 256 color
 set showcmd                            " Show current command bottom right
 set wildmenu                           " Show command line suggestions
 set number                             " Show line numbers
+set relativenumber                     " Experimental: Show relative numbers
 set nowrap                             " Disable  wrapping of long lines
 set shortmess+=I                       " Hide Vim's welcome message
 
