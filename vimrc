@@ -68,11 +68,6 @@ Plug 'rakr/vim-one'
 " Plug 'morhetz/gruvbox'
 " Plug 'nanotech/jellybeans.vim'
 
-" brew install cmake
-" cd ~/.vim/bundle/YouCompleteMe
-" ./install.py --js-completer
-" Plug 'Valloric/YouCompleteMe'
-
 " End plugin list
 call plug#end()
 
