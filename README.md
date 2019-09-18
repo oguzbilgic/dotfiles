@@ -35,6 +35,7 @@ cd code/
 git clone git@github.com:oguzbilgic/dotfiles.git
 ln -s ~/code/dotfiles/vimrc  ~/.vimrc
 ln -s ~/code/dotfiles/config ~/.config
+ln -s ~/code/dotfiles/hushlogin ~/.hushlogin
 ```
 
 ## Install packages
