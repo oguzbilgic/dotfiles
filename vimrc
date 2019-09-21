@@ -549,3 +549,43 @@ if g:colors_name == 'one' && &background == "light"
   highlight TabLine cterm=NONE gui=NONE
   highlight! link VertSplit StatusLine
 end
+
+"----------------------------------------------------------
+" Experimental: Custom Commands
+"----------------------------------------------------------
+
+" Saves read only file with sudo
+command Sudow w !sudo tee %
+
+" Resizes current window to fit contents
+command Fit execute('resize ' . line('$'))
+
+" DiffRev ------------------------------------------------
+
+" Populates quickfix with all the files changed
+" https://github.com/tpope/vim-fugitive/issues/132#issuecomment-290644034
+let s:git_status_dictionary = {
+      \ "A": "Added",
+      \ "B": "Broken",
+      \ "C": "Copied",
+      \ "D": "Deleted",
+      \ "M": "Modified",
+      \ "R": "Renamed",
+      \ "T": "Changed",
+      \ "U": "Unmerged",
+      \ "X": "Unknown"
+      \ }
+
+function! s:get_diff_files(rev)
+  let title = 'Files Changed'
+  let command = 'git diff --name-status '.a:rev
+  let items = map(
+        \ split(system(command), '\n'),
+        \ '{"filename":matchstr(v:val, "\\S\\+$"),"text":s:git_status_dictionary[matchstr(v:val, "^\\w")]}'
+        \ )
+  let list = {'title': title, 'items': items}
+  call setqflist([], 'r', list)
+  copen
+endfunction
+
+command! -nargs=1 DiffRev call s:get_diff_files(<q-args>)
