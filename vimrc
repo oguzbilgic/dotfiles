@@ -437,13 +437,13 @@ noremap <leader>gd :Gdiff<cr>
 noremap <leader>gp :Gpush<cr>
 noremap <leader>gr :Gread<cr>
 noremap <leader>gw :Gwrite<cr>
-noremap <leader>ge :Gedit<space>
 noremap <leader>gh :Gbrowse @:<cr>
+noremap <leader>gb :Gblame<cr>
+noremap <leader>ge :Gedit<space>
 
 " Shell aliases
 noremap <leader>gg :Git<space>
 noremap <leader>go :Git checkout<space>
-noremap <leader>gb :Git branch<cr>
 noremap <leader>gt :Git tree --all<cr>
 
 "----------------------------------------------------------
