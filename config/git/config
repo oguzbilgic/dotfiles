@@ -6,7 +6,6 @@
 [core]
   editor = vim
   quotepath = false
-  pager = less -+X
 [diff]
   tool = vimdiff
 [status]
