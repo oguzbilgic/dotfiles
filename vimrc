@@ -48,6 +48,7 @@ Plug 'pangloss/vim-javascript'         " Improves .js file type support
 Plug 'kchmck/vim-coffee-script'        " Adds .coffee file type support
 Plug 'leafgarland/typescript-vim'      " Adds .ts file type support
 Plug 'dag/vim-fish'                    " Adds .fish file type support
+Plug 'andreshazard/vim-freemarker'     " Adds .ftl file type support
 " Plug 'vim-ruby/vim-ruby'
 " Plug 'mxw/vim-jsx'
 
