@@ -16,19 +16,27 @@
 - Suspend and resume
   * CTRL-Z or :suspend
 - Executing shell commands
-  * :!{command}
-  * :r[ead] !{command}
+  * :!{command} execute
+  * :r[ead] !{command} execute and read to buffer
   * :w[write] !{command}
-  * :[range]!{command}
-  * :shell
+  * :[range]!{command} filter text through command
+  * :shell start shell
 - Remembering information; viminfo
-  * '0
-  * :oldfiles
-  * :browse
+  * '0 go to last edited file
+  * :oldfiles recently edited files
+  * :browse {command}
 - Sessions
-  * :mksession name.vim
-  * :source name.vim
+  * :mksession name.vim save session
+  * :source name.vim open session
   * vim -S name.vim
 - Views
+  * :mkview store view options for current file
+  * :loadview
 - Modelines
+  * file specific vim options
 
+# 22 - Finding the file to edit
+- The file browser
+- The current directory
+- Finding a file
+- The buffer list
