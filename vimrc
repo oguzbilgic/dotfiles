@@ -463,6 +463,14 @@ map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
 "----------------------------------------------------------
+" Vim Netrw Settings
+"----------------------------------------------------------
+
+" Hide info banner
+let g:netrw_banner=0
+let g:netrw_liststyle=3
+
+"----------------------------------------------------------
 " Vim Javascript Settings
 "----------------------------------------------------------
 
