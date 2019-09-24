@@ -1,22 +1,21 @@
 ## CLI Tools
 
-### Local tools
+### Local Tools
 
-Some of the tools that I use daily on my local machine.
+- `git`: version control
+- `vim`: text editor
+- `ranger`: directory explorer
+- `brew`: mac package manager
 
-- **git:** version control
-- **brew:** mac package manager
-- **man:** manual pages
-- **less:** pager
-- **ranger:** file explorer
-- **grep:** search 
-- **wc:** line counter
-- **vim:** text editor
-
-### Remote tools
-
-Some command line tools that are useful for remote machines.
+### Core Tools
 
 - `df -h`: displays storage usage
 - `w` & `who`: shows active ssh connections
 - `tail -f`: Prints logs as they come in
+- `man`: manual pages
+- `less`: pager
+- `grep`: search 
+- `wc`: line counter
+- `pwd`: print current directory
+- `ssh`
+- `cat`
