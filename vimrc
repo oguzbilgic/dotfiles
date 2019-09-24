@@ -120,6 +120,9 @@ set fillchars+=fold:\                  " Don't use fold divider character
 set fillchars+=diff:\                  " Don't fill deleted diff lines
 set diffopt+=vertical                  " Always show diffs in a vertical split
 
+" Session
+set sessionoptions-=options           " When saving session, don't store options
+
 " Performance
 set lazyredraw
 set ttyfast
