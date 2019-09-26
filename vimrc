@@ -246,7 +246,7 @@ nnoremap <leader>ve :tabe $MYVIMRC<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
 
 " Experimental: ZZ in insert mode
-inoremap ZZ <esc>ZZ
+" inoremap ZZ <esc>ZZ
 
 " Ipad Settings
 " map! ` <ESC>
