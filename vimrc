@@ -596,4 +596,21 @@ function! s:get_diff_files(rev)
   copen
 endfunction
 
+" Command
 command! -nargs=1 DiffRev call s:get_diff_files(<q-args>)
+
+" Experimental: Mappings
+nnoremap ]r :%bd<CR>:copen<CR>:cnext<CR>:Gdiffsplit master<CR>
+nnoremap [r :%bd<CR>:copen<CR>:cprevious<CR>:Gdiffsplit master<CR>
+
+" SynStack -----------------------------------------------
+
+" Prints the highlight groups for the word under the cursor
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
+command SynStack call SynStack()
