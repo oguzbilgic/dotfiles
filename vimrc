@@ -493,12 +493,12 @@ augroup vim_help_autocmds
   autocmd!
 
   " Use <CR> to move to tag
-  autocmd FileType help nnoremap <buffer> <cr> <c-]>
+  " autocmd FileType help nnoremap <buffer> <cr> <c-]>
   " Use <BS> to go back
-  autocmd FileType help nnoremap <buffer> <bs> <c-t>
+  " autocmd FileType help nnoremap <buffer> <bs> <c-t>
 
   " Use <tab> to jump to the next tag within the helpfile
-  autocmd FileType help nnoremap <buffer> <tab> /\|\zs\S\{-}\|/<cr>:noh<cr>
+  " autocmd FileType help nnoremap <buffer> <tab> /\|\zs\S\{-}\|/<cr>:noh<cr>
 
   " Center the cursor vertically
   autocmd FileType help setlocal scrolloff=999
