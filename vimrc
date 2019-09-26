@@ -13,11 +13,11 @@ endif
 call plug#begin()
 
 " Visual
-Plug 'bling/vim-airline'               " Improved status line
-Plug 'scrooloose/nerdtree'             " Adds file browser window
+" Plug 'bling/vim-airline'               " Improved status line
+" Plug 'scrooloose/nerdtree'             " Adds file browser window
 Plug 'junegunn/fzf'                    " Adds fuzzy finder
 Plug 'junegunn/fzf.vim'
-Plug 'w0rp/ale'                        " Shows inline lint errors
+" Plug 'w0rp/ale'                        " Shows inline lint errors
 Plug 'liuchengxu/vim-which-key'        " Displays mappings for <leader> in window
 Plug 'Kazark/vim-SimpleSmoothScroll'   " Slows down scroll speed
 
@@ -165,7 +165,7 @@ set listchars=tab:→\ ,nbsp:␣,trail:·,extends:⟩,precedes:⟨
 " │ » → •
 
 " Window Settings
-set laststatus=2                       " Always show window status line
+" set laststatus=2                       " Always show window status line
 set splitright                         " Vertical split to right side
 set fillchars+=vert:\                  " Don't use window divider character
 
