@@ -248,10 +248,6 @@ nnoremap <leader>vs :source $MYVIMRC<CR>
 " Experimental: ZZ in insert mode
 inoremap ZZ <esc>ZZ
 
-" Terminal mappings
-nnoremap <leader>td :terminal<cr>docker-compose up -d --build
-nnoremap <leader>tn :terminal<cr>npm install
-
 " Ipad Settings
 " map! ` <ESC>
 " vmap! ` <ESC>
