@@ -37,6 +37,23 @@
 
 # 22 - Finding the file to edit
 - The file browser
+  * :edit .
+  * netrw: o, v, p, P, t
+  * :Explore, :Sexplore
+  * :NetrwSettings
 - The current directory
+  * :pwd
+  * :cd, :lcd, :tcd
 - Finding a file
+  * gf
+  * 'path'
+  * :find
+  * CTRL-W_f
 - The buffer list
+  * :hide, 'hidden'
+  * :buffers, :ls
+  * :buffer, :sbuffer
+  * :bnext, :bprevious
+  * :bfirst, :blast
+  * :bdelete
+
