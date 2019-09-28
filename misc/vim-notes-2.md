@@ -1,4 +1,6 @@
-# 20 - Typing command-line commands quickly
+# Editing Effectively
+
+## 20 - Typing command-line commands quickly
 - Command line editing
   * S-Left, S-Right one word 
   * CTRL-B begin of command line
@@ -12,7 +14,7 @@
 - Command line window
   * q:
 
-# 21 - Go away and come back
+## 21 - Go away and come back
 - Suspend and resume
   * CTRL-Z or :suspend
 - Executing shell commands
@@ -35,7 +37,7 @@
 - Modelines
   * file specific vim options
 
-# 22 - Finding the file to edit
+## 22 - Finding the file to edit
 - The file browser
   * :edit .
   * netrw: o, v, p, P, t
@@ -57,7 +59,7 @@
   * :bfirst, :blast
   * :bdelete deletes buffer
 
-# 23 - Editing other files
+## 23 - Editing other files
 - DOS, Mac and Unix files
   * 'fileformat'
 - Files on the internet
@@ -73,7 +75,7 @@
 - Compressed files
   * .Z .gz .bz2
 
-# 24 - Inserting quickly
+## 24 - Inserting quickly
 - Making corrections
   * CTRL-W delete whole word
   * CTRL-U delete whole line

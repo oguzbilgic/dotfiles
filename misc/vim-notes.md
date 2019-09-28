@@ -1,10 +1,12 @@
-# 1 - About The Manuals
+# Getting Started
+
+## 1 - About The Manuals
 - Jumping around
   * CTRL-]: jump to tag
   * CTRL-t: jump to previous tag
   * CTRL-o: jump older position on jumplist
 
-# 2 - The First Steps in Vim
+## 2 - The First Steps in Vim
 - Inserting text
   * i, a, o
 - Moving
@@ -18,7 +20,7 @@
 - Finding help
   * CTRL-D
 
-# 3 - Moving Around
+## 3 - Moving Around
 - Horizontal movement
   * w, b, e
   * f, t
@@ -54,7 +56,7 @@
   * CTRL-O older position on jumplist
   * CTRL-I newer position on jumplist
 
-# 4 - Making Small Changes
+## 4 - Making Small Changes
 - Operators
   * d, c
 - Repeating
@@ -73,7 +75,7 @@
 - Other ways
   * I, A, ~
 
-# 5 - Set Your Settings
+## 5 - Set Your Settings
 - Vimrc
 - Mappings
 - Plugins
@@ -81,14 +83,14 @@
 - Option Window
 - Help files
 
-# 6 - Using Syntax Highlighting
+## 6 - Using Syntax Highlighting
 - Syntax
   * :syntax
 - Colors
   * :colo[rscheme]
   * :highlight
 
-# 7 - Editing more than one file
+## 7 - Editing more than one file
 - Args
   * :args
   * :n[ext], :prev[ious]
@@ -102,7 +104,7 @@
   * '. last delete
   * :marks
 
-# 8 - Splitting Windows
+## 8 - Splitting Windows
 - Windows
   * :sp[lit], :vsp[lit], :new
   * :close, :only
@@ -121,14 +123,14 @@
   * :tab {command}
   * gt go to next tab
 
-# 9 - Using the GUI
+## 9 - Using the GUI
 - GUI
 - Mouse
 - Clipboard
   * "+ real clipboard
   * "* current selection
 
-# 10 - Making Big Changes
+## 10 - Making Big Changes
 - Macros
   * . repeats change
   * q{a-z} record macro
@@ -164,9 +166,9 @@
   * :write !{command}
   * CTRL-L redraw screen
 
-# 11 - Recovering from a crash
+## 11 - Recovering from a crash
 
-# 12 - Clever Tricks
+## 12 - Clever Tricks
 - Replace
   * \( \) matching
   * :.,/^$ search in range
