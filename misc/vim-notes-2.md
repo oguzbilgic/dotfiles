@@ -114,3 +114,32 @@
   * :digraph define a digraph
 - Normal mode commands
   * CTRL-O {command} execute command from insert mode
+
+## 25 - Editing formatted text
+- Breaking lines
+  * 'textwidth' insert line breaks automatically
+  * 'wrap' fit lines to the window width
+  * gq reformat operator
+  * 'auto-format', 'fo-table', 'joinspaces', 'formatprg'
+- Aligning text
+  * :center, :right, :left align text
+- Indents and tabs
+  * 'autoindent'
+  * >, < increase or decrease indent operator
+  * 'shiftwidth' amount of indent
+  * 'softtabstop' number of spaces inserted for tab
+  * 'expandtab' always insert space, not tab
+  * 'tabstop' width of tab character
+  * :retab replace tab character with space
+- Dealing with long lines
+  * zh, zl scroll right/left
+  * zH, zL scroll half window right/left
+  * zs, ze scroll start/end
+  * g0, gm, g$ move to first/middle/last visible char
+  * g^ move to first non-blank visible character
+  * 'linebreak' don't wrap in the middle of word
+  * gk, gj move up/down for wrapped lines
+  * :join join lines
+- Editing tables
+  * 'virtualedit'
+  * gr, gR virtual replace mode
