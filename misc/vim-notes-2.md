@@ -143,3 +143,22 @@
 - Editing tables
   * 'virtualedit'
   * gr, gR virtual replace mode
+
+## 26 - Repeating
+- Repeating with Visual mode
+  * gv visually select same area again
+- Add and subtract
+  * CTRL-A add count to selected text
+  * CTRL-X subtract count to selected text
+- Making a change in many files
+  * :argdo {command} execute command in each arg
+  * :windo {command} execute command in each window
+  * :bufdo {command} execute command in each buffer
+  * :update write file only if updated
+  * | for multiple commands {cmd1} | {cmd2}
+- Using Vim from a shell script
+  * vim -s silent mode, no prompt
+  * vim {file} < commands.vim run commands
+  * ls | vim - put output of ls into vim
+  * vim -w script record commands in script file
+
