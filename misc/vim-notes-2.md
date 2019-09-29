@@ -162,3 +162,41 @@
   * ls | vim - put output of ls into vim
   * vim -w script record commands in script file
 
+## 27 - Search commands and patterns
+- Ignoring case
+  * 'ignorecase'
+  * 'hlsearch' highlight as search
+  * 'smartcase' case sensitive if upper case
+  * \c \C case sensitivity for pattern
+- Wrapping around the file end
+  * 'ruler' display cursor position in status line
+  * 'wrapscan' go to first match when search is complete
+- Offsets
+  * /pattern/2 leaves cursor 2 characters after match
+  * /pattern/e{count} leaves cursor at the end of the match
+  * /pattern/b{count} leaves cursor at the beginning of the match
+  * // repeats last search
+- Matching multiple times
+  * * can match previous item any number of times
+  * /\(ab\)* ab multiple times
+  * \+ avoid matching empty string
+  * \= makes previous item optional
+  * \{3,5} matches b 3 to 5 times
+  * \{-} matches item before zero or more times
+- Alternatives
+  * \| or operator /foo\|bar
+  * \& and operator
+- Character ranges
+  * [a-z] match single character from the range
+  * \e escape, \t tab, \r cr, \b bs
+  * [^x] any character but x
+  * \a, \d, \s, \D predefined ranges
+- Character classes
+  * \f file name characters
+  * \i identifier characters
+  * \k keyword characters
+  * \p printable characters
+- Matching a line break
+  * \n linebreak
+  * \_s space or linebreak
+- Examples
