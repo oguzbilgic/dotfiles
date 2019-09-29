@@ -200,7 +200,7 @@
   * \n linebreak
   * \_s space or linebreak
 
-28 - Folding
+## 28 - Folding
 - Manual folding
   * zf fold operator
   * zo open fold
