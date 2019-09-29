@@ -199,4 +199,33 @@
 - Matching a line break
   * \n linebreak
   * \_s space or linebreak
-- Examples
+
+28 - Folding
+- Manual folding
+  * zf fold operator
+  * zo open fold
+  * zc close fold
+  * zr, zR open all folds
+  * zm, zM close all folds
+  * zn/zN disable/enable folding
+  * zi toggle folding
+- Working with folds
+  * 'foldmethod'
+  * 'foldcolumn' to show fold column
+  * zO open all folds at the cursor
+  * zC close all folds at the cursor
+  * zd delete a folds at the cursor
+  * zD delete all folds at the cursor
+  * 'foldopen' 'foldclose'
+- Folding by indent
+  * foldmethod=indent
+  * 'foldlevel'
+- Folding with markers
+  * foldmethod=marker
+  * {{{ }}}}
+- Folding by syntax
+- Folding by expression
+  * foldmethod=expr
+  * 'foldexpr'
+- Folding unchanged lines
+  * foldmethod=diff
