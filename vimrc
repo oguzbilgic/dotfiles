@@ -288,7 +288,7 @@ let g:which_key_map.g.e = ':Gedit...'
 let g:which_key_map.g.h = 'open-github'
 let g:which_key_map.g.g = ':Git...'
 let g:which_key_map.g.o = 'checkout...'
-let g:which_key_map.g.b = 'branch'
+let g:which_key_map.g.b = ':Gblame'
 let g:which_key_map.g.t = 'tree'
 let g:which_key_map.g.v = 'view'
 
