@@ -600,8 +600,8 @@ endfunction
 command! -nargs=1 DiffRev call s:get_diff_files(<q-args>)
 
 " Experimental: Mappings
-nnoremap ]r :%bd<CR>:copen<CR>:cnext<CR>:Gdiffsplit master<CR>
-nnoremap [r :%bd<CR>:copen<CR>:cprevious<CR>:Gdiffsplit master<CR>
+nnoremap ]r :%bd<CR>:cnext<CR>:Gdiffsplit master<CR>
+nnoremap [r :%bd<CR>:cprevious<CR>:Gdiffsplit master<CR>
 
 " SynStack -----------------------------------------------
 
