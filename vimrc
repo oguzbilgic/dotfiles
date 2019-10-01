@@ -138,10 +138,8 @@ set secure
 
 " Colorscheme
 if &background == 'dark'
-  let g:spacegray_use_italics = 1
   colorscheme spacegray
 else
-  let g:one_allow_italics = 1
   colorscheme one
 endif
 
@@ -505,10 +503,12 @@ augroup vim_help_autocmds
 augroup END
 
 "----------------------------------------------------------
-" Highlight Overwrites
+" Colorscheme Settings & Overwrites
 "----------------------------------------------------------
 
-if &background == "light"
+if g:colors_name == 'one' && &background == "light"
+  let g:one_allow_italics = 1
+
   highlight clear Visual
   highlight clear Search
   highlight clear IncSearch
@@ -530,9 +530,18 @@ if &background == "light"
   highlight! link DiffAdded DiffAdd
   highlight! link DiffRemoved DiffDelete
   highlight! link DiffLine Folded
-endif
+
+  highlight clear Folded
+  highlight Folded guibg=#e8f1fb guifg=#868c90 cterm=italic
+
+  " Remove underline
+  highlight TabLine cterm=NONE gui=NONE
+  highlight! link VertSplit StatusLine
+end
 
 if g:colors_name == 'spacegray'
+  let g:spacegray_use_italics = 1
+
   highlight clear Todo
 
   highlight! link VertSplit StatusLineNC
@@ -545,17 +554,13 @@ if g:colors_name == 'spacegray'
   highlight SpellBad cterm=underline guibg=NONE
 
   " GitGutter
-  hi link GitGutterAdd String
-  hi link GitGutterChange Identifier
+  highlight link GitGutterAdd String
+  highlight link GitGutterChange Identifier
 end
 
-if g:colors_name == 'one' && &background == "light"
-  highlight clear Folded
-  highlight Folded guibg=#e8f1fb guifg=#868c90 cterm=italic
-
-  " Remove underline
-  highlight TabLine cterm=NONE gui=NONE
-  highlight! link VertSplit StatusLine
+if g:colors_name == 'gruvbox'
+  highlight clear Visual
+  highlight link Visual CursorLine
 end
 
 "----------------------------------------------------------
