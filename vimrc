@@ -14,6 +14,7 @@ call plug#begin()
 
 " Visual
 " Plug 'bling/vim-airline'               " Improved status line
+" Plug 'vim-airline/vim-airline-themes'
 " Plug 'scrooloose/nerdtree'             " Adds file browser window
 " Plug 'junegunn/fzf'                    " Adds fuzzy finder
 " Plug 'junegunn/fzf.vim'
@@ -53,9 +54,9 @@ Plug 'andreshazard/vim-freemarker'     " Adds .ftl file type support
 " Plug 'mxw/vim-jsx'
 
 " Colorschemes
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ajh17/Spacegray.vim'
+Plug 'morhetz/gruvbox'
 Plug 'rakr/vim-one'
+" Plug 'ajh17/Spacegray.vim'
 " Plug 'felixhummel/setcolors.vim'       " :SetColors all then F8 to switch colorschemes
 " Plug 'daviddavis/vim-colorpack'
 " Plug 'noahfrederick/vim-hemisu'
@@ -66,7 +67,6 @@ Plug 'rakr/vim-one'
 " Plug 'cormacrelf/vim-colors-github'
 " Plug 'cocopon/iceberg.vim'
 " Plug 'tomasr/molokai'
-" Plug 'morhetz/gruvbox'
 " Plug 'nanotech/jellybeans.vim'
 
 " End plugin list
@@ -138,7 +138,7 @@ set secure
 
 " Colorscheme
 if &background == 'dark'
-  colorscheme spacegray
+  colorscheme gruvbox
 else
   colorscheme one
 endif
@@ -559,8 +559,8 @@ if g:colors_name == 'spacegray'
 end
 
 if g:colors_name == 'gruvbox'
-  highlight clear Visual
-  highlight link Visual CursorLine
+  highlight! link Visual CursorLine
+  highlight! link VertSplit StatusLineNC
 end
 
 "----------------------------------------------------------
