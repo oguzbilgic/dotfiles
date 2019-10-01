@@ -15,8 +15,8 @@ call plug#begin()
 " Visual
 " Plug 'bling/vim-airline'               " Improved status line
 " Plug 'scrooloose/nerdtree'             " Adds file browser window
-Plug 'junegunn/fzf'                    " Adds fuzzy finder
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf'                    " Adds fuzzy finder
+" Plug 'junegunn/fzf.vim'
 " Plug 'w0rp/ale'                        " Shows inline lint errors
 Plug 'liuchengxu/vim-which-key'        " Displays mappings for <leader> in window
 Plug 'Kazark/vim-SimpleSmoothScroll'   " Slows down scroll speed
