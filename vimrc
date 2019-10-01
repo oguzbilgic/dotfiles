@@ -121,7 +121,7 @@ set fillchars+=diff:\                  " Don't fill deleted diff lines
 set diffopt+=vertical                  " Always show diffs in a vertical split
 
 " Session
-set sessionoptions-=options           " When saving session, don't store options
+set sessionoptions-=options            " When saving session, don't store options
 
 " Performance
 set lazyredraw
@@ -161,7 +161,7 @@ set shortmess+=I                       " Hide Vim's welcome message
 " Invisible Character
 set list                               " Show invisible characters
 set showbreak=↪\                       " Line breaks for wrap option
-set listchars=tab:→\ ,nbsp:␣,trail:·,extends:⟩,precedes:⟨
+set listchars=tab:│\ ,nbsp:␣,trail:·,extends:⟩,precedes:⟨
 " │ » → •
 
 " Window Settings
