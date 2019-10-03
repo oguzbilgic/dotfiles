@@ -569,6 +569,17 @@ if g:colors_name == 'gruvbox'
 
   highlight! link StatusLineTerm StatusLine
   highlight! link StatusLineTermNC StatusLineNC
+
+  highlight! link ALEError GruvboxRedBold
+  highlight! link ALEErrorSign GruvboxRedBold
+
+  highlight clear SignColumn
+  highlight! link GitGutterAdd GruvboxGreen
+  highlight! link GitGutterChange GruvboxYellow
+
+  highlight! link gitcommitSummary GruvboxBlue
+
+  highlight CursorLineNr guibg=NONE
 end
 
 "----------------------------------------------------------
