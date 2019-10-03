@@ -199,8 +199,8 @@ endif
 
 if $TERM_PROGRAM == 'iTerm.app'
   " Undercurl escape characters
-  let &t_Cs = "\e[4:3m"
-  let &t_Ce = "\e[4:0m"
+  " let &t_Cs = "\e[4:3m"
+  " let &t_Ce = "\e[4:0m"
 
   " Change cursor in insert mode
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
