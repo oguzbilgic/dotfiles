@@ -566,6 +566,9 @@ end
 if g:colors_name == 'gruvbox'
   highlight! link Visual CursorLine
   highlight! link VertSplit StatusLineNC
+
+  highlight! link StatusLineTerm StatusLine
+  highlight! link StatusLineTermNC StatusLineNC
 end
 
 "----------------------------------------------------------
