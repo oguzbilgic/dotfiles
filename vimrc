@@ -366,6 +366,11 @@ nnoremap <silent> <leader>as :ALESymbolSearch<space>
 " nnoremap <silent> gD :ALEGoToDefinition<CR>
 " nnoremap <silent> K :ALEHover<CR>
 
+nnoremap [e :ALEPrevious<cr>
+nnoremap ]e :ALENext<cr>
+nnoremap [E :ALEFirst<cr>
+nnoremap ]E :ALELast<cr>
+
 "----------------------------------------------------------
 " NERDTree Settings
 "----------------------------------------------------------
