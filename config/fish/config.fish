@@ -1,7 +1,10 @@
 # Disable fish greeting
 set fish_greeting ""
 
-# Git prompt settings
+# Enable Autojump
+[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+
+# Fish prompt settings (git)
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
 set __fish_git_prompt_showuntrackedfiles 'yes'
@@ -9,10 +12,11 @@ set __fish_git_prompt_describe_style 'branch'
 set __fish_git_prompt_showcolorhints 'yes'
 set __fish_git_prompt_show_informative_status 'yes'
 
-# Git prompt colors
+# Fish prompt colors (git)
 set __fish_git_prompt_color_branch yellow
 set __fish_git_prompt_color_cleanstate green
 
+# Fish prompt
 function fish_prompt --description 'Write out the prompt'
   set -l last_status $status
 

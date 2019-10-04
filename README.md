@@ -51,9 +51,10 @@ Install Packages:
 + fish: shell
 + vim: text editor
 + git: version controller
++ autojump: navigate file system
++ fzf: fuzzy finder
 + ranger: cli file browser
 + highlight: syntax highlighter
-+ fzf: fuzzy finder
 
 Set fish as the default shell:
 
