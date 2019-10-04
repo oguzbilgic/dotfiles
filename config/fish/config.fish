@@ -1,36 +1,29 @@
 # Disable fish greeting
 set fish_greeting ""
 
-# Enable Autojump
-[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+# Bootstrap Fundle
+if not functions -q fundle
+  eval (curl -sfL https://git.io/fundle-install)
+end
 
-# Fish prompt settings (git)
-set __fish_git_prompt_showdirtystate 'yes'
-set __fish_git_prompt_showstashstate 'yes'
-set __fish_git_prompt_showuntrackedfiles 'yes'
-set __fish_git_prompt_describe_style 'branch'
-set __fish_git_prompt_showcolorhints 'yes'
-set __fish_git_prompt_show_informative_status 'yes'
+# Fundle
+fundle plugin 'matchai/spacefish'
+fundle plugin 'Jomik/fish-gruvbox'
+fundle plugin 'jethrokuan/z'
+fundle init
 
-# Fish prompt colors (git)
-set __fish_git_prompt_color_branch yellow
-set __fish_git_prompt_color_cleanstate green
+# Spacefish
+set SPACEFISH_PROMPT_ADD_NEWLINE false
 
-# Fish prompt
-function fish_prompt --description 'Write out the prompt'
-  set -l last_status $status
+# Z
+set --universal Z_CMD "j"
 
-  set_color $fish_color_cwd
-  echo -n (prompt_pwd)
-  set_color normal
-
-  __fish_git_prompt
-
-  if not test $last_status -eq 0
-    set_color $fish_color_error
-  end
-
-  set_color $fish_color_cwd
-  echo -n ' ➜  '
-  set_color normal
+if status --is-interactive
+  abbr --add --global gad git add
+  abbr --add --global gch git checkout
+  abbr --add --global gcm git commit
+  abbr --add --global gdf git diff
+  abbr --add --global gpl git pull
+  abbr --add --global gps git push
+  abbr --add --global gst git status
 end
