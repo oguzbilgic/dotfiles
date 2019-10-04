@@ -52,7 +52,6 @@ Plug 'dag/vim-fish'                    " Adds .fish file type support
 Plug 'andreshazard/vim-freemarker'     " Adds .ftl file type support
 Plug 'mxw/vim-jsx'                     " Adds jsx support for .js and .jsx
 " Plug 'vim-ruby/vim-ruby'
-" Plug 'mxw/vim-jsx'
 
 " Colorschemes
 Plug 'morhetz/gruvbox'
