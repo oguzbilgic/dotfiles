@@ -152,7 +152,7 @@ set t_Co=256                           " Enable 256 color
 set showcmd                            " Show current command bottom right
 set wildmenu                           " Show command line suggestions
 set number                             " Show line numbers
-set relativenumber                     " Experimental: Show relative numbers
+set relativenumber                     " Show relative numbers
 set nowrap                             " Disable  wrapping of long lines
 set shortmess+=I                       " Hide Vim's welcome message
 
@@ -288,7 +288,7 @@ let g:which_key_map.g.e = ':Gedit...'
 let g:which_key_map.g.h = 'open-github'
 let g:which_key_map.g.g = ':Git...'
 let g:which_key_map.g.o = 'checkout...'
-let g:which_key_map.g.b = ':Gblame'
+let g:which_key_map.g.b = 'blame'
 let g:which_key_map.g.t = 'tree'
 let g:which_key_map.g.v = 'view'
 
