@@ -592,7 +592,7 @@ command Sudow w !sudo tee %
 " Resizes current window to fit contents
 command Fit execute('resize ' . line('$'))
 
-" DiffRev ------------------------------------------------
+" Gcompare -----------------------------------------------
 
 " Populates quickfix with all the files changed
 " https://github.com/tpope/vim-fugitive/issues/132#issuecomment-290644034
@@ -621,7 +621,7 @@ function! s:get_diff_files(rev)
 endfunction
 
 " Command
-command! -nargs=1 DiffRev call s:get_diff_files(<q-args>)
+command! -nargs=1 Gcompare call s:get_diff_files(<q-args>)
 
 " Experimental: Mappings
 nnoremap ]r :%bd<CR>:cnext<CR>:Gdiffsplit master<CR>
