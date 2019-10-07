@@ -50,7 +50,7 @@ Plug 'kchmck/vim-coffee-script'        " Adds .coffee file type support
 Plug 'leafgarland/typescript-vim'      " Adds .ts file type support
 Plug 'dag/vim-fish'                    " Adds .fish file type support
 Plug 'andreshazard/vim-freemarker'     " Adds .ftl file type support
-Plug 'mxw/vim-jsx'                     " Adds jsx support for .js and .jsx
+Plug 'maxmellon/vim-jsx-pretty'        " Adds jsx support for .js and .jsx
 " Plug 'vim-ruby/vim-ruby'
 
 " Colorschemes
