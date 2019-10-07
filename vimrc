@@ -21,6 +21,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'                        " Shows inline lint errors
 Plug 'liuchengxu/vim-which-key'        " Displays mappings for <leader> in window
 Plug 'Kazark/vim-SimpleSmoothScroll'   " Slows down scroll speed
+Plug 'Yggdroot/indentLine'             " Display indentation levels for spaces
 
 " Text
 Plug 'tpope/vim-commentary'            " Adds gc operator for toggling comments
@@ -460,6 +461,15 @@ noremap <leader>gv :GV --all<cr>
 
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
+
+"----------------------------------------------------------
+" IndentLine Settings
+"----------------------------------------------------------
+
+" let g:indentLine_showFirstIndentLevel = 1
+
+let g:indentLine_first_char = '│'
+let g:indentLine_char = '│'
 
 "----------------------------------------------------------
 " Vim Netrw Settings
