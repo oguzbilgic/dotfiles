@@ -351,7 +351,11 @@ nnoremap <leader>va :AirlineToggle<CR>
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = 'ⓘ'
 
-let g:ale_completion_enabled = 1
+" Enable ale auto completion
+" let g:ale_completion_enabled = 1
+
+" Display :ALEHover within balloon using mouse
+let g:ale_set_balloons = 1
 
 nnoremap <silent> <leader>ah :ALEHover<CR>
 nnoremap <silent> <leader>ad :ALEDocumentation<CR>
