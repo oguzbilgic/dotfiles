@@ -18,10 +18,17 @@ call plug#begin()
 " Plug 'scrooloose/nerdtree'             " Adds file browser window
 Plug 'junegunn/fzf'                    " Adds fuzzy finder
 Plug 'junegunn/fzf.vim'
-Plug 'w0rp/ale'                        " Shows inline lint errors
+" Plug 'w0rp/ale'                        " Shows inline lint errors
 Plug 'liuchengxu/vim-which-key'        " Displays mappings for <leader> in window
 Plug 'Kazark/vim-SimpleSmoothScroll'   " Slows down scroll speed
 Plug 'Yggdroot/indentLine'             " Display indentation levels for spaces
+
+" LSP
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'ryanolsonx/vim-lsp-javascript'
 
 " Text
 Plug 'tpope/vim-commentary'            " Adds gc operator for toggling comments
