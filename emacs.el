@@ -24,11 +24,16 @@
   :config
   (evil-commentary-mode))
 
-;; load git-gutter - not working
-;; (use-package git-gutter
-;;   :ensure t
-;;   :config
-;;   (global-git-gutter-mode +1))
+;; load git-gutter
+(use-package git-gutter
+  :ensure t
+  :config
+  (global-git-gutter-mode +1)
+  (setq git-gutter:modified-sign "▎")
+  (setq git-gutter:added-sign "▎")
+  (set-face-foreground 'git-gutter:modified "orange")
+  (set-face-foreground 'git-gutter:added "green")
+  (set-face-foreground 'git-gutter:deleted "red"))
 
 ;; Set the default font
 (set-frame-font "Roboto Mono 15")
