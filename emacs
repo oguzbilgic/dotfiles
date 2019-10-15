@@ -29,13 +29,17 @@
 (scroll-bar-mode -1)
 ;; Show matching paren
 (show-paren-mode 1)
-;; Show line numbers
-(global-display-line-numbers-mode)
 ;; Don't show vertical borders in the frame
 (set-fringe-mode 0)
-
 ;; Let window resize pixelwise
 (setq frame-resize-pixelwise t)
+;; Increase line height - not working?
+(setq line-spacing 0.15)
+;; Increase line height
+(setq make-backup-files nil)
+
+;; Show line numbers
+;; (global-display-line-numbers-mode)
 
 ;; Flash the mode line instead of bell
 (setq ring-bell-function 'flash-mode-line)
