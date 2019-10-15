@@ -15,9 +15,20 @@
   (evil-mode))
 
 ;; load gruvbox-theme
-;; (use-package
-;;   gruvbox-theme
+;; (use-package gruvbox-theme
 ;;   :ensure t)
+
+;; load evil-commentary
+(use-package evil-commentary
+  :ensure t
+  :config
+  (evil-commentary-mode))
+
+;; load git-gutter - not working
+;; (use-package git-gutter
+;;   :ensure t
+;;   :config
+;;   (global-git-gutter-mode +1))
 
 ;; Set the default font
 (set-frame-font "Roboto Mono 15")
@@ -33,7 +44,7 @@
 (set-fringe-mode 0)
 ;; Let window resize pixelwise
 (setq frame-resize-pixelwise t)
-;; Increase line height - not working?
+;; Increase line height - not working
 (setq line-spacing 0.15)
 ;; Increase line height
 (setq make-backup-files nil)
