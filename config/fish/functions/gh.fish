@@ -9,7 +9,7 @@ end
 # Prints the origin and remote
 # Example: oguzbilgic/dotfiles
 function org_repo
-  echo (origin | python -c "import sys; url = sys.stdin.readlines()[0].strip(); print url.split(':')[1][:-4]")
+  echo (origin | python -c "import sys; url = sys.stdin.readlines()[0].strip(); print(url.split(':')[1][:-4)]")
 end
 
 # Prints the current branch name
