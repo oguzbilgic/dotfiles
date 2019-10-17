@@ -36,7 +36,7 @@
   (set-face-foreground 'git-gutter:deleted "red"))
 
 ;; Set the default font
-(set-frame-font "Roboto Mono 15")
+(set-frame-font "Roboto Mono 16")
 ;; Remove the toolbar
 (tool-bar-mode -1)
 ;; Don't blink the cursor
