@@ -14,8 +14,21 @@
   :config
   (evil-mode))
 
-;; load gruvbox-theme
-;; (use-package gruvbox-theme
+;; load fzf
+;; (use-package fzf
+;;   :ensure t
+;;   :config
+;;   (when (memq window-system '(mac ns))
+;;     (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+;;     (setq exec-path (append exec-path '("/usr/local/bin")))))
+
+;; Load gruvbox-theme
+(use-package gruvbox-theme
+  :ensure t
+  :config
+  (load-theme 'gruvbox-light-hard t))
+
+;; (use-package color-theme-sanityinc-tomorrow
 ;;   :ensure t)
 
 ;; load evil-commentary
@@ -40,14 +53,10 @@
   :ensure t
   :init
   (setq parinfer-extensions
-    '(defaults       ; should be included.
-      pretty-parens  ; different paren styles for different modes.
-      evil           ; If you use Evil.
-      smart-tab      ; C-b & C-f jump positions and smart shift with tab & S-tab.
-      smart-yank))   ; Yank behavior depend on mode.
-  (add-hook 'clojure-mode-hook #'parinfer-mode) 
-  (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
-  (add-hook 'lisp-mode-hook #'parinfer-mode))
+	'(defaults
+	   pretty-parens
+	   evil))
+  (add-hook 'emacs-lisp-mode-hook #'parinfer-mode))
 
 ;; Set the default font
 (set-frame-font "Roboto Mono 16")
@@ -61,6 +70,8 @@
 (show-paren-mode 1)
 ;; Don't show vertical borders in the frame
 (set-fringe-mode 0)
+;; Enable line highlight mode
+(global-hl-line-mode t)
 ;; Let window resize pixelwise
 (setq frame-resize-pixelwise t)
 ;; Increase line height - not working
