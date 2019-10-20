@@ -368,9 +368,9 @@ nnoremap <silent> <leader>ar :ALEFindReferences<CR>
 nnoremap <silent> <leader>ag :ALEGoToDefinition<CR>
 nnoremap <silent> <leader>as :ALESymbolSearch<space>
 
-" nnoremap <silent> gd :ALEGoToDefinition<CR>
-" nnoremap <silent> gD :ALEGoToDefinition<CR>
-" nnoremap <silent> K :ALEHover<CR>
+nnoremap <silent> gd :ALEGoToDefinition<CR>
+nnoremap <silent> gD :ALEGoToDefinition<CR>
+nnoremap <silent> K :ALEHover<CR>
 
 nnoremap [e :ALEPrevious<cr>
 nnoremap ]e :ALENext<cr>
