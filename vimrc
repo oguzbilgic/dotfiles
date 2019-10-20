@@ -500,6 +500,7 @@ augroup vim_markdown_autocmds
 
   " Enable spell checker
   autocmd FileType markdown setlocal spell
+  autocmd FileType markdown setlocal wrap
 augroup END
 
 "----------------------------------------------------------
