@@ -52,6 +52,7 @@ Plug 'leafgarland/typescript-vim'      " Adds .ts file type support
 Plug 'dag/vim-fish'                    " Adds .fish file type support
 Plug 'andreshazard/vim-freemarker'     " Adds .ftl file type support
 Plug 'maxmellon/vim-jsx-pretty'        " Adds jsx support for .js and .jsx
+Plug 'peitalin/vim-jsx-typescript'     " Adds .tsx file type support
 " Plug 'vim-ruby/vim-ruby'
 
 " Colorschemes
