@@ -25,10 +25,11 @@ Plug 'Yggdroot/indentLine'             " Display indentation levels for spaces
 
 " Text
 Plug 'tpope/vim-commentary'            " Adds gc operator for toggling comments
+Plug 'gokcehan/vim-opex'               " Adds gx operator to execute code
 Plug 'tpope/vim-surround'              " Adds s text-object for surrounding ' } )
-Plug 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal
 Plug 'michaeljsmith/vim-indent-object' " Adds i text-object for indentation
 Plug 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
+Plug 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal
 " Plug 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars in insert mode
 
 " Git
