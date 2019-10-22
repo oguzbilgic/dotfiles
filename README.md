@@ -4,25 +4,29 @@ my workstation configuration
 
 ## Fonts
 
-- Roboto Mono (14pt, 110% vertical spacing)
+- Roboto Mono 
+  * 14pt, Light, 110% vertical, 130% horizontal spacing
+  * https://fonts.google.com/specimen/Roboto+Mono
+- SF Mono 
+  * 12pt, 130% horizontal spacing
+  * Can be found in `/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/`
 - Fira Code
 - Source Code Pro
-- Office Code Pro (12pt, 125% vertical spacing)
-- SF Mono (12pt, 130% vertical spacing)
-  * Can be found in `/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/`
+- Office Code Pro 
+  * 12pt, 125% vertical spacing
 
 ## Install Mac apps
 
 + Google Chrome: Web browser
 + Xcode Cli Tools
 + [iTerm2](https://www.iterm2.com/): Terminal
++ [Amethyst](https://github.com/ianyh/Amethyst): Window manager
 + [Color Picker](https://itunes.apple.com/us/app/color-picker/id641027709?l=en&mt=12)
++ [Irvue](http://irvue.tumblr.com/): Wallpaper manager
 + [Kitematic](https://kitematic.com/): Docker GUI
 + [Sequel Pro](https://www.sequelpro.com/): MySQL client
 + [robo 3T](https://robomongo.org/): MongoDB client
 + [Postman](https://www.getpostman.com/): API client
-+ [Amethyst](https://github.com/ianyh/Amethyst): Window manager
-+ [Irvue](http://irvue.tumblr.com/): Wallpaper manager
 + [Slack](http://slack.com/): Team chat
 + [Zoom](http://zoom.us/) Video conference
 + [Tunnelblick](https://tunnelblick.net): VPN Client
