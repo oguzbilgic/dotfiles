@@ -269,53 +269,15 @@ nnoremap <leader>pc :PlugClean<cr>
 
 set timeoutlen=500
 
-let g:which_key_map = {}
-
-let g:which_key_map.a = { 'name' : '+ale' }
-
-let g:which_key_map.f = { 'name' : '+fuzy-finder' }
-let g:which_key_map.f.b = 'buffer-finder'
-let g:which_key_map.f.f = 'file-finder'
-let g:which_key_map.f.h = 'help-finder'
-let g:which_key_map.f.c = 'command-finder'
-
-let g:which_key_map.g = { 'name' : '+git' }
-let g:which_key_map.g.s = 'status'
-let g:which_key_map.g.c = 'commit'
-let g:which_key_map.g.d = 'diff'
-let g:which_key_map.g.p = 'push'
-let g:which_key_map.g.r = ':Gread'
-let g:which_key_map.g.w = ':Gwrite'
-let g:which_key_map.g.e = ':Gedit...'
-let g:which_key_map.g.h = 'open-github'
-let g:which_key_map.g.g = ':Git...'
-let g:which_key_map.g.o = 'checkout...'
-let g:which_key_map.g.b = 'blame'
-let g:which_key_map.g.t = 'tree'
-let g:which_key_map.g.v = 'view'
-
-let g:which_key_map.h = { 'name' : '+hunk' }
-let g:which_key_map.h.s = 'stage-hunk'
-let g:which_key_map.h.u = 'unstage-hunk'
-let g:which_key_map.h.p = 'preview-hunk'
-let g:which_key_map.h.f = 'fold-unchanged'
-
-let g:which_key_map.n = { 'name' : '+nerd-tree' }
-let g:which_key_map.n.t = 'toggle-nerd-tree'
-let g:which_key_map.n.f = 'find-nerd-tree'
-
-let g:which_key_map.p = { 'name' : '+plugin' }
-let g:which_key_map.p.i = 'install-plugins'
-let g:which_key_map.p.c = 'clean-plugins'
-let g:which_key_map.p.u = 'update-plugins'
-
-let g:which_key_map.t = { 'name' : '+terminal' }
-let g:which_key_map.t.d = 'docker-compose-build'
-let g:which_key_map.t.n = 'npm-install'
-
-let g:which_key_map.v = { 'name' : '+vim' }
-let g:which_key_map.v.s = 'source-vimrc'
-let g:which_key_map.v.e = 'edit-vimrc'
+let g:which_key_map = {
+  \ 'a': { 'name' : '+ale' },
+  \ 'f': { 'name' : '+fuzy-finder' },
+  \ 'g': { 'name' : '+git' },
+  \ 'h': { 'name' : '+hunk' },
+  \ 'n': { 'name' : '+nerd-tree' },
+  \ 'p': { 'name' : '+plugin' },
+  \ 'v': { 'name' : '+vim' }
+  \ }
 
 call which_key#register('<space>', "g:which_key_map")
 nnoremap <silent> <leader> :<c-u>WhichKey '<leader>'<CR>
