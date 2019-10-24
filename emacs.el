@@ -8,6 +8,12 @@
   (package-install 'use-package))
 (require 'use-package)
 
+;; load which-key
+(use-package which-key
+  :ensure t
+  :init
+  (which-key-mode))
+
 ;; load evil
 (use-package evil
   :ensure t
