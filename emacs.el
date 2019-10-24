@@ -17,6 +17,8 @@
 ;; load evil
 (use-package evil
   :ensure t
+  :init
+  (setq evil-want-C-u-scroll t)
   :config
   (evil-mode))
 
@@ -32,7 +34,7 @@
 (use-package gruvbox-theme
   :ensure t
   :config
-  (load-theme 'gruvbox-light-hard t))
+  (load-theme 'gruvbox-dark-soft t))
 
 ;; (use-package color-theme-sanityinc-tomorrow
 ;;   :ensure t)
@@ -65,7 +67,7 @@
   (add-hook 'emacs-lisp-mode-hook #'parinfer-mode))
 
 ;; Set the default font
-(set-frame-font "Roboto Mono 16")
+(set-frame-font "Roboto Mono Light 15")
 ;; Remove the toolbar
 (tool-bar-mode -1)
 ;; Don't blink the cursor
@@ -80,10 +82,15 @@
 (global-hl-line-mode t)
 ;; Let window resize pixelwise
 (setq frame-resize-pixelwise t)
-;; Increase line height - not working
-(setq line-spacing 0.15)
-;; Increase line height
+;; Increase line height, doesn't center horizontally
+(setq-default line-spacing 0.3)
+;; Don't create name~ files
 (setq make-backup-files nil)
+;; Don't create #name# files
+(setq auto-save-default nil)
+;; Make background transparent
+;; (set-frame-parameter (selected-frame) 'alpha '(95 95))
+;; (add-to-list 'default-frame-alist '(alpha 95 95))
 
 ;; Show line numbers
 ;; (global-display-line-numbers-mode)
