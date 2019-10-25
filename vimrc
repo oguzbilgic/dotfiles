@@ -570,7 +570,7 @@ command Sudow w !sudo tee %
 " Resizes current window to fit contents
 command Fit execute('resize ' . line('$'))
 
-" Gcompare -----------------------------------------------
+" Gdiff --------------------------------------------------
 
 " Populates quickfix with all the files changed
 " https://github.com/tpope/vim-fugitive/issues/132#issuecomment-290644034
@@ -587,7 +587,7 @@ let s:git_status_dictionary = {
       \ }
 
 function! s:get_diff_files(rev)
-  let title = 'Files Changed'
+  let title = 'Gdiff '.a:rev
   let command = 'git diff --name-status '.a:rev
   let items = map(
         \ split(system(command), '\n'),
@@ -599,7 +599,7 @@ function! s:get_diff_files(rev)
 endfunction
 
 " Command
-command! -nargs=1 Gcompare call s:get_diff_files(<q-args>)
+command! -nargs=1 Gdiff call s:get_diff_files(<q-args>)
 
 " Experimental: Mappings
 nnoremap ]r :%bd<CR>:cnext<CR>:Gdiffsplit master<CR>
