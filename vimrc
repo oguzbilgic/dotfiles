@@ -330,9 +330,14 @@ nnoremap <silent> <leader>ar :ALEFindReferences<CR>
 nnoremap <silent> <leader>ag :ALEGoToDefinition<CR>
 nnoremap <silent> <leader>as :ALESymbolSearch<space>
 
-nnoremap <silent> gd :ALEGoToDefinition<CR>
-nnoremap <silent> gD :ALEGoToDefinition<CR>
-nnoremap <silent> K :ALEHover<CR>
+augroup ale_autocmds
+  autocmd!
+
+  autocmd Filetype javascript nnoremap <buffer> gd :ALEGoToDefinition<CR>
+  autocmd Filetype javascript nnoremap <buffer> gD :ALEGoToDefinition<CR>
+  autocmd Filetype javascript nnoremap <buffer> K :ALEHover<CR>
+  autocmd Filetype javascript set omnifunc=ale#completion#OmniFunc
+augroup END
 
 nnoremap [e :ALEPrevious<cr>
 nnoremap ]e :ALENext<cr>
