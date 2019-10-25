@@ -88,6 +88,9 @@
 (setq make-backup-files nil)
 ;; Don't create #name# files
 (setq auto-save-default nil)
+;; Prevent emacs adding custom-set-variables to .emacs.el
+(setq custom-file (make-temp-file "emacs-custom"))
+
 ;; Make background transparent
 ;; (set-frame-parameter (selected-frame) 'alpha '(95 95))
 ;; (add-to-list 'default-frame-alist '(alpha 95 95))
