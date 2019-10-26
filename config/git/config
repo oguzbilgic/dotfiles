@@ -20,3 +20,5 @@
 [push]
   # Enables to push new branches easily
   default = current
+[format]
+  pretty = %C(auto)%h%Creset %s %C(bold blue)%an%Creset %Cgreen%cr%Creset %C(auto)%d%Creset
