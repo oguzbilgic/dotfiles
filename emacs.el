@@ -34,7 +34,7 @@
 (use-package gruvbox-theme
   :ensure t
   :config
-  (load-theme 'gruvbox-dark-soft t))
+  (load-theme 'gruvbox-dark-medium t))
 
 ;; (use-package color-theme-sanityinc-tomorrow
 ;;   :ensure t)
@@ -61,10 +61,9 @@
   :ensure t
   :init
   (setq parinfer-extensions
-	'(defaults
-	   pretty-parens
-	   evil))
-  (add-hook 'emacs-lisp-mode-hook #'parinfer-mode))
+        '(defaults pretty-parens evil))
+  (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
+  (add-hook 'emacs-lisp-mode-hook #'parinfer-toggle-mode))
 
 ;; Set the default font
 (set-frame-font "Roboto Mono Light 15")
@@ -92,8 +91,8 @@
 (setq custom-file (make-temp-file "emacs-custom"))
 
 ;; Make background transparent
-;; (set-frame-parameter (selected-frame) 'alpha '(95 95))
-;; (add-to-list 'default-frame-alist '(alpha 95 95))
+(set-frame-parameter (selected-frame) 'alpha '(97 97))
+(add-to-list 'default-frame-alist '(alpha 97 97))
 
 ;; Show line numbers
 ;; (global-display-line-numbers-mode)
