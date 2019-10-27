@@ -135,6 +135,13 @@ set ttyfast
 set exrc
 set secure
 
+" Experimental: enable 'cursorline' only for the active window
+augroup cursor_line_autocmds
+  autocmd!
+  autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  autocmd WinLeave * setlocal nocursorline
+augroup END
+
 "----------------------------------------------------------
 " UI Settings
 "----------------------------------------------------------
@@ -333,7 +340,6 @@ nnoremap <silent> <leader>as :ALESymbolSearch<space>
 
 augroup ale_autocmds
   autocmd!
-
   autocmd Filetype javascript nnoremap <buffer> gd :ALEGoToDefinition<CR>
   autocmd Filetype javascript nnoremap <buffer> gD :ALEGoToDefinition<CR>
   autocmd Filetype javascript nnoremap <buffer> K :ALEHover<CR>
@@ -401,7 +407,6 @@ augroup fugitive_autocmds
   autocmd!
   autocmd Filetype fugitive setlocal nonumber
   " autocmd Filetype fugitive setlocal winfixheight
-
   autocmd Filetype gitcommit setlocal nonumber
   autocmd Filetype gitcommit setlocal spell
   " autocmd Filetype gitcommit exe "resize " . line('$')
@@ -477,7 +482,6 @@ let g:javascript_plugin_jsdoc = 1
 
 augroup vim_markdown_autocmds
   autocmd!
-
   " Enable spell checker
   autocmd FileType markdown setlocal spell
   autocmd FileType markdown setlocal wrap
