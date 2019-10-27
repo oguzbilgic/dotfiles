@@ -36,9 +36,10 @@ Plug 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/cry
 Plug 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
 Plug 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
 " Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for 'wildignore'
-Plug 'tpope/vim-fugitive'              " Adds :Gstatus, :Gcommit, :Gdiff and more
+Plug 'tpope/vim-fugitive'              " Adds :Gstatus, :Gcommit and more
 Plug 'tpope/vim-rhubarb'               " Adds :Gbrowse for opening in Github
 Plug 'junegunn/gv.vim'                 " Adds :GV command for viewing git logs
+Plug 'oguzbilgic/vim-gdiff'            " Adds :Gdiff command 
 
 " Compilers
 Plug 'dgraham/vim-eslint'              " Adds eslint compiler. ':make .' populates quickfix
@@ -422,6 +423,18 @@ noremap <leader>go :Git checkout<space>
 noremap <leader>gt :Git tree --all<cr>
 
 "----------------------------------------------------------
+" Gdiff Settings
+"----------------------------------------------------------
+
+" Experimental: Mappings
+" After quickfix list is populated with :Gdiff command
+" Requires fugitive plugin
+nnoremap ]r :%bd<CR>:cnext<CR>:Gdiffsplit master<CR>
+nnoremap [r :%bd<CR>:cprevious<CR>:Gdiffsplit master<CR>
+nnoremap ]R :%bd<CR>:clast<CR>:Gdiffsplit master<CR>
+nnoremap [R :%bd<CR>:cfirst<CR>:Gdiffsplit master<CR>
+
+"----------------------------------------------------------
 " GV Settings
 "----------------------------------------------------------
 
@@ -574,43 +587,6 @@ command Sudow w !sudo tee %
 
 " Resizes current window to fit contents
 command Fit execute('resize ' . line('$'))
-
-" Gdiff --------------------------------------------------
-
-" Populates quickfix with all the files changed
-" https://github.com/tpope/vim-fugitive/issues/132#issuecomment-290644034
-let s:git_status_dictionary = {
-      \ "A": "Added",
-      \ "B": "Broken",
-      \ "C": "Copied",
-      \ "D": "Deleted",
-      \ "M": "Modified",
-      \ "R": "Renamed",
-      \ "T": "Changed",
-      \ "U": "Unmerged",
-      \ "X": "Unknown"
-      \ }
-
-function! s:get_diff_files(rev)
-  let title = 'Gdiff '.a:rev
-  let command = 'git diff --name-status '.a:rev
-  let items = map(
-        \ split(system(command), '\n'),
-        \ '{"filename":matchstr(v:val, "\\S\\+$"),"text":s:git_status_dictionary[matchstr(v:val, "^\\w")]}'
-        \ )
-  let list = {'title': title, 'items': items}
-  call setqflist([], 'r', list)
-  copen
-endfunction
-
-" Command
-command! -nargs=1 Gdiff call s:get_diff_files(<q-args>)
-
-" Experimental: Mappings
-nnoremap ]r :%bd<CR>:cnext<CR>:Gdiffsplit master<CR>
-nnoremap [r :%bd<CR>:cprevious<CR>:Gdiffsplit master<CR>
-nnoremap ]R :%bd<CR>:clast<CR>:Gdiffsplit master<CR>
-nnoremap [R :%bd<CR>:cfirst<CR>:Gdiffsplit master<CR>
 
 " SynStack -----------------------------------------------
 
