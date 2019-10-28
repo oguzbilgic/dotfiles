@@ -135,6 +135,9 @@ set ttyfast
 set exrc
 set secure
 
+" Completion
+set completeopt-=preview
+
 " Experimental: enable 'cursorline' only for the active window
 augroup cursor_line_autocmds
   autocmd!
