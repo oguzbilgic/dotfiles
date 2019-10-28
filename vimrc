@@ -417,7 +417,7 @@ augroup END
 
 noremap <leader>gs :Gstatus<cr>
 noremap <leader>gc :Gcommit<cr>
-noremap <leader>gd :Gdiff<cr>
+noremap <leader>gd :Gdiffsplit<cr>
 noremap <leader>gp :Gpush<cr>
 noremap <leader>gr :Gread<cr>
 noremap <leader>gw :Gwrite<cr>
