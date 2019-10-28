@@ -603,3 +603,23 @@ function! SynStack()
 endfunc
 
 command SynStack call SynStack()
+
+" Note ---------------------------------------------------
+
+" Experimental: Navigate to notes
+function! Note(period)
+  let day = strftime('%Y-%m-%d')
+  let week = strftime('%Y-%W')
+  let folder = '~/Code/oguzbilgic/self/'
+  let daily_file = folder . day . '.md'
+  let weekly_file = folder . 'week/' . week . '.md'
+
+  if a:period == "week"
+    execute "tabedit" . weekly_file
+  else
+    execute "tabedit" . daily_file
+  endif
+endfunc
+
+nnoremap <leader>vd :call Note("day")<CR>
+nnoremap <leader>vw :call Note("week")<CR>
