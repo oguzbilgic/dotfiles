@@ -89,7 +89,8 @@
 (setq auto-save-default nil)
 ;; Prevent emacs adding custom-set-variables to .emacs.el
 (setq custom-file (make-temp-file "emacs-custom"))
-
+;; Don't ask to follow symlinks
+(setq vc-follow-symlinks t)
 ;; Make background transparent
 (set-frame-parameter (selected-frame) 'alpha '(97 97))
 (add-to-list 'default-frame-alist '(alpha 97 97))
