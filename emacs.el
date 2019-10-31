@@ -66,7 +66,7 @@
   (add-hook 'emacs-lisp-mode-hook #'parinfer-toggle-mode))
 
 ;; Set the default font
-(set-frame-font "Roboto Mono Light 15")
+(set-frame-font "Roboto Mono Light 14")
 ;; Remove the toolbar
 (tool-bar-mode -1)
 ;; Don't blink the cursor
@@ -82,7 +82,7 @@
 ;; Let window resize pixelwise
 (setq frame-resize-pixelwise t)
 ;; Increase line height, doesn't center horizontally
-(setq-default line-spacing 0.3)
+(setq-default line-spacing 0.4)
 ;; Don't create name~ files
 (setq make-backup-files nil)
 ;; Don't create #name# files
@@ -91,18 +91,14 @@
 (setq custom-file (make-temp-file "emacs-custom"))
 ;; Don't ask to follow symlinks
 (setq vc-follow-symlinks t)
+;; Flash the mode line instead of bell
+(setq ring-bell-function 'ignore)
 ;; Make background transparent
 (set-frame-parameter (selected-frame) 'alpha '(97 97))
 (add-to-list 'default-frame-alist '(alpha 97 97))
 
 ;; Show line numbers
 ;; (global-display-line-numbers-mode)
-
-;; Flash the mode line instead of bell
-(setq ring-bell-function 'flash-mode-line)
-(defun flash-mode-line ()
-  (invert-face 'mode-line)
-  (run-with-timer 0.1 nil #'invert-face 'mode-line))
 
 ;; Remove macOS title bar
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
