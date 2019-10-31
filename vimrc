@@ -189,27 +189,6 @@ if has('termguicolors')
   set termguicolors
 endif
 
-" GUI Settings
-if has("gui_running")
-  set fuoptions=maxvert,maxhorz        " Full screen mode settings
-  " set guioptions=emgt                  " Hide toolbar and scrollbars
-  set guifont=Roboto\ Mono:h13
-  set linespace=3                      " Increase line height
-  set lines=999 columns=95             " Set window size
-endif
-
-" Experimental tmux settings
-if $TERM == 'tmux-256color'
-  " Italics and true color support in tmux+vim
-  " INFO: https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
-  " Mouse in tmux doesn't resize windows, but this option makes
-  " scrolling very slow in vim without tmux
-  set ttymouse=xterm2
-endif
-
 if $TERM_PROGRAM == 'iTerm.app'
   " Undercurl escape characters
   " let &t_Cs = "\e[4:3m"
