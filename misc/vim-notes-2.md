@@ -385,3 +385,28 @@
 
 - `gD` go to the first match under the cursor
 - `gd` go to the first match with in the function
+
+## 30 - Editing programs
+
+### Compiling
+
+- `:make {arguments}` compile the source code with quickfix
+- `:cnext`, `:cprevious` jump to next/prev quickfix error
+- `:cc` echo the whole error message
+- `:clist` echo all the error messages
+- `:cfirst`, `:clast` jump to the first/last error message
+- `'makeprg'` change what program `:make` command runs
+- `:colder`, `:cnewer` go to older/newer quickfix list
+- `'errorformat'` define the output of `'makeprg'` is parsed
+- `:compiler {name}` switch to `'makeprg'` and '`errorformat'`
+- `:cfile {filename}` populate quickfix list from a file
+
+### Indenting C files
+
+### Automatic indenting
+
+### Other indenting
+
+### Tabs and spaces
+
+### Formatting comments
