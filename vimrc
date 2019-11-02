@@ -112,7 +112,7 @@ set expandtab                          " Insert <space> instead of tab
 set smarttab
 
 " Folding
-set foldmethod=indent                  " Fold based on indentation
+" set foldmethod=indent                  " Fold based on indentation
 set foldlevel=9                        " Fold all starting from the first
 " set foldclose=all                      " Close folds if you leave them in any way
 " set foldopen=all                       " Open folds if you touch them in any way
@@ -461,6 +461,8 @@ let g:javascript_plugin_jsdoc = 1
 "----------------------------------------------------------
 " Vim Markdown Settings
 "----------------------------------------------------------
+
+let g:markdown_folding = 1
 
 augroup vim_markdown_autocmds
   autocmd!
