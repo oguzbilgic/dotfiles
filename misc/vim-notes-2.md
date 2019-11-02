@@ -289,8 +289,8 @@
 
 ### Matching a line break
 
-- `\n` linebreak
-- `\_s` space or linebreak
+- `\n` line break
+- `\_s` space or line break
 
 ## 28 - Folding
 
@@ -403,10 +403,28 @@
 
 ### Indenting C files
 
+- `'cindent'` set indentation options for C programs
+- `=` indentation operator
+- `'cinoptions'` change indentation style for C programs
+
 ### Automatic indenting
 
+- `:filetype indent on` enable automatic indentation
+- `:let b:did_indent = 1`
+- `indent/{filetype}.vim` filetype specific indentation
+- `'filetype'` file type of the buffer
+- `'runtimepath'` path the vim searches for .vim files
+
 ### Other indenting
+
+- `'autoindent'` -> `'smartindent'` -> `'cindent'`
+- `CTRL-D` remove indentation in insert mode
+- `CTRL-T` add indentation in insert mode
 
 ### Tabs and spaces
 
 ### Formatting comments
+
+- `'formatoptions'` automatic formatting options
+- `'comments'` defines what a comment looks like
+
