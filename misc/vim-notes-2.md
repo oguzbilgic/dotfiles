@@ -178,7 +178,7 @@
   * // repeats last search
 - Matching multiple times
   * * can match previous item any number of times
-  * /\(ab\)* ab multiple times
+  * `/\(ab\)*` ab multiple times
   * \+ avoid matching empty string
   * \= makes previous item optional
   * \{3,5} matches b 3 to 5 times
@@ -229,3 +229,43 @@
   * 'foldexpr'
 - Folding unchanged lines
   * foldmethod=diff
+
+## 29 - Moving through programs
+- Using tags
+  * Use `ctags` to generate tags file
+  * :tag {functionname} to jump to function definition
+  * CTRL-] jump to the tag under cursor
+  * :tags show the list of tags traversed
+  * CTRL-T go to the preceding tag
+  * :tag go to the tag on top of the list
+  * :stag {tag} jump to the tag on split window
+  * CTRL-W ] jump to the tag on split window
+  * 'tags' tags files
+  * :tnext jump to the other matches for the same tag
+  * :tselect {tagname} select a match for the tag
+  * :tfirst, :tlast
+- The preview window
+  * :ptag {tag} display tag in a preview window
+  * CTRL-W } display the tag under cursor in a preview window
+  * :pclose close the preview window
+  * :pedit edit a file in the preview window
+  * :psearch search the word in preview window
+  * 'previewheight' preview window height
+- Moving through a program
+  * % move between matching (), {}, []
+  * [#, ]#
+  * `[[`, `][`
+  * [{, ]} jump to the start/end of the outer { block
+  * ]m, [m jump to the previous/next method
+  * [(, ]) jump to the start/end of the outer ( block
+  * [/, ]/ jump to the start/end of / comment line
+- Finding global identifiers
+  * [I list matching lines for the word under the cursor
+  * 'include' to specify which files are included
+  * :checkpath to check 'path'
+  * [<TAB> jump to the first match in [I 
+  * ]I list items below the cursor
+  * [D, ]D, [d, ]d finding macros for `#define`
+- Finding local identifiers
+  * gD go to the first match under the cursor
+  * gd go to the first match with in the function
