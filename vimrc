@@ -33,13 +33,13 @@ Plug 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/cry
 " Plug 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars in insert mode
 
 " Git
-Plug 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
 Plug 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
-" Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for 'wildignore'
 Plug 'tpope/vim-fugitive'              " Adds :Gstatus, :Gcommit and more
 Plug 'tpope/vim-rhubarb'               " Adds :Gbrowse for opening in Github
 Plug 'junegunn/gv.vim'                 " Adds :GV command for viewing git logs
 Plug 'oguzbilgic/vim-gdiff'            " Adds :Gdiff command 
+Plug 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
+" Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for 'wildignore'
 
 " Compilers
 Plug 'dgraham/vim-eslint'              " Adds eslint compiler. ':make .' populates quickfix
@@ -82,7 +82,7 @@ call plug#end()
 
 " General Settings
 set hidden                             " Enable unsaved buffers to be hidden
-set clipboard=unnamed                  " Use system clipboard for copy/paste
+" set clipboard=unnamed                  " Use system clipboard for copy/paste
 set visualbell                         " Disable beeping by using visual bell
 set history=500                        " Increase command history
 
