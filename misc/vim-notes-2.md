@@ -4,11 +4,11 @@
 
 ### Command line editing
 
-- `S-Left`, `S-Right` one word 
-- `CTRL-B` begin of command line
-- `CTRL-E` end of command line
-- `CTRL-W` delete word
-- `CTRL-U` remove all
+- `S-Left`, `S-Right` jump one word 
+- `CTRL-B` jump to the beginning of command line
+- `CTRL-E` jump to the end of command line
+- `CTRL-W` delete a word
+- `CTRL-U` clear the line
 
 ### Command line completion
 
@@ -16,67 +16,70 @@
 
 ### Command line history
 
-- `:history`
+- `:history` show command line history
 
 ### Command line window
 
-- `q:`
+- `q:` open command line window
 
 ## 21 - Go away and come back
 
 ### Suspend and resume
 
-- `CTRL-Z` or :`suspend`
+- `CTRL-Z`, `:suspend` move vim process to background
 
 ### Executing shell commands
 
-- `:!{command}` execute
-- `:r[ead] !{command}` execute and read to buffer
-- `:w[write] !{command}`
-- `:[range]!{command}` filter text through command
+- `:!{prog}` execute a cli program
+- `:r[ead] !{prog}` execute and read the output to buffer
+- `:w[write] !{prog}`
+- `:[range]!{prog}` filter text through program
 - `:shell` start shell
 
 ### Remembering information; viminfo
 
-- `'0` go to last edited file
-- `:oldfiles` recently edited files
-- `:browse` {command}
+- `'0` go to the last edited file
+- `:oldfiles` list recently edited files
+- `:browse {command}`
 
 ### Sessions
 
-- `:mksession name.vim` save session
-- `:source name.vim` open session
-- `vim -S name.vim`
+- `:mksession name.vim` save the session
+- `:source name.vim` open a session
+- `vim -S name.vim` open a session
 
 ### Views
 
-- `:mkview` store view options for current file
+- `:mkview` store view options for the current file
 - `:loadview`
 
 ### Modelines
 
 - file specific vim options
 
+
 ## 22 - Finding the file to edit
 
 ### The file browser
 
-- `:edit .`
+- `:edit .` open the file browser (netrw)
 - netrw: o, v, p, P, t
 - `:Explore`, `:Sexplore`
 - `:NetrwSettings`
 
 ### The current directory
 
-- `:pwd`
-- `:cd`, `:lcd`, `:tcd`
+- `:pwd` echo the current directory name.
+- `:cd` change the current directory
+- `:lcd` change the current directory for the window
+- `:tcd` change the current directory for the tab
 
 ### Finding a file
 
-- `gf` opens the file under cursor
+- `gf` open the file under cursor
 - `'path'`
 - `:find`
-- `CTRL-W_f` opens a window for the file under cursor
+- `CTRL-W_f` open a window for the file under cursor
 
 ### The buffer list
 
@@ -428,3 +431,14 @@
 - `'formatoptions'` automatic formatting options
 - `'comments'` defines what a comment looks like
 
+## 31 - Exploiting the GUI
+
+### The file browser
+
+### Confirmation
+
+### Menu shortcuts
+
+### Vim window position and size
+
+### Various
