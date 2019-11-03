@@ -37,7 +37,7 @@ my workstation configuration
 mkdir code
 cd code/
 git clone git@github.com:oguzbilgic/dotfiles.git
-ln -s ~/code/dotfiles/vimrc  ~/.vimrc
+ln -s ~/code/dotfiles/vim  ~/.vim
 ln -s ~/code/dotfiles/config ~/.config
 ln -s ~/code/dotfiles/hushlogin ~/.hushlogin
 ```
