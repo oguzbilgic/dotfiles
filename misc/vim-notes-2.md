@@ -462,9 +462,19 @@
 
 ### Undo up to a file write
 
+- `:earlier 1f` go back to last written file
+- `:later 1f`
+
 ### Numbering changes
 
 ### Jumping around the tree
 
+- `:undo N`
+- `g-`
+- `g+`
+
 ### Time travelling
 
+- `:undolist` list the branches in the undo tree
+- `:earlier 10s` go back to 10 seconds ago
+- `undotree()` return details of the undo tree
