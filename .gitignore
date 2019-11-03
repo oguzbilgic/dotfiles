@@ -1,5 +1,6 @@
 vim/autoload
 vim/plugged/
+vim/.netrwhist
 
 config/configstore/update-notifier-npm.json
 
