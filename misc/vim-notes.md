@@ -68,40 +68,79 @@
 - `CTRL-D` show possible options for the command
 
 ## 3 - Moving Around
-- Horizontal movement
-  * w, b, e
-  * f, t
-  * 0, ^, $
-  * %
-- Vertical movement
-  * gg, G
-  * %
-  * H, M, L
-- Current location
-  * CTRL-G
-- Scrolling
-  * CTRL-U, CTRL-D: half screen
-  * CTRL-E, CTRL-Y: line
-  * CTRL-F, CTRL-B: whole screen
-  * zt, zz, zb
-- Search
-  * / search
-  * \ escape character
-  * n, N next occurance
-  * * search current word
-  * \> end of word
-  * \< start of word
-  * ^ beginning of line
-  * $ end of line
-  * . any single char
-- Marks
-  * ma `a
-  * '' last jump
-  * '" last edit
-  * '[, '] last change
-- Jumps
-  * CTRL-O older position on jumplist
-  * CTRL-I newer position on jumplist
+
+
+### Word movement
+
+- `w`, `b` move cursor forward/backward one word
+- `e`, `ge` move cursor to the next/previous end of a word
+- `W`, `B`, `E`, `gE` same but white-space separated words
+
+### Moving to the start or end of a line
+
+- `0`, `$` move the cursor to the start/end of line
+- `^` move to the first non-black character of the line
+
+### Moving to a character
+
+- `fx`, `Fx` search forward/backward for the single character x
+- `tx`, `Tx` same as `f` but stops before the character (till)
+- `;` repeat the previous `f` or `t` command
+- `,` repeat the previous `f` or `t` in the other direction
+
+### Matching a parenthesis
+
+- `%` jump between matching pairs of `()`, `{}` and `[]`
+- `'matchpairs'` specify matching pairs
+
+### Moving to a specific line
+
+- `gg`, `G` jump to the beginning/end of the file
+- `7G` jump to the specific line
+- `H`, `M`, `L` jump to the first/middle/last visible line
+
+### Telling where you are
+
+- `CTRL-G` print the current cursor location in the file
+- `'number'` display line numbers
+- `'ruler'` display the cursor position in statusline
+
+### Scrolling around
+
+- `CTRL-U`, `CTRL-D` scroll up/down half a screen
+- `CTRL-E`, `CTRL-Y` scroll up/down one line
+- `CTRL-F`, `CTRL-B` scroll up/down by a whole screen
+- `zt`, `zz`, `zb` puts the cursor top/middle/bottom of the screen
+
+### Simple searches
+
+- `/string` search for a string
+- `n`, `N` jump to the next/previous search match
+- `?word` search backwards
+- `'ignorecase'` ignore case during search
+- `*` search for the word under the cursor
+- `/\<the\>` search for the whole word
+- `'hlsearch'` highlight matches
+- `'incsearch'` display matches during search
+
+### Simple search patterns
+
+- `/^`, `/$` match beginning/end of a line
+- `/.` match any single character
+- `/\.` escape character, match literal `.`
+
+### Using marks
+
+- `CTRL-O`, `CTRL-I` jump to older/newer position on jumplist
+- `:jumps` list of positions you have jumped
+- ```a`` go to mark a
+- `ms` mark the current position `s`
+- `:marks` list all the marks
+- `'` same as `` ` `` but jumps to the beginning of the line
+- ```>`` jump to last edited position
+- ```````` jump to previous position
+- ```[``, ```]`` jump to start/end of the last change
+- ```"`` jump to position when last editing the file
 
 ## 4 - Making Small Changes
 - Operators
