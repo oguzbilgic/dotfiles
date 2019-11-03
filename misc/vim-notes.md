@@ -1,24 +1,71 @@
 # Getting Started
 
 ## 1 - About The Manuals
-- Jumping around
-  * CTRL-]: jump to tag
-  * CTRL-t: jump to previous tag
-  * CTRL-o: jump older position on jumplist
+
+### Two manuals
+
+- The User manual
+- The Reference manual
+- `CTRL-]` jump to the tag under cursor
+- `CTRL-t` jump to previous tag
+- `CTRL-o` jump older position on jumplist
+
+### Vim installed
+
+### Using the Vim tutor
+
+- `vimtutor` start the vim tutorial
+
+### Copyright
 
 ## 2 - The First Steps in Vim
-- Inserting text
-  * i, a, o
-- Moving
-  * h, j, k, l
-- Deleting
-  * x, d, J
-- Undo / Redo
-  * u, CTRL-r
-- Getting out
-  * ZZ, ZQ
-- Finding help
-  * CTRL-D
+
+### Running Vim for the First Time
+
+- `gvim file.txt` open the file using GUI vim
+- `vim file.txt` open the file
+
+### Inserting text
+ 
+- `i` start Insert mode
+- `<Esc>` stop Insert mode and go to Normal mode
+- `'showmode'` show the current mode
+
+### Moving around
+
+- `h` move the cursor left
+- `j` move the cursor down
+- `k` move the cursor up
+- `l` move the cursor right
+
+### Deleting characters
+
+- `x` delete the character under cursor
+- `dd` delete a whole line
+
+### Undo and Redo
+
+- `u` undo the last edit
+- `CTRL-R` reverse the last undo
+- `U` undo all the changes made on the line
+
+### Other editing commands
+
+- `a` start insert mode with after the character (append)
+- `o` open a new line below the cursor
+- `O` open a new line above the cursor
+
+### Getting out
+
+- `ZZ` write the file and exit
+- `:q!` quit the file without saving
+
+### Finding help
+
+- `:help` open the generic help
+- `:help {subject}` open the help for the subject
+- `:helpgrep {topic}` search in all help pages
+- `CTRL-D` show possible options for the command
 
 ## 3 - Moving Around
 - Horizontal movement
