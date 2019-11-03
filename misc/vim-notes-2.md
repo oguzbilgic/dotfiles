@@ -435,10 +435,36 @@
 
 ### The file browser
 
+- `:browse edit` open GUI file picker for the command
+- `'browsedir'` where to start the file browser
+
 ### Confirmation
+
+- `:confirm edit foo.txt` pop up a GUI confirmation dialog
 
 ### Menu shortcuts
 
+- `<A-*>` open a GUI menu using a keyboard
+
 ### Vim window position and size
 
+- `:winpos` print the current Vim window position
+- `'lines'` height of Vim window
+- `'columns'` width of Vim window
+
 ### Various
+
+- `gvim -f file.txt` block the shell
+- `:gui` switch to gvim from terminal vim
+- `vim -u anotherrc` vimrc file to use
+
+## 32 - The undo tree
+
+### Undo up to a file write
+
+### Numbering changes
+
+### Jumping around the tree
+
+### Time travelling
+
