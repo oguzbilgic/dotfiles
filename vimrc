@@ -428,13 +428,6 @@ nnoremap [R :%bd<CR>:cfirst<CR>:Gdiffsplit master<CR>
 noremap <leader>gv :GV --all<cr>
 
 "----------------------------------------------------------
-" SimpleSmoothScroll Settings
-"----------------------------------------------------------
-
-map <ScrollWheelUp> <C-Y>
-map <ScrollWheelDown> <C-E>
-
-"----------------------------------------------------------
 " IndentLine Settings
 "----------------------------------------------------------
 
