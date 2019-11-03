@@ -63,9 +63,19 @@
 ### The file browser
 
 - `:edit .` open the file browser (netrw)
-- netrw: o, v, p, P, t
-- `:Explore`, `:Sexplore`
-- `:NetrwSettings`
+- netrw: opening a file
+  * `<enter>` open the file in the current window
+  * `o` split window and display the file
+  * `v` vertical split window and display the file
+  * `p` use preview window to display the file
+  * `P` edit in the previous window
+  * `t` open file in a new tab
+- netrw: controlling browser display
+  * `i` change listing style (thin, long, wide, and tree)
+  * `s` change how files are sorted
+  * `r` reverse sorting order
+- `:Explore {director}` can be local, ftp and scp
+- `:NetrwSettings` list current netrw settings
 
 ### The current directory
 
@@ -77,18 +87,21 @@
 ### Finding a file
 
 - `gf` open the file under cursor
-- `'path'`
-- `:find`
+- `'path'` directories vim searches to find the file
+- `'isfname'` specifies which characters are included in the file 
+- `:find {filename}` search path for the file and edit
 - `CTRL-W_f` open a window for the file under cursor
 
 ### The buffer list
 
-- `:hide`, `'hidden'`
+- `:hide edit two.txt` let other commend hide the modified buffer
+- `'hidden'` make modified buffers to be hidden
 - `:buffers`, `:ls` lists open buffers
-- `:buffer,`, `:sbuffer`
-- `:bnext`, `:bprevious`
-- `:bfirst`, `:blast`
-- `:bdelete` deletes buffer
+- `:buffer {file}` switch to open buffer
+- `:sbuffer {file}` switch to open buffer in a split window
+- `:bnext`, `:bprevious` go to next/previous buffer
+- `:bfirst`, `:blast` go to first/last buffer
+- `:bdelete` delete a buffer
 
 ## 23 - Editing other files
 
