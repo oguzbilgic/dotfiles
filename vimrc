@@ -178,6 +178,8 @@ set listchars=tab:│\ ,nbsp:␣,trail:·,extends:⟩,precedes:⟨
 " Window Settings
 " set laststatus=2                       " Always show window status line
 set splitright                         " Vertical split to right side
+set splitbelow                         " Horizontal split to bottom
+set noequalalways                      " Don't make equalize windows when closed
 set fillchars+=vert:\                  " Don't use window divider character
 
 " Set truecolor for 16 million colors
