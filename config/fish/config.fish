@@ -12,6 +12,9 @@ fundle plugin 'Jomik/fish-gruvbox'
 fundle plugin 'jethrokuan/z'
 fundle init
 
+# Set gruvbox theme
+theme_gruvbox dark medium
+
 # Spacefish
 set SPACEFISH_PROMPT_ADD_NEWLINE false
 

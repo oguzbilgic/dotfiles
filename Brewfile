@@ -1,0 +1,20 @@
+brew "fish"
+brew "vim"
+brew "git"
+brew "fzf"
+brew "ranger"
+brew "highlight"
+
+cask "google-chrome"
+cask "iterm2"
+cask "amethyst"
+
+cask "zoomus"
+cask "slack"
+cask "tunnelblick"
+
+# cask "docker"
+# cask "postman"
+# cask "kitematic"
+# cask "sequel-pro"
+# cask "robo-3t"

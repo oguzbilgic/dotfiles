@@ -17,7 +17,7 @@ my workstation configuration
 
 ## Install Mac apps
 
-+ Google Chrome: Web browser
++ [Google Chrome](https://www.google.com/chrome/): Web browser
 + Xcode Cli Tools
 + [iTerm2](https://www.iterm2.com/): Terminal
 + [Amethyst](https://github.com/ianyh/Amethyst): Window manager
@@ -30,6 +30,18 @@ my workstation configuration
 + [Slack](http://slack.com/): Team chat
 + [Zoom](http://zoom.us/) Video conference
 + [Tunnelblick](https://tunnelblick.net): VPN Client
+
+## Generate SSH key
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+Add the new ssh key to Github:
+
+```bash
+pbcopy < ~/.ssh/id_rsa.pub
+```
 
 ## Symlink dot files
 
@@ -50,23 +62,22 @@ Install homebrew:
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Install Packages:
+Install packages:
 
-+ fish: shell
-+ vim: text editor
-+ git: version controller
-+ autojump: navigate file system
-+ fzf: fuzzy finder
-+ ranger: cli file browser
-+ highlight: syntax highlighter
+```bash
+brew bundle
+```
 
 Set fish as the default shell:
 
 ``` bash
-chsh -s /usr/local/bin/fish
+echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+chsh -s `which fish`
 ```
 
-## Enable italics in iTerm
+## Configure iTerm
+
+Enable italics in iTerm:
 
 https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
 
