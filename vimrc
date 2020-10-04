@@ -13,9 +13,9 @@ endif
 call plug#begin()
 
 " Visual
-" Plug 'bling/vim-airline'               " Improved status line
-" Plug 'vim-airline/vim-airline-themes'
-" Plug 'scrooloose/nerdtree'             " Adds file browser window
+Plug 'bling/vim-airline'               " Improved status line
+Plug 'vim-airline/vim-airline-themes'  " Add color themes for Airline plugin
+Plug 'scrooloose/nerdtree'             " Adds file browser window
 Plug 'junegunn/fzf'                    " Adds fuzzy finder
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'                        " Shows inline lint errors
