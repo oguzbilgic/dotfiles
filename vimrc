@@ -31,15 +31,16 @@ Plug 'michaeljsmith/vim-indent-object' " Adds i text-object for indentation
 Plug 'bhurlow/vim-parinfer'            " Balances lisp parenthesis
 Plug 'tpope/vim-endwise'               " Adds 'end' after def, if... in ruby/crystal
 " Plug 'jiangmiao/auto-pairs'            " Adds closing ' ] } ) chars in insert mode
+Plug 'junegunn/vim-easy-align'         " Adds ga operatoro for aligning text
 
 " Git
 Plug 'airblade/vim-gitgutter'          " Shows unstaged lines on the file
 Plug 'tpope/vim-fugitive'              " Adds :Gstatus, :Gcommit and more
 Plug 'tpope/vim-rhubarb'               " Adds :Gbrowse for opening in Github
 Plug 'junegunn/gv.vim'                 " Adds :GV command for viewing git logs
-Plug 'oguzbilgic/vim-gdiff'            " Adds :Gdiff command 
+Plug 'oguzbilgic/vim-gdiff'            " Adds :Gdiff command
 Plug 'xuyuanp/nerdtree-git-plugin'     " Shows git status in the nerd tree
-" Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for 'wildignore'
+Plug 'vim-scripts/gitignore'           " Makes vim use gitignore for 'wildignore'
 
 " Compilers
 Plug 'dgraham/vim-eslint'              " Adds eslint compiler. ':make .' populates quickfix
@@ -56,6 +57,8 @@ Plug 'andreshazard/vim-freemarker'     " Adds .ftl file type support
 Plug 'maxmellon/vim-jsx-pretty'        " Adds jsx support for .js and .jsx
 Plug 'peitalin/vim-jsx-typescript'     " Adds .tsx file type support
 " Plug 'vim-ruby/vim-ruby'
+" Plug 'cespare/vim-toml'              " Adds .toml file type support
+Plug 'jxnblk/vim-mdx-js'               " Adds .mdx Markdown-jsx support
 
 " Colorschemes
 Plug 'morhetz/gruvbox'
@@ -467,6 +470,17 @@ augroup vim_markdown_autocmds
 augroup END
 
 "----------------------------------------------------------
+" Vim Markdown.mdx Settings
+"----------------------------------------------------------
+
+augroup vim_markdown_mdx_autocmds
+  autocmd!
+  " Enable spell checker
+  autocmd FileType markdown.mdx setlocal spell
+  autocmd FileType markdown.mdx setlocal wrap
+augroup END
+
+"----------------------------------------------------------
 " Experimental: Vim Help Settings
 "----------------------------------------------------------
 
@@ -483,7 +497,7 @@ augroup vim_help_autocmds
   " autocmd FileType help nnoremap <buffer> <tab> /\|\zs\S\{-}\|/<cr>:noh<cr>
 
   " Center the cursor vertically
-  autocmd FileType help setlocal scrolloff=999
+  " autocmd FileType help setlocal scrolloff=999
 augroup END
 
 "----------------------------------------------------------
