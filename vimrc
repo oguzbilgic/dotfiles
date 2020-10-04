@@ -20,8 +20,9 @@ Plug 'junegunn/fzf'                    " Adds fuzzy finder
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'                        " Shows inline lint errors
 Plug 'liuchengxu/vim-which-key'        " Displays mappings for <leader> in window
-Plug 'Kazark/vim-SimpleSmoothScroll'   " Slows down scroll speed
-Plug 'Yggdroot/indentLine'             " Display indentation levels for spaces
+Plug 'psliwka/vim-smoothie'            " Makes CTRL-D,U scrolling smooth
+" Plug 'Kazark/vim-SimpleSmoothScroll'   " Makes CTRL-D,U scrolling smooth
+Plug 'Yggdroot/indentLine'             " Displays indentation levels for spaces
 
 " Text
 Plug 'tpope/vim-commentary'            " Adds gc operator for toggling comments
