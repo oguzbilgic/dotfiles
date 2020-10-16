@@ -8,13 +8,13 @@
   (package-install 'use-package))
 (require 'use-package)
 
-;; load which-key
+;; Load Packages ------------------------------------------------
+
 (use-package which-key
   :ensure t
   :init
   (which-key-mode))
 
-;; load evil
 (use-package evil
   :ensure t
   :init
@@ -22,7 +22,6 @@
   :config
   (evil-mode))
 
-;; load fzf
 ;; (use-package fzf
 ;;   :ensure t
 ;;   :config
@@ -30,22 +29,21 @@
 ;;     (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 ;;     (setq exec-path (append exec-path '("/usr/local/bin")))))
 
-;; Load gruvbox-theme
-(use-package gruvbox-theme
+;; (use-package gruvbox-theme
+;;   :ensure t
+;;   :config
+;;   (load-theme 'gruvbox-dark-medium t))
+
+(use-package color-theme-sanityinc-tomorrow
   :ensure t
   :config
-  (load-theme 'gruvbox-dark-medium t))
+  (load-theme 'sanityinc-tomorrow-night t))
 
-;; (use-package color-theme-sanityinc-tomorrow
-;;   :ensure t)
-
-;; load evil-commentary
 (use-package evil-commentary
   :ensure t
   :config
   (evil-commentary-mode))
 
-;; load git-gutter
 (use-package git-gutter
   :ensure t
   :config
@@ -56,7 +54,6 @@
   (set-face-foreground 'git-gutter:added "green")
   (set-face-foreground 'git-gutter:deleted "red"))
 
-;; load parinfer
 (use-package parinfer
   :ensure t
   :init
@@ -65,8 +62,33 @@
   (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
   (add-hook 'emacs-lisp-mode-hook #'parinfer-toggle-mode))
 
+;; General Settings ---------------------------------------------
+
+;; Don't create name~ files
+(setq make-backup-files nil)
+;; Don't create #name# files
+(setq auto-save-default nil)
+;; Prevent emacs adding custom-set-variables to .emacs.el
+(setq custom-file (make-temp-file "emacs-custom"))
+;; Don't ask to follow symlinks
+(setq vc-follow-symlinks t)
+
+;; Visual Settings ----------------------------------------------
+
 ;; Set the default font
-(set-frame-font "Roboto Mono Light 14")
+(set-frame-font "JetBrains Mono Light 14")
+;; (set-frame-font "JetBrains Mono 13")
+;; Increase line height, doesn't center horizontally
+(setq-default line-spacing 0.5)
+;; Let window resize pixelwise
+(setq frame-resize-pixelwise t)
+;; Flash the mode line instead of bell
+(setq ring-bell-function 'ignore)
+
+;; Make background transparent
+(set-frame-parameter (selected-frame) 'alpha '(96 96))
+(add-to-list 'default-frame-alist '(alpha 97 97))
+
 ;; Remove the toolbar
 (tool-bar-mode -1)
 ;; Don't blink the cursor
@@ -77,26 +99,8 @@
 (show-paren-mode 1)
 ;; Don't show vertical borders in the frame
 (set-fringe-mode 0)
-;; Enable line highlight mode
-(global-hl-line-mode t)
-;; Let window resize pixelwise
-(setq frame-resize-pixelwise t)
-;; Increase line height, doesn't center horizontally
-(setq-default line-spacing 0.4)
-;; Don't create name~ files
-(setq make-backup-files nil)
-;; Don't create #name# files
-(setq auto-save-default nil)
-;; Prevent emacs adding custom-set-variables to .emacs.el
-(setq custom-file (make-temp-file "emacs-custom"))
-;; Don't ask to follow symlinks
-(setq vc-follow-symlinks t)
-;; Flash the mode line instead of bell
-(setq ring-bell-function 'ignore)
-;; Make background transparent
-(set-frame-parameter (selected-frame) 'alpha '(97 97))
-(add-to-list 'default-frame-alist '(alpha 97 97))
-
+;; Don't highlight the current line
+;; (global-hl-line-mode t)
 ;; Show line numbers
 ;; (global-display-line-numbers-mode)
 
@@ -105,3 +109,14 @@
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 (setq ns-use-proxy-icon nil)
 (setq frame-title-format nil)
+
+;; Increase line height while keeping it centered?
+;; (defun set-bigger-spacing ()
+;;   (setq-local default-text-properties '(line-spacing 0.25 line-height 1.25)))
+;; (add-hook 'text-mode-hook 'set-bigger-spacing)
+;; (add-hook 'prog-mode-hook 'set-bigger-spacing)
+
+;; Mode Settings ------------------------------------------------
+
+;; Javascript mode settings
+(setq js-indent-level 2)
