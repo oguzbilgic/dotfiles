@@ -354,7 +354,8 @@ nnoremap ]E :ALELast<cr>
 " NERDTree Settings
 "----------------------------------------------------------
 
-let NERDTreeMinimalUI=1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeWinPos = 'right'
 
 nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>nt :NERDTreeToggle<CR>
