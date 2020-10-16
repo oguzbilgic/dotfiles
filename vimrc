@@ -16,8 +16,6 @@ call plug#begin()
 Plug 'bling/vim-airline'               " Improved status line
 Plug 'vim-airline/vim-airline-themes'  " Add color themes for Airline plugin
 Plug 'scrooloose/nerdtree'             " Adds file browser window
-Plug 'junegunn/fzf'                    " Adds fuzzy finder
-Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'                        " Shows inline lint errors
 Plug 'liuchengxu/vim-which-key'        " Displays mappings for <leader> in window
 Plug 'psliwka/vim-smoothie'            " Makes CTRL-D,U scrolling smooth
@@ -76,6 +74,19 @@ Plug 'rakr/vim-one'
 " Plug 'cocopon/iceberg.vim'
 " Plug 'tomasr/molokai'
 " Plug 'nanotech/jellybeans.vim'
+
+" Experimental: Fuzzy Finder
+" Plug 'junegunn/fzf'                    " Adds fuzzy finder
+" Plug 'junegunn/fzf.vim'
+
+" Experimental: FZF replacement
+" Plug 'Yggdroot/LeaderF'
+" let g:Lf_WindowPosition = 'popup'
+" let g:Lf_PopupShowStatusline = 0
+" nnoremap <leader>fl :Leaderf file<CR>
+
+" Experimental: Another FZF replacement
+Plug 'liuchengxu/vim-clap'
 
 " End plugin list
 call plug#end()
@@ -359,10 +370,27 @@ highlight link NERDTreeDirSlash NERDTreeDir
 let g:fzf_buffers_jump = 1
 
 " Command key doesn't work, we are using option/alt key <command-t>
-nnoremap <leader>fb :Buffers<CR>
-nnoremap <leader>ff :GFiles<CR>
-nnoremap <leader>fh :Helptags<CR>
-nnoremap <leader>fc :Commands<CR>
+" nnoremap <leader>fb :Buffers<CR>
+" nnoremap <leader>ff :GFiles<CR>
+" nnoremap <leader>fh :Helptags<CR>
+" nnoremap <leader>fc :Commands<CR>
+
+"----------------------------------------------------------
+" Clap Settings
+"----------------------------------------------------------
+
+let g:clap_enable_icon = 1
+
+nnoremap <leader>f :Clap files<CR>
+
+let g:clap_popup_move_manager = {
+      \ "\<C-N>": "\<Down>",
+      \ "\<C-P>": "\<Up>",
+      \ }
+
+" nnoremap <leader>fb :Clap buffers<CR>
+" nnoremap <leader>ff :Clap files<CR>
+" nnoremap <leader>fc :Clap colors<CR>
 
 "----------------------------------------------------------
 " GitGutter Settings
