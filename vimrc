@@ -62,9 +62,10 @@ Plug 'jxnblk/vim-mdx-js'               " Adds .mdx Markdown-jsx support
 " Colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'rakr/vim-one'
-" Plug 'ajh17/Spacegray.vim'
+Plug 'ajh17/Spacegray.vim'
 " Plug 'felixhummel/setcolors.vim'       " :SetColors all then F8 to switch colorschemes
 " Plug 'daviddavis/vim-colorpack'
+" Plug 'ghifarit53/daycula-vim' , {'branch' : 'main'}
 " Plug 'noahfrederick/vim-hemisu'
 " Plug 'junegunn/seoul256.vim'
 " Plug 'vim-scripts/playroom'
@@ -164,9 +165,18 @@ augroup END
 " UI Settings
 "----------------------------------------------------------
 
+" Set truecolor for 16 million colors
+" INFO: https://gist.github.com/XVilka/8346728
+" BUG: This checks if vim is built with +termguicolors feature.
+"      We need a way to check if the current terminal supports truecolor.
+"      Hyper.js and Terminal.app don't support truecolor.
+if has('termguicolors')
+  set termguicolors
+endif
+
 " Colorscheme
 if &background == 'dark'
-  colorscheme gruvbox
+  colorscheme spacegray
 else
   colorscheme one
 endif
@@ -196,15 +206,6 @@ set splitright                         " Vertical split to right side
 set splitbelow                         " Horizontal split to bottom
 set noequalalways                      " Don't make equalize windows when closed
 set fillchars+=vert:\                  " Don't use window divider character
-
-" Set truecolor for 16 million colors
-" INFO: https://gist.github.com/XVilka/8346728
-" BUG: This checks if vim is built with +termguicolors feature.
-"      We need a way to check if the current terminal supports truecolor.
-"      Hyper.js and Terminal.app don't support truecolor.
-if has('termguicolors')
-  set termguicolors
-endif
 
 if $TERM_PROGRAM == 'iTerm.app'
   " Undercurl escape characters
@@ -470,6 +471,11 @@ noremap <leader>gv :GV --all<cr>
 
 let g:indentLine_first_char = '│'
 let g:indentLine_char = '│'
+
+
+if g:colors_name == 'spacegray'
+  let g:indentLine_color_term = 59
+endif
 
 "----------------------------------------------------------
 " Vim Netrw Settings
