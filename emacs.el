@@ -43,7 +43,10 @@
   (setq git-gutter:added-sign "▎")
   (set-face-foreground 'git-gutter:modified "orange")
   (set-face-foreground 'git-gutter:added "green")
-  (set-face-foreground 'git-gutter:deleted "red"))
+  (set-face-foreground 'git-gutter:deleted "red")
+  (set-face-background 'git-gutter:modified "orange")
+  (set-face-background 'git-gutter:added "green")
+  (set-face-background 'git-gutter:deleted "red"))
 
 (use-package parinfer
   :ensure t
@@ -74,10 +77,13 @@
 
 ;; Don't create name~ files
 (setq make-backup-files nil)
+
 ;; Don't create #name# files
 (setq auto-save-default nil)
+
 ;; Prevent emacs adding custom-set-variables to .emacs.el
 (setq custom-file (make-temp-file "emacs-custom"))
+
 ;; Don't ask to follow symlinks
 (setq vc-follow-symlinks t)
 
@@ -89,10 +95,13 @@
 ;; Set the default font
 (set-frame-font "JetBrains Mono Light 14")
 ;; (set-frame-font "JetBrains Mono 13")
+
 ;; Increase line height, doesn't center horizontally
 (setq-default line-spacing 0.5)
+
 ;; Let window resize pixelwise
 (setq frame-resize-pixelwise t)
+
 ;; Flash the mode line instead of bell
 (setq ring-bell-function 'ignore)
 
@@ -104,14 +113,17 @@
 (tool-bar-mode -1)
 ;; Don't blink the cursor
 (blink-cursor-mode 0)
+
 ;; Disable scroll bar
 (scroll-bar-mode -1)
+
 ;; Show matching paren
 (show-paren-mode 1)
 ;; Don't show vertical borders in the frame
 (set-fringe-mode 0)
 ;; Don't highlight the current line
 ;; (global-hl-line-mode t)
+
 ;; Show line numbers
 ;; (global-display-line-numbers-mode)
 
