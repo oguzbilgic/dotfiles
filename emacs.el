@@ -87,6 +87,11 @@
 ;; Don't ask to follow symlinks
 (setq vc-follow-symlinks t)
 
+;; Ido Mode
+(ido-mode)
+(setq ido-everywhere t)
+(setq ido-enable-flex-matching t)
+
 ;; Visual Settings ----------------------------------------------
 
 ;; Set theme
