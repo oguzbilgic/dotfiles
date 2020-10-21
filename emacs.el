@@ -124,13 +124,19 @@
 
 ;; Show matching paren
 (show-paren-mode 1)
+
 ;; Don't show vertical borders in the frame
 (set-fringe-mode 0)
-;; Don't highlight the current line
+
+;; Highlight the current line
 ;; (global-hl-line-mode t)
 
 ;; Show line numbers
-;; (global-display-line-numbers-mode)
+(global-display-line-numbers-mode)
+;; Enable customizable window divider
+
+(window-divider-mode 1)
+(setq window-divider-default-right-width 8)
 
 ;; Remove macOS title bar
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
