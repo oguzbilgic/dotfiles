@@ -1,5 +1,6 @@
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://stable.melpa.org/packages/") t)
+;; (add-to-list 'package-archives '("melpa" . "http://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
 ;; bootstrap use-package
@@ -29,16 +30,6 @@
 ;;     (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 ;;     (setq exec-path (append exec-path '("/usr/local/bin")))))
 
-;; (use-package gruvbox-theme
-;;   :ensure t
-;;   :config
-;;   (load-theme 'gruvbox-dark-medium t))
-
-(use-package color-theme-sanityinc-tomorrow
-  :ensure t
-  :config
-  (load-theme 'sanityinc-tomorrow-night t))
-
 (use-package evil-commentary
   :ensure t
   :config
@@ -62,6 +53,23 @@
   (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
   (add-hook 'emacs-lisp-mode-hook #'parinfer-toggle-mode))
 
+;; Load themes --------------------------------------------------
+
+(use-package sublime-themes
+  :ensure t)
+
+(use-package gruvbox-theme
+  :ensure t)
+
+(use-package color-theme-sanityinc-tomorrow
+  :ensure t)
+
+(use-package spacegray-theme
+  :ensure t)
+
+(use-package modus-operandi-theme
+  :ensure t)
+
 ;; General Settings ---------------------------------------------
 
 ;; Don't create name~ files
@@ -75,6 +83,9 @@
 
 ;; Visual Settings ----------------------------------------------
 
+;; Set theme
+(load-theme 'leuven t)
+
 ;; Set the default font
 (set-frame-font "JetBrains Mono Light 14")
 ;; (set-frame-font "JetBrains Mono 13")
@@ -86,8 +97,8 @@
 (setq ring-bell-function 'ignore)
 
 ;; Make background transparent
-(set-frame-parameter (selected-frame) 'alpha '(96 96))
-(add-to-list 'default-frame-alist '(alpha 97 97))
+(set-frame-parameter (selected-frame) 'alpha '(95 95))
+(add-to-list 'default-frame-alist '(alpha 95 95))
 
 ;; Remove the toolbar
 (tool-bar-mode -1)
