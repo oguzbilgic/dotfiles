@@ -7,6 +7,7 @@ my workstation configuration
 - Turn on 'Dock Hiding'
 - Turn on 'Menu Bar Hiding'
 - Enable 'Mouse right click'
+- Enable 'Mouse Swipe between pages'
 - Turn on 'Night Shift', bit warmer than default
 - Increase 'mouse tracking speed', 5th level from the right
 - Configure 'Menu Bar'
