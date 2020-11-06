@@ -2,6 +2,11 @@
 
 my workstation configuration
 
+## Mac Configuration
+
+- Turn on Dock Hiding
+- Enable Mouse right click
+
 ## Step by step configuration
 
 Generate a new SSH Key for the device:
