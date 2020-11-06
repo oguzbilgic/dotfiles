@@ -253,6 +253,17 @@ nnoremap ]B :blast<cr>
 nnoremap <leader>ve :tabe $MYVIMRC<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
 
+" Experimental: Run terminal commands
+nnoremap <leader>ts :call ToggleTerminal("shell", "fish")<CR>
+" nnoremap <leader>tj :call ToggleTerminal("node-repl", "node -i")<CR>
+nnoremap <leader>tj :call ToggleTerminal("node-repl", "docker run -it node:alpine")<CR>
+nnoremap <leader>tr :call ToggleTerminal("ruby-repl", "docker run -it ruby:alpine")<CR>
+nnoremap <leader>tp :call ToggleTerminal("python-repl", "docker run -it python:alpine")<CR>
+
+
+nnoremap <leader>td :call ToggleTerminal("docker-compose up", "docker-compose up")<CR>
+nnoremap <leader>tn :call ToggleTerminal("npm run dev", "npm run dev")<CR>
+
 " Experimental: ZZ in insert mode
 " inoremap ZZ <esc>ZZ
 
@@ -284,6 +295,7 @@ let g:which_key_map = {
   \ 'h': { 'name' : '+hunk' },
   \ 'n': { 'name' : '+nerd-tree' },
   \ 'p': { 'name' : '+plugin' },
+  \ 't': { 'name' : '+terminal' },
   \ 'v': { 'name' : '+vim' }
   \ }
 
@@ -652,3 +664,30 @@ endfunc
 
 nnoremap <leader>vd :call Note("day")<CR>
 nnoremap <leader>vw :call Note("week")<CR>
+
+" ToggleTerminal -----------------------------------------
+
+" Experimental: toggle terminal with the given command
+"
+" :call ToggleTerminal("node -i")
+" Opens up a new or an existing node repl
+function! ToggleTerminal(name, command)
+  let bufferNum = bufnr(a:name)
+
+  if bufferNum == -1 || bufloaded(bufferNum) != 1
+    call term_start(a:command, { 
+          \ 'term_finish': 'close',
+          \ 'term_name': a:name
+          \})
+    resize 15
+  else
+    let windowNum = bufwinnr(bufferNum)
+    if windowNum == -1
+      execute 'sbuffer '.bufferNum
+      resize 15
+    else
+      execute windowNum.'wincmd w'
+      hide
+    endif
+  endif
+endfunction
