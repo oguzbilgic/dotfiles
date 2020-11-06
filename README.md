@@ -69,6 +69,8 @@ chsh -s `which fish`
 
 Start amethyst and configure. Refer to `Configure Amethyst`
 
+Install Irvue from Mac App Store.
+
 ## Mac Configuration
 
 - Turn on 'Dock Hiding'
