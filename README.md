@@ -2,24 +2,25 @@
 
 my workstation configuration
 
-## Mac Configuration
-
-- Turn on 'Dock Hiding'
-- Turn on 'Menu Bar Hiding'
-- Enable 'Mouse right click'
-- Enable 'Mouse Swipe between pages'
-- Turn on 'Night Shift', bit warmer than default
-- Increase 'mouse tracking speed', 5th level from the right
-- Configure 'Menu Bar'
-  * hide keyboard
-  * show date
-  * show sound icon
-
 ## Step by step configuration
+
+Configure basic Mac settings. Refer to `Mac Configuration`
 
 Using Safari, download and install Google Chrome, sign in and set as default.
 
 Use default Terminal app to run the following commands.
+
+Install homebrew:
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+Install git:
+
+```bash
+brew install git
+```
 
 Generate a new SSH Key for the device:
 
@@ -32,17 +33,6 @@ Add the new ssh key to Github account, copy the key using:
 ```bash
 pbcopy < ~/.ssh/id_rsa.pub
 
-```
-Install homebrew:
-
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-Install git:
-
-```bash
-brew install git
 ```
 
 Create `code/` and clone dot files repo: 
@@ -59,7 +49,7 @@ Install packages and mac apps using Brewfile:
 brew bundle
 ```
 
-Switch to iterm, and import iterm profile.
+Switch to iterm, and import iterm profile. Refer to `Configure Amethyst`
 
 Symlink dot files:
 
@@ -77,11 +67,41 @@ echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s `which fish`
 ```
 
+Start amethyst and configure. Refer to `Configure Amethyst`
+
+## Mac Configuration
+
+- Turn on 'Dock Hiding'
+- Turn on 'Menu Bar Hiding'
+- Enable 'Mouse right click'
+- Enable 'Mouse Swipe between pages'
+- Turn on 'Night Shift', bit warmer than default
+- Increase 'mouse tracking speed', 5th level from the right
+- Configure 'Menu Bar'
+  * hide keyboard
+  * show date
+  * show sound icon
+
+## Configure Amethyst
+
+- Enable 'Start Amethyst on login'
+- Set 'Window margin' 15px
+- Layouts: Tall, Tall Right and Full Screen
+- Enable 'Swap windows using mouse'
+- Enable 'Resize windows using mouse'
+
 ## Configure iTerm
 
+- Download font
 - Import profile `misc/iterm-Spacegray.json`
+- Enable 'Terminal windows resize smoothly'
 - Enable italics in iTerm:
   * https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
+
+```bash
+tic -x ~/code/dotfiles/misc/xterm-256color.terminfo
+tic -x ~/code/dotfiles/misc/tmux-256color.terminfo
+```
 
 ## Mac apps
 
@@ -100,11 +120,6 @@ These Mac apps will be installed using brew with the previous command.
 + [Slack](http://slack.com/): Team chat
 + [Zoom](http://zoom.us/) Video conference
 + [Tunnelblick](https://tunnelblick.net): VPN Client
-
-```bash
-tic -x ~/code/dotfiles/misc/xterm-256color.terminfo
-tic -x ~/code/dotfiles/misc/tmux-256color.terminfo
-```
 
 ## Fonts
 
