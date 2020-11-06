@@ -17,7 +17,9 @@ my workstation configuration
 
 ## Step by step configuration
 
-Download and install Google Chrome, sign in and set as default.
+Using Safari, download and install Google Chrome, sign in and set as default.
+
+Use default Terminal app to run the following commands.
 
 Generate a new SSH Key for the device:
 
@@ -51,6 +53,14 @@ cd code/
 git clone git@github.com:oguzbilgic/dotfiles.git
 ```
 
+Install packages and mac apps using Brewfile:
+
+```bash
+brew bundle
+```
+
+Switch to iterm, and import iterm profile.
+
 Symlink dot files:
 
 ```bash
@@ -59,14 +69,6 @@ ln -s ~/code/dotfiles/emacs.el  ~/.emacs.el
 ln -s ~/code/dotfiles/config ~/.config
 ln -s ~/code/dotfiles/hushlogin ~/.hushlogin
 ```
-
-Install packages and mac apps using Brewfile:
-
-```bash
-brew bundle
-```
-
-Switch to iterm, and import iterm profile.
 
 Set fish as the default shell:
 
