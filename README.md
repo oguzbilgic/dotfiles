@@ -5,9 +5,14 @@ my workstation configuration
 ## Mac Configuration
 
 - Turn on 'Dock Hiding'
+- Turn on 'Menu Bar Hiding'
 - Enable 'Mouse right click'
 - Turn on 'Night Shift', bit warmer than default
 - Increase 'mouse tracking speed', 5th level from the right
+- Configure 'Menu Bar'
+  * hide keyboard
+  * show date
+  * show sound icon
 
 ## Step by step configuration
 
