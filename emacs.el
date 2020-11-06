@@ -56,24 +56,32 @@
   (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)
   (add-hook 'emacs-lisp-mode-hook #'parinfer-toggle-mode))
 
+(use-package company
+  :ensure t
+  :init
+  (global-company-mode))
+
 ;; Load themes --------------------------------------------------
 
-(use-package sublime-themes
-  :ensure t)
+;; (use-package sublime-themes
+;;   :ensure t)
 
-(use-package gruvbox-theme
-  :ensure t)
+;; (use-package gruvbox-theme
+;;   :ensure t)
 
-(use-package color-theme-sanityinc-tomorrow
-  :ensure t)
+;; (use-package color-theme-sanityinc-tomorrow
+;;   :ensure t)
 
-(use-package spacegray-theme
-  :ensure t)
+;; (use-package spacegray-theme
+;;   :ensure t)
 
-(use-package modus-operandi-theme
-  :ensure t)
+;; (use-package modus-operandi-theme
+;;   :ensure t)
 
 ;; General Settings ---------------------------------------------
+
+;; TODO: Set startup directory
+;; (setq default-directory "~/")
 
 ;; Don't create name~ files
 (setq make-backup-files nil)
@@ -116,6 +124,7 @@
 
 ;; Remove the toolbar
 (tool-bar-mode -1)
+
 ;; Don't blink the cursor
 (blink-cursor-mode 0)
 
@@ -133,8 +142,8 @@
 
 ;; Show line numbers
 (global-display-line-numbers-mode)
-;; Enable customizable window divider
 
+;; Enable customizable window divider
 (window-divider-mode 1)
 (setq window-divider-default-right-width 8)
 
@@ -152,5 +161,28 @@
 
 ;; Mode Settings ------------------------------------------------
 
-;; Javascript mode settings
+;; -- Window Divider Mode ---------------------------------------
+
+(set-face-foreground `window-divider "gray97")
+(set-face-foreground `window-divider-first-pixel "gray97")
+(set-face-foreground `window-divider-last-pixel "gray97")
+
+;; -- Line Number Mode ------------------------------------------
+
+(set-face-foreground `line-number "gray80")
+
+;; -- Mode Line -------------------------------------------------
+
+(set-face-attribute `mode-line nil
+        :box `(:line-width 4
+               :color "#335EA8"
+               :style nil))
+
+(set-face-attribute `mode-line-inactive nil
+        :box `(:line-width 4
+               :color "#9B9C97"
+               :style nil))
+
+;; -- Javascript Mode -------------------------------------------
+
 (setq js-indent-level 2)
