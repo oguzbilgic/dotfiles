@@ -107,6 +107,9 @@ tic -x ~/code/dotfiles/misc/tmux-256color.terminfo
 
 These fonts are used in vim, emacs, and iTerm2:
 
+- JetBrains Mono
+  * 14pt, ExtraLight, 110, 130
+  * https://www.jetbrains.com/lp/mono/
 - Roboto Mono 
   * 14pt, Light, 110% vertical, 130% horizontal spacing
   * https://fonts.google.com/specimen/Roboto+Mono
