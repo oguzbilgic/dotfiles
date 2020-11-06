@@ -29,6 +29,18 @@ Add the new ssh key to Github account, copy the key using:
 
 ```bash
 pbcopy < ~/.ssh/id_rsa.pub
+
+```
+Install homebrew:
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+Install git:
+
+```bash
+brew install git
 ```
 
 Create `code/` and clone dot files repo: 
@@ -48,11 +60,6 @@ ln -s ~/code/dotfiles/config ~/.config
 ln -s ~/code/dotfiles/hushlogin ~/.hushlogin
 ```
 
-Install homebrew:
-
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
 
 Install packages and mac apps using Brewfile:
 
