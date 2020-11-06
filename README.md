@@ -9,6 +9,8 @@ my workstation configuration
 
 ## Step by step configuration
 
+Download and install Google Chrome, sign in and set as default.
+
 Generate a new SSH Key for the device:
 
 ```bash
