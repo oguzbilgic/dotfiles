@@ -60,12 +60,13 @@ ln -s ~/code/dotfiles/config ~/.config
 ln -s ~/code/dotfiles/hushlogin ~/.hushlogin
 ```
 
-
 Install packages and mac apps using Brewfile:
 
 ```bash
 brew bundle
 ```
+
+Switch to iterm, and import iterm profile.
 
 Set fish as the default shell:
 
@@ -76,9 +77,9 @@ chsh -s `which fish`
 
 ## Configure iTerm
 
-Enable italics in iTerm:
-
-https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
+- Import profile `misc/iterm-Spacegray.json`
+- Enable italics in iTerm:
+  * https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
 
 ## Mac apps
 
