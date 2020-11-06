@@ -4,8 +4,9 @@ my workstation configuration
 
 ## Mac Configuration
 
-- Turn on Dock Hiding
-- Enable Mouse right click
+- Turn on 'Dock Hiding'
+- Enable 'Mouse right click'
+- Turn on 'Night Shift', bit warmer than default
 
 ## Step by step configuration
 
