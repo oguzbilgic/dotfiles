@@ -97,6 +97,7 @@ Install Irvue from Mac App Store.
 - Download font
 - Import profile `misc/iterm-Spacegray.json`
 - Enable 'Terminal windows resize smoothly'
+- Enable 'Quit when all windows are closed'
 - Enable italics in iTerm:
   * https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be
 
