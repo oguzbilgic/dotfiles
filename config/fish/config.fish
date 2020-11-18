@@ -30,3 +30,6 @@ if status --is-interactive
   abbr --add --global gps git push
   abbr --add --global gst git status
 end
+
+# For manual Apple M1 silicon installation
+set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths
