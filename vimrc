@@ -368,7 +368,7 @@ nnoremap ]E :ALELast<cr>
 "----------------------------------------------------------
 
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeWinPos = 'right'
+" let g:NERDTreeWinPos = 'right'
 
 nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>nt :NERDTreeToggle<CR>
@@ -442,20 +442,24 @@ augroup fugitive_autocmds
   " autocmd Filetype gitcommit exe "resize " . line('$')
 augroup END
 
-noremap <leader>gs :Gstatus<cr>
-noremap <leader>gc :Gcommit<cr>
+noremap <leader>gs :Git<cr>
 noremap <leader>gd :Gdiffsplit<cr>
-noremap <leader>gp :Gpush<cr>
 noremap <leader>gr :Gread<cr>
 noremap <leader>gw :Gwrite<cr>
 noremap <leader>gh :Gbrowse @:<cr>
-noremap <leader>gb :Gblame<cr>
 noremap <leader>ge :Gedit<space>
 
-" Shell aliases
-noremap <leader>gg :Git<space>
-noremap <leader>go :Git checkout<space>
-noremap <leader>gt :Git tree --all<cr>
+noremap <leader>gbl :Gblame<cr>
+noremap <leader>gbd :Git branch -D<space>
+
+noremap <leader>gco :Git commit<cr>
+noremap <leader>gca :Git commit --ammend<cr>
+noremap <leader>gch :Git checkout<space>
+noremap <leader>gcb :Git checkout -b<space>
+noremap <leader>gcm :Git checkout ma
+
+noremap <leader>gps :Git push<cr>
+noremap <leader>gpl :Gpull<cr>
 
 "----------------------------------------------------------
 " Gdiff Settings
