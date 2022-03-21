@@ -393,16 +393,26 @@ let g:fzf_buffers_jump = 1
 " Clap Settings
 "----------------------------------------------------------
 
+" Show file type fonts using Nerd fonts
 let g:clap_enable_icon = 1
 
-nnoremap <leader>f :Clap files<CR>
+let g:clap_layout = {
+      \ 'width': '50%',
+      \ 'height': '33%',
+      \ 'row': '33%',
+      \ 'col': '25%'
+      \ }
 
 let g:clap_popup_move_manager = {
       \ "\<C-N>": "\<Down>",
       \ "\<C-P>": "\<Up>",
       \ }
 
-" nnoremap <leader>fb :Clap buffers<CR>
+" Don't show file previews on the right
+let g:clap_open_preview = 'never'
+
+nnoremap <leader>f :Clap files<CR>
+nnoremap <leader>fb :Clap buffers<CR>
 " nnoremap <leader>ff :Clap files<CR>
 " nnoremap <leader>fc :Clap colors<CR>
 
