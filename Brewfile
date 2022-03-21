@@ -1,3 +1,7 @@
+##
+# CLI Applications
+##
+
 brew "fish"
 brew "vim"
 brew "git"
@@ -5,9 +9,14 @@ brew "git"
 # brew "ranger"
 # brew "highlight"
 
+##
+# GUI Applications
+##
+
 # cask "google-chrome"
 cask "iterm2"
 cask "amethyst"
+cask "emacs"
 
 # cask "zoomus"
 # cask "slack"
@@ -17,3 +26,10 @@ cask "amethyst"
 # cask "kitematic"
 # cask "sequel-pro"
 # cask "robo-3t"
+
+##
+# Fonts
+##
+
+tap "homebrew/cask-fonts"
+cask "font-inconsolata"

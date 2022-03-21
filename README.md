@@ -35,7 +35,7 @@ pbcopy < ~/.ssh/id_rsa.pub
 
 ```
 
-Create `code/` and clone dot files repo: 
+Create `code/` and clone dot files repo:
 
 ```bash
 mkdir code
@@ -94,7 +94,6 @@ Install Irvue from Mac App Store.
 
 ## Configure iTerm
 
-- Download font
 - Import profile `misc/iterm-Spacegray.json`
 - Enable 'Terminal windows resize smoothly'
 - Enable 'Quit when all windows are closed'
@@ -126,18 +125,18 @@ These Mac apps will be installed using brew with the previous command.
 
 ## Fonts
 
-These fonts are used in vim, emacs, and iTerm2:
+These fonts are used in vim, emacs, and iTerm2. Fonts can be installed using
+`Brewfile`
 
+- Inconsolata
+  * 16pt, Light, 110, 135
 - JetBrains Mono
   * 14pt, ExtraLight, 110, 130
-  * https://www.jetbrains.com/lp/mono/
-- Roboto Mono 
+- Roboto Mono
   * 14pt, Light, 110% vertical, 130% horizontal spacing
-  * https://fonts.google.com/specimen/Roboto+Mono
-- SF Mono 
+- SF Mono
   * 12pt, 130% horizontal spacing
-  * Can be found in `/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/`
 - Fira Code
 - Source Code Pro
-- Office Code Pro 
+- Office Code Pro
   * 12pt, 125% vertical spacing
