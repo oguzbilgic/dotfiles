@@ -453,13 +453,13 @@ noremap <leader>gbl :Gblame<cr>
 noremap <leader>gbd :Git branch -D<space>
 
 noremap <leader>gco :Git commit<cr>
-noremap <leader>gca :Git commit --ammend<cr>
+noremap <leader>gca :Git commit --amend<cr>
 noremap <leader>gch :Git checkout<space>
 noremap <leader>gcb :Git checkout -b<space>
 noremap <leader>gcm :Git checkout ma
 
 noremap <leader>gps :Git push<cr>
-noremap <leader>gpl :Gpull<cr>
+noremap <leader>gpl :Git pull<cr>
 
 "----------------------------------------------------------
 " Gdiff Settings
