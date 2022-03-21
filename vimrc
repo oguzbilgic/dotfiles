@@ -490,7 +490,7 @@ let g:indentLine_char = '│'
 
 
 if g:colors_name == 'spacegray'
-  let g:indentLine_color_term = 59
+  let g:indentLine_color_gui = '#1C1F20'
 endif
 
 "----------------------------------------------------------
@@ -679,7 +679,7 @@ function! ToggleTerminal(name, command)
   let bufferNum = bufnr(a:name)
 
   if bufferNum == -1 || bufloaded(bufferNum) != 1
-    call term_start(a:command, { 
+    call term_start(a:command, {
           \ 'term_finish': 'close',
           \ 'term_name': a:name
           \})
