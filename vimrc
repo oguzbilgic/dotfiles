@@ -155,11 +155,11 @@ set secure
 set completeopt-=preview
 
 " Experimental: enable 'cursorline' only for the active window
-augroup cursor_line_autocmds
-  autocmd!
-  autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  autocmd WinLeave * setlocal nocursorline
-augroup END
+" augroup cursor_line_autocmds
+"   autocmd!
+"   autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+"   autocmd WinLeave * setlocal nocursorline
+" augroup END
 
 "----------------------------------------------------------
 " UI Settings
