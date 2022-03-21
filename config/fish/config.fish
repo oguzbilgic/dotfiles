@@ -32,4 +32,4 @@ if status --is-interactive
 end
 
 # For manual Apple M1 silicon installation
-set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths
+fish_add_path "/opt/homebrew/bin"
