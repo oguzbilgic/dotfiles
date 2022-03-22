@@ -335,7 +335,9 @@ let g:ale_sign_error = '✖'
 let g:ale_sign_warning = 'ⓘ'
 
 " Enable ale auto completion
-" let g:ale_completion_enabled = 1
+" Make sure to install lsp binaries for each file type.
+" Use tsserver for javascript
+let g:ale_completion_enabled = 1
 
 " Display :ALEHover within balloon using mouse
 let g:ale_set_balloons = 1
