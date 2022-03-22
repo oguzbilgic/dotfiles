@@ -17,10 +17,9 @@
 
 (use-package evil
   :ensure t
-  :config
-  (setq evil-want-C-u-scroll t)
   :init
-  (evil-mode))
+  (evil-mode)
+  (setq evil-want-C-u-scroll t))
 
 (use-package good-scroll
   :ensure t
