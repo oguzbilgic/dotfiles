@@ -76,6 +76,12 @@
 
 ;; General Settings ---------------------------------------------
 
+;; Don's show the welcome page
+(setq inhibit-startup-screen t)
+
+;; Don't show message in scratch buffer
+(setq initial-scratch-message nil)
+
 ;; TODO: Set startup directory
 ;; (setq default-directory "~/")
 
