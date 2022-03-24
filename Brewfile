@@ -27,6 +27,10 @@ cask "emacs"
 # cask "sequel-pro"
 # cask "robo-3t"
 
+# Heroku CLI
+tap "heroku/brew"
+brew "heroku"
+
 ##
 # Fonts
 ##
