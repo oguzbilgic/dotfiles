@@ -21,10 +21,29 @@
   (evil-mode)
   (setq evil-want-C-u-scroll t))
 
+;; Good scroll half page
+(defun good-scroll-up-half-screen ()
+  (interactive)
+  (good-scroll-move (/ (good-scroll--window-usable-height) 2)))
+
+;; Good scroll half page
+(defun good-scroll-down-half-screen ()
+  (interactive)
+  (good-scroll-move (- (/ (good-scroll--window-usable-height) 2))))
+
 (use-package good-scroll
-  :ensure t
-  :init
-  (good-scroll-mode 1))
+  :after evil
+  :config
+  (good-scroll-mode 1)
+  ;; Overwrite evil's scrool with good-scroll commands
+  (evil-define-key nil evil-motion-state-map (kbd "C-d") #'good-scroll-up-half-screen)
+  (evil-define-key nil evil-motion-state-map (kbd "C-u") #'good-scroll-down-half-screen)
+  (evil-define-key nil evil-motion-state-map (kbd "C-e") #'good-scroll-up)
+  (evil-define-key nil evil-motion-state-map (kbd "C-y") #'good-scroll-down)
+  (evil-define-key nil evil-motion-state-map (kbd "C-f") #'good-scroll-up-full-screen)
+  (evil-define-key nil evil-motion-state-map (kbd "C-b") #'good-scroll-down-full-screen)
+  (global-set-key [next] #'good-scroll-up-full-screen)
+  (global-set-key [prior] #'good-scroll-down-full-screen))
 
 (use-package find-file-in-project
   :ensure t)
