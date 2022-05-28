@@ -1,7 +1,4 @@
-##
-# CLI Applications
-##
-
+# Development Tools
 brew "fish"
 brew "vim"
 brew "git"
@@ -9,19 +6,18 @@ brew "git"
 # brew "ranger"
 # brew "highlight"
 
-##
-# GUI Applications
-##
-
 # cask "google-chrome"
 cask "iterm2"
 cask "amethyst"
 cask "emacs"
 
+# Office Tools
 # cask "zoomus"
 # cask "slack"
 # cask "tunnelblick"
-# cask "docker"
+
+# Development GUI tools
+cask "docker"
 # cask "postman"
 # cask "kitematic"
 # cask "sequel-pro"
@@ -31,9 +27,6 @@ cask "emacs"
 tap "heroku/brew"
 brew "heroku"
 
-##
 # Fonts
-##
-
 tap "homebrew/cask-fonts"
 cask "font-inconsolata"
