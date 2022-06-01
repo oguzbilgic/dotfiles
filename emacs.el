@@ -10,6 +10,10 @@
 
 ;; Load Packages ------------------------------------------------
 
+;; Changes theme based on date and time. i.e. dark/light
+(use-package theme-changer
+  :ensure t)
+
 (use-package which-key
   :ensure t
   :init
@@ -71,9 +75,10 @@
   ;; but these don't work
   (set-face-foreground 'git-gutter:modified "orange")
   (set-face-foreground 'git-gutter:added "green")
-  (set-face-foreground 'git-gutter:deleted "red")
-  )
+  (set-face-foreground 'git-gutter:deleted "red"))
+  
 
+;; Package has been deprecated by the author
 ;; (use-package parinfer
 ;;   :ensure t
 ;;   :init
@@ -194,25 +199,20 @@
 
 ;; Face Settings ------------------------------------------------
 
-;; -- Window Divider Mode ---------------------------------------
+;; Doom One Light
+(when (custom-theme-enabled-p 'doom-one-light)
+  (set-face-foreground `window-divider "gray97")
+  (set-face-foreground `window-divider-first-pixel "gray97")
+  (set-face-foreground `window-divider-last-pixel "gray97")
+  (set-face-foreground `line-number "gray80")
+  (set-face-attribute `mode-line nil
+                      :box `(:line-width 8 :color "#e7e7e7" :style nil))
+  (set-face-attribute `mode-line-inactive nil
+                      :box `(:line-width 8 :color "#e1e1e1" :style nil)))
 
-;; (set-face-foreground `window-divider "gray97")
-;; (set-face-foreground `window-divider-first-pixel "gray97")
-;; (set-face-foreground `window-divider-last-pixel "gray97")
-
-;; -- Line Number Mode ------------------------------------------
-
-;; (set-face-foreground `line-number "gray80")
-
-;; -- Mode Line -------------------------------------------------
-
-;; Add margin to the Mode Line
-;; (set-face-attribute `mode-line nil
-;;         :box `(:line-width 8
-;;                :color "black"
-;;                :style nil))
-
-;; (set-face-attribute `mode-line-inactive nil
-;;         :box `(:line-width 4
-;;                :color "#9B9C97"
-;;                :style nil))
+;; Doom Tomorrow Night
+(when (custom-theme-enabled-p 'doom-tomorrow-night)
+  (set-face-attribute `mode-line nil
+                      :box `(:line-width 8 :color "#0f1011" :style nil))
+  (set-face-attribute `mode-line-inactive nil
+                      :box `(:line-width 8 :color "#1d1f21" :style nil)))
