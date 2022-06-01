@@ -128,6 +128,12 @@
 
 ;; Visual Settings ----------------------------------------------
 
+;; Experimental: Set theme based on the time
+(setq calendar-location-name "Los Angeles, CA") 
+(setq calendar-latitude 34.052)
+(setq calendar-longitude -118.243)
+(change-theme 'doom-one-light 'doom-tomorrow-night)
+
 ;; Set the default font
 ;; (set-frame-font "JetBrains Mono Light 14")
 ;; (set-frame-font "JetBrains Mono 13")
