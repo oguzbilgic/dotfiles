@@ -5,6 +5,7 @@ brew "git"
 # brew "fzf"
 # brew "ranger"
 # brew "highlight"
+brew "difftastic"
 
 # cask "google-chrome"
 cask "iterm2"
