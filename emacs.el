@@ -10,6 +10,19 @@
 
 ;; Load Packages ------------------------------------------------
 
+;; Can't find the binary since the $PATH isn't set correctly in emacs
+(use-package lsp-mode
+  :ensure t
+  :init
+  ;; set $path for packages that use bin such as lsp
+  (setq exec-path (append exec-path '("/opt/homebrew/bin")))
+  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+  (setq lsp-keymap-prefix "C-c l")
+  :hook
+  (js-mode . lsp)
+  ;;if you want which-key integratio
+  (lsp-mode . lsp-enable-which-key-integration)
+  :commands lsp)
 
 (use-package which-key
   :ensure t
