@@ -144,9 +144,6 @@
 ;; (set-frame-font "JetBrains Mono 13")
 (set-frame-font "Inconsolata Light 15")
 
-;; Increase line height, doesn't center horizontally
-(setq-default line-spacing 0.5)
-
 ;; Let window resize pixelwise
 (setq frame-resize-pixelwise t)
 
@@ -188,11 +185,15 @@
 (setq ns-use-proxy-icon nil)
 (setq frame-title-format nil)
 
+;; Increase line height, doesn't center horizontally
+;; (setq-default line-spacing 0.5)
+
 ;; Increase line height while keeping it centered?
-;; (defun set-bigger-spacing ()
-;;   (setq-local default-text-properties '(line-spacing 0.25 line-height 1.25)))
-;; (add-hook 'text-mode-hook 'set-bigger-spacing)
-;; (add-hook 'prog-mode-hook 'set-bigger-spacing)
+(defun set-bigger-spacing ()
+  (interactive)
+  (setq-local default-text-properties '(line-spacing 0.25 line-height 1.25)))
+(add-hook 'text-mode-hook 'set-bigger-spacing)
+(add-hook 'prog-mode-hook 'set-bigger-spacing)
 
 ;; Make Emacs full screen on startup
 (add-hook 'emacs-startup-hook 'toggle-frame-fullscreen)
