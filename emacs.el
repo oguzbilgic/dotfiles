@@ -10,9 +10,6 @@
 
 ;; Load Packages ------------------------------------------------
 
-;; Changes theme based on date and time. i.e. dark/light
-(use-package theme-changer
-  :ensure t)
 
 (use-package which-key
   :ensure t
