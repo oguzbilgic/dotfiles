@@ -76,7 +76,6 @@
   (set-face-foreground 'git-gutter:modified "orange")
   (set-face-foreground 'git-gutter:added "green")
   (set-face-foreground 'git-gutter:deleted "red"))
-  
 
 ;; Package has been deprecated by the author
 ;; (use-package parinfer
@@ -93,9 +92,16 @@
   (global-company-mode))
 
 (use-package doom-themes
+  :ensure t)
+
+;; Changes theme based on date and time. i.e. dark/light
+(use-package theme-changer
   :ensure t
-  :init
-  (load-theme 'doom-tomorrow-night t))
+  :config
+  (setq calendar-location-name "Los Angeles, CA")
+  (setq calendar-latitude 34.052)
+  (setq calendar-longitude -118.243)
+  (change-theme 'doom-one-light 'doom-tomorrow-night))
 
 ;; General Settings ---------------------------------------------
 
@@ -132,12 +138,6 @@
 (setq js-indent-level 2)
 
 ;; Visual Settings ----------------------------------------------
-
-;; Experimental: Set theme based on the time
-(setq calendar-location-name "Los Angeles, CA") 
-(setq calendar-latitude 34.052)
-(setq calendar-longitude -118.243)
-(change-theme 'doom-one-light 'doom-tomorrow-night)
 
 ;; Set the default font
 ;; (set-frame-font "JetBrains Mono Light 14")
@@ -201,6 +201,7 @@
 
 ;; Doom One Light
 (when (custom-theme-enabled-p 'doom-one-light)
+  (set-frame-font "Inconsolata 15")
   (set-face-foreground `window-divider "gray97")
   (set-face-foreground `window-divider-first-pixel "gray97")
   (set-face-foreground `window-divider-last-pixel "gray97")
