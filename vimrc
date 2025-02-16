@@ -22,6 +22,9 @@ Plug 'psliwka/vim-smoothie'            " Makes CTRL-D,U scrolling smooth
 " Plug 'Kazark/vim-SimpleSmoothScroll'   " Makes CTRL-D,U scrolling smooth
 Plug 'Yggdroot/indentLine'             " Displays indentation levels for spaces
 
+" AI
+Plug 'github/copilot.vim'
+
 " Text
 Plug 'tpope/vim-commentary'            " Adds gc operator for toggling comments
 Plug 'gokcehan/vim-opex'               " Adds gx operator to execute code
@@ -58,6 +61,7 @@ Plug 'peitalin/vim-jsx-typescript'     " Adds .tsx file type support
 " Plug 'vim-ruby/vim-ruby'
 " Plug 'cespare/vim-toml'              " Adds .toml file type support
 Plug 'jxnblk/vim-mdx-js'               " Adds .mdx Markdown-jsx support
+Plug 'jceb/vim-orgmode'                " Adds .org emacs-org support
 
 " Colorschemes
 Plug 'morhetz/gruvbox'
@@ -189,6 +193,7 @@ set t_Co=256                           " Enable 256 color
 " set mouse=a                            " Enable mouse
 set showcmd                            " Show current command bottom right
 set wildmenu                           " Show command line suggestions
+set wildoptions=pum
 set number                             " Show line numbers
 set relativenumber                     " Show relative numbers
 set nowrap                             " Disable  wrapping of long lines
@@ -458,7 +463,7 @@ noremap <leader>gs :Git<cr>
 noremap <leader>gd :Gdiffsplit<cr>
 noremap <leader>gr :Gread<cr>
 noremap <leader>gw :Gwrite<cr>
-noremap <leader>gh :Gbrowse @:<cr>
+noremap <leader>gh :GBrowse @:<cr>
 noremap <leader>ge :Gedit<space>
 
 noremap <leader>gbl :Gblame<cr>
@@ -543,6 +548,13 @@ augroup vim_markdown_mdx_autocmds
   autocmd FileType markdown.mdx setlocal spell
   autocmd FileType markdown.mdx setlocal wrap
 augroup END
+
+"----------------------------------------------------------
+" Vim OrgMode Settings
+"----------------------------------------------------------
+
+let g:org_indent = 1
+let g:org_heading_shade_leading_stars = 0
 
 "----------------------------------------------------------
 " Experimental: Vim Help Settings
