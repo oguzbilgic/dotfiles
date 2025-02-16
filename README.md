@@ -114,14 +114,14 @@ These Mac apps will be installed using brew with the previous command.
 + [iTerm2](https://www.iterm2.com/): Terminal
 + [Amethyst](https://github.com/ianyh/Amethyst): Window manager
 + [Color Picker](https://itunes.apple.com/us/app/color-picker/id641027709?l=en&mt=12)
-+ [Irvue](http://irvue.tumblr.com/): Wallpaper manager
-+ [Kitematic](https://kitematic.com/): Docker GUI
 + [Sequel Pro](https://www.sequelpro.com/): MySQL client
 + [robo 3T](https://robomongo.org/): MongoDB client
 + [Postman](https://www.getpostman.com/): API client
 + [Slack](http://slack.com/): Team chat
 + [Zoom](http://zoom.us/) Video conference
 + [Tunnelblick](https://tunnelblick.net): VPN Client
++ [UltiMaker Cura](https://ultimaker.com/software/ultimaker-cura/) STL slicer for 3D printing
++ [VS Code](https://code.visualstudio.com/) IDE
 
 ## Fonts
 
