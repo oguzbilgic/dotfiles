@@ -12,9 +12,9 @@ brew "git"
 # brew "difftastic"
 
 # Embedded development
-brew "cmake"
-brew "picotool"
-brew "open-ocd"
+# brew "cmake"
+# brew "picotool"
+# brew "open-ocd"
 # brew "stlink"
 # brew "stm32flash"
 # brew "arm-none-eabi-gcc"
@@ -25,8 +25,8 @@ brew "open-ocd"
 
 # General GUI
 # cask "google-chrome"
-# cask "zoomus"
-# cask "slack"
+cask "zoomus"
+cask "slack"
 cask "tunnelblick"
 cask "spotify"
 cask "iterm2"
@@ -36,14 +36,14 @@ cask "iterm2"
 # Development GUI
 cask "emacs"
 cask "visual-studio-code"
-# cask "docker"
+cask "docker"
 # cask "postman"
 # cask "kitematic"
 # cask "sequel-pro"
 # cask "robo-3t"
 
 # Embedded development GUI tools
-cask "kicad"
+# cask "kicad"
 
 #----------------------------------------
 # Taps
