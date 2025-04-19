@@ -63,7 +63,7 @@ ln -s ~/code/dotfiles/hushlogin ~/.hushlogin
 Set fish as the default shell:
 
 ``` bash
-echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+echo `which fish` | sudo tee -a /etc/shells
 chsh -s `which fish`
 ```
 
