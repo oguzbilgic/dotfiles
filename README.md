@@ -49,7 +49,7 @@ Install packages and mac apps using Brewfile:
 brew bundle
 ```
 
-Switch to iterm, and import iterm profile. Refer to `Configure Amethyst`
+Switch to iterm, and import iterm profile.
 
 Symlink dot files:
 
@@ -67,11 +67,7 @@ echo `which fish` | sudo tee -a /etc/shells
 chsh -s `which fish`
 ```
 
-Start amethyst and configure. Refer to `Configure Amethyst`
-
-Install Irvue from Mac App Store.
-
-## Mac Configuration
+## Configuration Mac
 
 - Turn on 'Dock Hiding'
   - Remove items from dock
@@ -112,6 +108,8 @@ tic -x ~/code/dotfiles/misc/tmux-256color.terminfo
 These Mac apps will be installed using brew with the previous command.
 
 + [Google Chrome](https://www.google.com/chrome/): Web browser
++ [Slack](http://slack.com/): Team chat
++ [Zoom](http://zoom.us/) Video conference
 + Xcode Cli Tools
 + [iTerm2](https://www.iterm2.com/): Terminal
 + [Amethyst](https://github.com/ianyh/Amethyst): Window manager
@@ -119,8 +117,6 @@ These Mac apps will be installed using brew with the previous command.
 + [Sequel Pro](https://www.sequelpro.com/): MySQL client
 + [robo 3T](https://robomongo.org/): MongoDB client
 + [Postman](https://www.getpostman.com/): API client
-+ [Slack](http://slack.com/): Team chat
-+ [Zoom](http://zoom.us/) Video conference
 + [Tunnelblick](https://tunnelblick.net): VPN Client
 + [UltiMaker Cura](https://ultimaker.com/software/ultimaker-cura/) STL slicer for 3D printing
 + [VS Code](https://code.visualstudio.com/) IDE
