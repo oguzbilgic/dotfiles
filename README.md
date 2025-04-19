@@ -82,6 +82,7 @@ Install Irvue from Mac App Store.
   * hide keyboard
   * show date
   * show sound icon
+- Simplify `Spotlight` results
 
 ## Configure Amethyst
 
@@ -139,3 +140,4 @@ These fonts are used in vim, emacs, and iTerm2. Fonts can be installed using
 - Source Code Pro
 - Office Code Pro
   * 12pt, 125% vertical spacing
+
