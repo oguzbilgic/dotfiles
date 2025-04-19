@@ -83,6 +83,8 @@ Install Irvue from Mac App Store.
   * show date
   * show sound icon
 - Simplify `Spotlight` results
+- Disable most iCloud services
+- Simplify Finder sidebar
 
 ## Configure Amethyst
 
