@@ -55,3 +55,5 @@ brew "git"
 
 # Fonts
 cask "font-inconsolata"
+cask "font-inconsolata-nerd-font"
+
