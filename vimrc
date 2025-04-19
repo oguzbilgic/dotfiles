@@ -66,7 +66,10 @@ Plug 'jceb/vim-orgmode'                " Adds .org emacs-org support
 " Colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'rakr/vim-one'
-Plug 'ajh17/Spacegray.vim'
+" Deprecated -> 'ajh17/Spacegray.vim'
+Plug 'https://git.sr.ht/~ackyshake/spacegray.vim'
+
+
 " Plug 'felixhummel/setcolors.vim'       " :SetColors all then F8 to switch colorschemes
 " Plug 'daviddavis/vim-colorpack'
 " Plug 'ghifarit53/daycula-vim' , {'branch' : 'main'}
@@ -182,7 +185,7 @@ endif
 if &background == 'dark'
   colorscheme spacegray
 else
-  colorscheme one
+  colorscheme spacegray
 endif
 
 " Color Settings
