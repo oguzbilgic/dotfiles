@@ -25,18 +25,18 @@ brew "git"
 
 # General GUI
 # cask "google-chrome"
-cask "zoomus"
-cask "slack"
-cask "tunnelblick"
-cask "spotify"
-cask "iterm2"
+# cask "zoomus"
+# cask "slack"
+# cask "tunnelblick"
+# cask "spotify"
+# cask "iterm2"
 # cask "amethyst"
 # cask "rstudio"
 
 # Development GUI
-cask "emacs"
-cask "visual-studio-code"
-cask "docker"
+# cask "emacs"
+# cask "visual-studio-code"
+# cask "docker"
 # cask "postman"
 # cask "kitematic"
 # cask "sequel-pro"
@@ -54,5 +54,4 @@ cask "docker"
 # brew "heroku"
 
 # Fonts
-tap "homebrew/cask-fonts"
 cask "font-inconsolata"
