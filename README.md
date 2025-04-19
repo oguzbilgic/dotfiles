@@ -74,11 +74,10 @@ Install Irvue from Mac App Store.
 ## Mac Configuration
 
 - Turn on 'Dock Hiding'
+  - Remove items from dock
+- Make Dock smaller
 - Turn on 'Menu Bar Hiding'
-- Enable 'Mouse right click'
-- Enable 'Mouse Swipe between pages'
 - Turn on 'Night Shift', bit warmer than default
-- Increase 'mouse tracking speed', 5th level from the right
 - Configure 'Menu Bar'
   * hide keyboard
   * show date
