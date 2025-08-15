@@ -42,7 +42,7 @@ cask "warp"
 # Development GUI
 # cask "emacs"
 cask "cursor"
-# cask "visual-studio-code@insiders"
+cask "visual-studio-code@insiders"
 # cask "visual-studio-code"
 # cask "docker"
 # cask "postman"
