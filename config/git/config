@@ -8,7 +8,6 @@
   quotepath = false
 [diff]
   tool = vimdiff
-  external = difft
 [status]
   short = true
 [fetch]
